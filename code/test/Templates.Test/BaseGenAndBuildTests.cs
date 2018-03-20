@@ -36,6 +36,8 @@ namespace Microsoft.Templates.Test
                     return "B";
                 case "SplitView":
                     return "SV";
+                case "MasterDetailXamarin":
+                    return "MDX";
                 case "TabbedPivot":
                     return "TP";
                 default:
@@ -98,6 +100,8 @@ namespace Microsoft.Templates.Test
             {
                 AssertCorrectProjectConfigInfo(projectType, framework, platform);
             }
+
+            // TODO: Assert project config for xamarin once defined where this goes, x-ref (https://github.com/Microsoft/WindowsTemplateStudio/issues/1350)
 
             // Clean
             if (cleanGeneration)
