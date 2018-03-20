@@ -137,7 +137,13 @@ namespace Microsoft.Templates.UI.VisualStudio
             if (GenContext.CurrentLanguage == _shell.GetActiveProjectLanguage())
             {
                 var projectConfig = ProjectConfigInfo.ReadProjectConfiguration();
-                if (projectConfig.Platform == Platforms.Uwp)
+                if (projectConfig.Platform == Platforms.Xamarin)
+                {
+                    DestinationPath = new DirectoryInfo(GenContext.ToolBox.Shell.GetActiveProjectPath()).Parent.FullName;
+                    DestinationParentPath = new DirectoryInfo(DestinationPath).Parent.FullName;
+                    ProjectName = GenContext.ToolBox.Shell.GetActiveProjectName();
+                }
+                else
                 {
                     DestinationPath = GenContext.ToolBox.Shell.GetActiveProjectPath();
                     DestinationParentPath = new DirectoryInfo(DestinationPath).Parent.FullName;
