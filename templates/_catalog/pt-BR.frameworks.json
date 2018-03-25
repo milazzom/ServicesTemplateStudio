@@ -5,19 +5,9 @@
     "summary": "Esta é uma versão genérica de um padrão MVVM. O padrão Model-View-ViewModel pode ser usado em todas as plataformas XAML."
   },
   {
-    "name": "MVVMLight",
-    "displayName": "MVVM Light",
-    "summary": "MVVM Light é uma framework popular de terceiros baseada no padrão Model-View-ViewModel."
-  },
-  {
     "name": "CodeBehind",
     "displayName": "Code Behind",
     "summary": "Esse é o modelo tradicional para um aplicativo em que a lógica é tratada no code-behind.  Para um aplicativo rápido, essa é uma ótima opção."
-  },
-  {
-    "name": "CaliburnMicro",
-    "displayName": "Caliburn.Micro",
-    "summary": "Caliburn.Micro é uma framework MVVM popular que enfatiza convenções e capacidade de composição."
   },
   {
     "name": "Prism",

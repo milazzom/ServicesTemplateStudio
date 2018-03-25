@@ -43,11 +43,11 @@
                             <TextBlock Text="New Uwp C# project..."/>
                         </Hyperlink>
                     </TextBlock>
-                    <TextBlock>
+                    <!--<TextBlock>
                         <Hyperlink Command="{Binding NewUwpVisualBasicProjectCommand}">
                             <TextBlock Text="New Uwp VB project..."/>
                         </Hyperlink>
-                    </TextBlock>
+                    </TextBlock>-->
                     <TextBlock>
                         <Hyperlink Command="{Binding NewXamarinCSharpProjectCommand}">
                             <TextBlock Text="New Xamarin C# project..."/>
@@ -63,11 +63,11 @@
                             <TextBlock Text="Analyze C# project selection"/>
                         </Hyperlink>
                     </TextBlock>
-                    <TextBlock>
+                    <!--<TextBlock>
                         <Hyperlink Command="{Binding AnalyzeVisualBasicSelectionCommand}">
                             <TextBlock Text="Analyze VB project selection"/>
                         </Hyperlink>
-                    </TextBlock>
+                    </TextBlock>-->
                     <ComboBox SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" ItemsSource="{Binding Themes}" Margin="0,8,0,0" Style="{StaticResource VSEmulatorComboBox}"/>
                     <TextBlock Margin="0,20,0,0">
                         <Hyperlink Command="{Binding ConfigureVersionsCommand}">

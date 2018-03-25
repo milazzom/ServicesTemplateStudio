@@ -5,19 +5,9 @@
     "summary": "Toto je obecná verze vzoru MVVM. Vzor Model-View-ViewModel je možné používat na všech platformách XAML."
   },
   {
-    "name": "MVVMLight",
-    "displayName": "MVVM Light",
-    "summary": "MVVM Light je oblíbený rámec (framework) třetí strany, založený na vzoru Model-View-ViewModel."
-  },
-  {
     "name": "CodeBehind",
     "displayName": "Code Behind",
     "summary": "Jde o tradiční model pro aplikace, ve kterých se logika zpracovává v kódu na pozadí (code-behind).  Představuje tak skvělou volbu pro rychlé aplikace."
-  },
-  {
-    "name": "CaliburnMicro",
-    "displayName": "Caliburn.Micro",
-    "summary": "Caliburn.Micro je oblíbený rámec (framework) MVVM, který klade důraz na konvence a uspořadatelnost."
   },
   {
     "name": "Prism",
