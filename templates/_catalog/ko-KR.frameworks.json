@@ -5,19 +5,9 @@
     "summary": "MVVM 패턴의 일반 버전입니다. MVVM(Model-View-ViewModel) 패턴은 모든 XAML 플랫폼에서 사용됩니다."
   },
   {
-    "name": "MVVMLight",
-    "displayName": "MVVM Light",
-    "summary": "MVVM Light는 Model-View-ViewModel 패턴 기반의 인기있는 타사 framework입니다."
-  },
-  {
     "name": "CodeBehind",
     "displayName": "Code Behind",
     "summary": "기존의 이 모델 방식은 애플리케이션의 논리를 code-behind으로 처리합니다.  빠른 애플리케이션을 위한 훌륭한 옵션입니다."
-  },
-  {
-    "name": "CaliburnMicro",
-    "displayName": "Caliburn.Micro",
-    "summary": "Caliburn.Micro는 규칙과 결합성에 중점을 둔 인기 있는 MVVM framework입니다."
   },
   {
     "name": "Prism",
