@@ -184,6 +184,11 @@ namespace Microsoft.Templates.UI.Generation
                 return Platforms.Uwp;
             }
 
+            if (IsBot())
+            {
+                return Platforms.Bot;
+            }
+
             throw new Exception(StringRes.ExceptionUnableResolvePlatform);
         }
 
@@ -218,6 +223,24 @@ namespace Microsoft.Templates.UI.Generation
             {
                 return false;
             }
+        }
+
+        private static bool IsBot()
+        {
+            var searchPath = new DirectoryInfo(GenContext.ToolBox.Shell.GetActiveProjectPath()).Parent.FullName;
+            string[] fileExtensions = { ".json", ".config", ".csproj" };
+
+            var files = Directory.GetFiles(searchPath, "*.*", SearchOption.AllDirectories)
+                    .Where(f => fileExtensions.Contains(Path.GetExtension(f)));
+
+            foreach (string file in files)
+            {
+                if (File.ReadAllText(file).Contains("Bots"))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private static string InferProjectType()

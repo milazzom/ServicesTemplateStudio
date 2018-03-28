@@ -10,11 +10,13 @@ namespace Microsoft.Templates.Core
     {
         public const string Uwp = "Uwp";
         public const string Xamarin = "Xamarin";
+        public const string Bot = "Bot";
 
         public static IEnumerable<string> GetAllPlatforms()
         {
             yield return Platforms.Uwp;
             yield return Platforms.Xamarin;
+            yield return Platforms.Bot;
         }
     }
 }

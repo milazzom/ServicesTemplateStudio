@@ -96,6 +96,8 @@ namespace Microsoft.Templates.VsEmulator.Main
 
         public RelayCommand NewXamarinCSharpProjectCommand => new RelayCommand(NewXamarinCSharpProject);
 
+        public RelayCommand NewBotCSharpProjectCommand => new RelayCommand(NewBotCSharpProject);
+
         public RelayCommand LoadProjectCommand => new RelayCommand(LoadProject);
 
         public RelayCommand RefreshTemplateCacheCommand => _refreshTemplateCacheCommand ?? (_refreshTemplateCacheCommand = new RelayCommand(
@@ -245,6 +247,16 @@ namespace Microsoft.Templates.VsEmulator.Main
                 await NewProjectAsync(Platforms.Xamarin, ProgrammingLanguages.CSharp);
             });
         }
+
+        private void NewBotCSharpProject()
+        {
+            SafeThreading.JoinableTaskFactory.Run(async () =>
+            {
+                await SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
+                await NewProjectAsync(Platforms.Bot, ProgrammingLanguages.CSharp);
+            });
+        }
+
 
         private async Task NewProjectAsync(string platform, string language)
         {

@@ -43,14 +43,14 @@
                             <TextBlock Text="New Uwp C# project..."/>
                         </Hyperlink>
                     </TextBlock>
-                    <!--<TextBlock>
-                        <Hyperlink Command="{Binding NewUwpVisualBasicProjectCommand}">
-                            <TextBlock Text="New Uwp VB project..."/>
-                        </Hyperlink>
-                    </TextBlock>-->
                     <TextBlock>
                         <Hyperlink Command="{Binding NewXamarinCSharpProjectCommand}">
                             <TextBlock Text="New Xamarin C# project..."/>
+                        </Hyperlink>
+                    </TextBlock>
+                    <TextBlock>
+                        <Hyperlink Command="{Binding NewBotCSharpProjectCommand}">
+                            <TextBlock Text="New Bot C# project..."/>
                         </Hyperlink>
                     </TextBlock>
                     <TextBlock>
