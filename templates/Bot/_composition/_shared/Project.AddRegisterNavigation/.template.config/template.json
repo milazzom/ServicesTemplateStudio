@@ -3,12 +3,12 @@
   "classifications": [
     "Universal"
   ],
-  "name": "Project.Xamarin.AddRegisterNavigation.Xamarin",
+  "name": "Project.Bot.AddRegisterNavigation.Bot",
   "tags": {
     "language": "C#",
     "type": "item",
     "wts.type": "composition",
-    "wts.platform" : "Xamarin",
+    "wts.platform" : "Bot",
     "wts.version": "1.0.0",
     "wts.compositionFilter": "$framework == CodeBehind|MVVMBasic & wts.type == project"
  },

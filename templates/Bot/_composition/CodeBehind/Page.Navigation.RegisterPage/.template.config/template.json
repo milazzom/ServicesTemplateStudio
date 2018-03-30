@@ -3,12 +3,12 @@
   "classifications": [
     "Universal"
   ],
-  "name": "CodeBehind.Page.Navigation.RegisterPage.Xamarin",
+  "name": "CodeBehind.Page.Navigation.RegisterPage.Bot",
   "tags": {
     "language": "C#",
     "type": "item",
     "wts.type": "composition",
-    "wts.platform" : "Xamarin",
+    "wts.platform" : "Bot",
     "wts.version": "1.0.0",
     "wts.compositionFilter": "$framework == CodeBehind & wts.type == page"
   },

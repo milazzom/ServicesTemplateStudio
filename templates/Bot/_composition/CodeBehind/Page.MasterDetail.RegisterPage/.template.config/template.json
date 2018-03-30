@@ -8,9 +8,9 @@
     "language": "C#",
     "type": "item",
     "wts.type": "composition",
-    "wts.platform" : "Xamarin",
+    "wts.platform" : "Bot",
     "wts.version": "1.0.0",
-    "wts.compositionFilter": "$framework == CodeBehind & $projectType == MasterDetailXamarin & wts.type == page"
+    "wts.compositionFilter": "$framework == CodeBehind & $projectType == MasterDetailBot & wts.type == page"
   },
   "sourceName": "wts.ItemName",
   "preferNameDirectory": true,

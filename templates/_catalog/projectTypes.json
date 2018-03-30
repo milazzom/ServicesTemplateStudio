@@ -6,7 +6,7 @@
         "author": "Microsoft",
         "order": "2",
         "licenses": "",
-        "platforms": ["Uwp", "Xamarin"],
+        "platforms": ["Uwp", "Xamarin", "Bot"],
         "languages": [ "C#", "VisualBasic" ]
     },
     {
@@ -27,6 +27,16 @@
         "order": "1",
         "licenses": "",
         "platforms": ["Xamarin"],
+        "languages": [ "C#" ]
+    },
+    {
+        "name": "MasterDetailBot",
+        "displayName": "Master Detail",
+        "summary": "A navigation pane (or 'hamburger menu') is included for navigation between pages. (Bot)",
+        "author": "Microsoft",
+        "order": "1",
+        "licenses": "",
+        "platforms": ["Bot"],
         "languages": [ "C#" ]
     },
     {

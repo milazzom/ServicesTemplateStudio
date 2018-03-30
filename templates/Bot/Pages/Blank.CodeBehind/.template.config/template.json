@@ -4,8 +4,8 @@
     "Universal"
   ],
   "name": "Blank",
-  "groupIdentity": "wts.Page.Blank.Xamarin",
-  "identity": "wts.Page.Blank.CodeBehind.Xamarin",
+  "groupIdentity": "wts.Page.Blank.Bot",
+  "identity": "wts.Page.Blank.CodeBehind.Bot",
   "description": "This is the most basic page. A blank canvas to mold into whatever you wish.",
   "tags": {
     "language": "C#",

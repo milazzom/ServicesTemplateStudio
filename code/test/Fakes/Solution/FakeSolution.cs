@@ -318,7 +318,7 @@ EndProject
             {
                 return UwpProjectConfigurationTemplate;
             }
-            else if (platform == Platforms.Xamarin)
+            else if (platform == Platforms.Xamarin || platform == Platforms.Bot)
             {
                 if (projectName.Contains("Android"))
                 {
@@ -344,7 +344,9 @@ EndProject
                 case Platforms.Uwp:
                     return File.ReadAllText(@"Solution\UwpSolutionTemplate.txt");
                 case Platforms.Xamarin:
+                case Platforms.Bot:
                     return File.ReadAllText(@"Solution\XamarinSolutionTemplate.txt");
+
             }
 
             throw new InvalidDataException(nameof(platform));

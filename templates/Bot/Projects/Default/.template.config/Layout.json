@@ -1,7 +1,7 @@
 ﻿[
     {
         "name": "Main",
-        "templateGroupIdentity": "wts.Page.Blank.Xamarin",
+        "templateGroupIdentity": "wts.Page.Blank.Bot",
         "readonly": "false"
     }    
 ]

@@ -3,14 +3,14 @@
   "classifications": [
     "Universal"
   ],
-  "name": "CodeBehind.Project.MasterDetail.Xamarin",
+  "name": "CodeBehind.Project.MasterDetail.Bot",
   "tags": {
     "language": "C#",
     "type": "item",
     "wts.type": "composition",
-    "wts.platform" : "Xamarin",
+    "wts.platform" : "Bot",
     "wts.version": "1.0.0",
-    "wts.compositionFilter": "$framework == CodeBehind & wts.type == project & $projectType == MasterDetailXamarin",
+    "wts.compositionFilter": "$framework == CodeBehind & wts.type == project & $projectType == MasterDetailBot",
     "wts.compositionOrder": "1"
   },
   "sourceName": "wts.ItemName",

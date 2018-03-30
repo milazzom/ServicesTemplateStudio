@@ -3,14 +3,14 @@
   "classifications": [
     "Universal"
   ],
-  "name": "Project.MasterDetail.SetNavigation.Xamarin",
+  "name": "Project.MasterDetail.SetNavigation.Bot",
   "tags": {
     "language": "C#",
     "type": "item",
     "wts.type": "composition",
-    "wts.platform" : "Xamarin",
+    "wts.platform" : "Bot",
     "wts.version": "1.0.0",
-    "wts.compositionFilter": "$framework == CodeBehind|MVVMBasic & $projectType == MasterDetailXamarin & wts.type == project",
+    "wts.compositionFilter": "$framework == CodeBehind|MVVMBasic & $projectType == MasterDetailBot & wts.type == project",
     "wts.compositionOrder": "0"
  },
   "sourceName": "wts.ItemName",

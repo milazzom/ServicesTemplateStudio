@@ -3,12 +3,12 @@
   "classifications": [
     "Universal"
   ],
-  "name": "Project.Blank.SetMainPage.Xamarin",
+  "name": "Project.Blank.SetMainPage.Bot",
   "tags": {
     "language": "C#",
     "type": "item",
     "wts.type": "composition",
-    "wts.platform" : "Xamarin",
+    "wts.platform" : "Bot",
     "wts.version": "1.0.0",
     "wts.compositionFilter": "$framework == CodeBehind|MVVMBasic & $projectType == Blank & wts.type == project"
  },

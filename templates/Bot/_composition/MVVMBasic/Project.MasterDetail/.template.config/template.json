@@ -3,12 +3,12 @@
   "classifications": [
     "Universal"
   ],
-  "name": "MVVMBasic.Project.MasterDetail.Xamarin",
+  "name": "MVVMBasic.Project.MasterDetail.Bot",
   "tags": {
     "language": "C#",
     "type": "item",
     "wts.type": "composition",
-    "wts.platform" : "Xamarin",
+    "wts.platform" : "Bot",
     "wts.version": "1.0.0",
     "wts.compositionFilter": "$framework == MVVMBasic & wts.type == project & $projectType == MasterDetailXamarin",
     "wts.compositionOrder": "1"

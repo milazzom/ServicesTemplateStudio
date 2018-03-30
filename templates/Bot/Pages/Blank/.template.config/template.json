@@ -4,15 +4,15 @@
     "Universal"
   ],
   "name": "Blank",
-  "groupIdentity": "wts.Page.Blank.Xamarin",
-  "identity": "wts.Page.Blank.Xamarin",
+  "groupIdentity": "wts.Page.Blank.Bot",
+  "identity": "wts.Page.Blank.Bot",
   "description": "This is the most basic page. A blank canvas to mold into whatever you wish.",
   "tags": {
     "language": "C#",
     "type": "item",
     "wts.type": "page",
     "wts.framework": "MVVMBasic",
-    "wts.platform" : "Xamarin",
+    "wts.platform" : "Bot",
     "wts.version": "1.0.0",
     "wts.displayOrder": "1",
     "wts.genGroup": "0",
