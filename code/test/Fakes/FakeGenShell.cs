@@ -65,7 +65,7 @@ namespace Microsoft.Templates.Fakes
             foreach (var projectFile in filesByProject)
             {
                 var msbuildProj = FakeMsBuildProject.Load(projectFile.Key);
-                if (msbuildProj != null)
+                if (msbuildProj != null && !msbuildProj.IsNetStandardProject)
                 {
                     foreach (var file in projectFile.Value)
                     {

@@ -10,7 +10,7 @@
     "wts.type": "composition",
     "wts.platform" : "Xamarin",
     "wts.version": "1.0.0",
-    "wts.compositionFilter": "$framework == Prism & wts.type == page"
+    "wts.compositionFilter": "$framework == PrismXamarinSharedProject|PrismXamarinNETStd & wts.type == page"
   },
   "sourceName": "wts.ItemName",
   "preferNameDirectory": true,
