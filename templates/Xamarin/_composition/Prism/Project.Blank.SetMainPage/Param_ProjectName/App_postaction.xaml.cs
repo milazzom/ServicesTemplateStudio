@@ -14,16 +14,10 @@
         protected override async void OnInitialized()
         {
             InitializeComponent();
-//{[{
-            await NavigationService.NavigateAsync("RootMasterDetailPage/NavigationPage/Param_HomeNamePage");
-//}]}
-        }
-
-        protected override void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-//{[{
-            containerRegistry.RegisterForNavigation<RootMasterDetailPage>();
-//}]}
+            //^^
+            //{[{
+            MainPage = new NavigationPage(new Param_HomeNamePage());
+            //}]}
         }
     }
 }
