@@ -1,0 +1,52 @@
+﻿{
+  "author": "Microsoft",
+  "classifications": [
+    "Universal"
+  ],
+  "name": "Prism.Project.MasterDetail.Xamarin",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "composition",
+    "wts.platform" : "Xamarin",
+    "wts.version": "1.0.0",
+    "wts.compositionFilter": "$framework == PrismXamarinSharedProject|PrismXamarinNETStd & wts.type == project & $projectType == MasterDetailXamarin",
+    "wts.compositionOrder": "1"
+  },
+  "sourceName": "wts.ItemName",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+    {
+      "path": ".\\Param_ProjectName\\ViewModels\\RootMasterDetailPageViewModel.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName\\Views\\RootMasterDetailPage.xaml"
+    },
+    {
+      "path": ".\\Param_ProjectName\\Views\\RootMasterDetailPage.xaml.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName\\Models\\MasterDetailPageMenuItem.cs"
+    }
+  ],
+  "symbols": {
+    "wts.projectName":
+    {
+      "type": "parameter",
+      "replaces": "Param_ProjectName",
+      "fileRename": "Param_ProjectName"
+    },
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    },
+    "wts.homePageName": {
+      "type":"parameter",
+      "replaces":"Param_HomeName"
+    }
+  }
+}
