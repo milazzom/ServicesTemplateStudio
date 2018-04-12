@@ -89,7 +89,7 @@
   <ItemGroup>
     <ProjectReference Include="..\wts.DefaultProject\wts.DefaultProject.csproj">
       <Project>{c84d6ab8-12fc-46e8-838e-30056ca6c432}</Project>
-      <Name>App4</Name>
+      <Name>wts.DefaultProject</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
