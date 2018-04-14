@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Windows Template Studio (Universal Windows; local)</Name>
+    <Name>Services Template Studio (Universal Windows; local)</Name>
     <Description>Windows Şablon Stüdyosu, ihtiyaçlarınızı Windows 10 desenlerinden ve en iyi uygulamalarından kurulu bir temele dönüştürebileceğiniz, sihirbaz tabanlı bir kullanıcı arabirimi ile bir UWP uygulamasını hızlı bir şekilde geliştirmeyi sağlar.</Description>
     <Icon>windowsTemplateStudio_Logo_256x256.ico</Icon>
     <ProjectType>VisualBasic</ProjectType>
