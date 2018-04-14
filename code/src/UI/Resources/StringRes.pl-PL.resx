@@ -226,7 +226,7 @@
     <comment>Error dialog title</comment>
   </data>
   <data name="ErrorDialogWindowTitle" xml:space="preserve">
-    <value>Windows Template Studio Error</value>
+    <value>Services Template Studio Error</value>
     <comment>Error dialog window title</comment>
   </data>
   <data name="ChangesSummaryMoreInfoLink" xml:space="preserve">
@@ -318,7 +318,7 @@
     <comment>Notification message for Sync Error, {0}:Version</comment>
   </data>
   <data name="NotificationSyncStatus_NewWizardVersionAvailable" xml:space="preserve">
-    <value>Windows Template Studio Version {0} is available. Update the extension to enjoy the latest features.</value>
+    <value>Services Template Studio Version {0} is available. Update the extension to enjoy the latest features.</value>
     <comment>Notification message for Sync Status: New Wizard Version available, {0}:New Version</comment>
   </data>
   <data name="NotificationSyncStatus_Preparing" xml:space="preserve">
@@ -370,7 +370,7 @@
     <comment>About section templates version</comment>
   </data>
   <data name="ProjectDetailsAboutSectionText" xml:space="preserve">
-    <value>Windows Template Studio</value>
+    <value>Services Template Studio</value>
     <comment>About section text</comment>
   </data>
   <data name="ProjectDetailsAboutSectionTitle" xml:space="preserve">
@@ -450,8 +450,8 @@
     <comment>Licenses Terms and conditions text</comment>
   </data>
   <data name="WindowsTemplateStudio" xml:space="preserve">
-    <value>Windows Template Studio</value>
-    <comment>Windows template studio label</comment>
+    <value>Services Template Studio</value>
+    <comment>Services Template Studio label</comment>
   </data>
   <data name="StatusBarGenerationFinished" xml:space="preserve">
     <value>Generation finished</value>
@@ -462,7 +462,7 @@
     <comment>Status bar message for restoring</comment>
   </data>
   <data name="StatusBarCreatingProject" xml:space="preserve">
-    <value>Creating Windows Template Studio project...</value>
+    <value>Creating Services Template Studio project...</value>
     <comment>Status bar message for solution wizard run finished</comment>
   </data>
   <data name="StatusBarNewItemAddFeatureCancelled" xml:space="preserve">

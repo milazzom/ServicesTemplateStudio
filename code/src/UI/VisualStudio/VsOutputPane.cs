@@ -74,7 +74,7 @@ namespace Microsoft.Templates.UI.VisualStudio
                 Convert.ToInt32(clearWithSolution));
 
             output.GetPane(ref paneGuid, out var pane);
-            pane.OutputString($"Windows Template Studio {DateTime.Now.FormatAsFullDateTime()}\n");
+            pane.OutputString($"Services Template Studio {DateTime.Now.FormatAsFullDateTime()}\n");
             pane.OutputString($"Version: {GetVersion()}\n");
             pane.OutputString($">\n");
         }

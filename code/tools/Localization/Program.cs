@@ -90,7 +90,7 @@ namespace Localization
                 Console.WriteLine("EXT\tExtract localizable items for different cultures.");
                 Console.WriteLine("GEN\tGenerates Project Templates for different cultures.");
                 Console.WriteLine("VERIFY\tVerify if exist localizable items for different cultures.");
-                Console.WriteLine("HELP\tProvides Help information for Windows Template Studio Localization Tool.");
+                Console.WriteLine("HELP\tProvides Help information for Services Template Studio Localization Tool.");
                 Console.WriteLine();
             }
             else
@@ -144,7 +144,7 @@ namespace Localization
                         Console.WriteLine();
                         break;
                     case "HELP":
-                        Console.WriteLine("Provides Help information for Windows Template Studio Localization Tool.");
+                        Console.WriteLine("Provides Help information for Services Template Studio Localization Tool.");
                         Console.WriteLine();
                         Console.WriteLine("Localization help [command]");
                         Console.WriteLine();

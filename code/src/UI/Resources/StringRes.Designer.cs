@@ -466,7 +466,7 @@ namespace Microsoft.Templates.UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows Template Studio Error.
+        ///   Looks up a localized string similar to Services Template Studio Error.
         /// </summary>
         public static string ErrorDialogWindowTitle {
             get {
@@ -790,7 +790,7 @@ namespace Microsoft.Templates.UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows Template Studio Version {0} is available. Update the extension to enjoy the latest features..
+        ///   Looks up a localized string similar to Services Template Studio Version {0} is available. Update the extension to enjoy the latest features..
         /// </summary>
         public static string NotificationSyncStatus_NewWizardVersionAvailable {
             get {
@@ -925,7 +925,7 @@ namespace Microsoft.Templates.UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows Template Studio.
+        ///   Looks up a localized string similar to Services Template Studio.
         /// </summary>
         public static string ProjectDetailsAboutSectionText {
             get {
@@ -1060,7 +1060,7 @@ namespace Microsoft.Templates.UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Creating Windows Template Studio project....
+        ///   Looks up a localized string similar to Creating Services Template Studio project....
         /// </summary>
         public static string StatusBarCreatingProject {
             get {
@@ -1258,7 +1258,7 @@ namespace Microsoft.Templates.UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows Template Studio.
+        ///   Looks up a localized string similar to Services Template Studio.
         /// </summary>
         public static string WindowsTemplateStudio {
             get {
