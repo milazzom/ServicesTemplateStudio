@@ -82,8 +82,10 @@ namespace Microsoft.Templates.Core.Locations
                     await UpdateTemplatesCacheAsync(force);
 
                     PurgeContentAsync().FireAndForget();
-
-                    TelemetryService.Current.SetContentVersionToContext(CurrentContent.Version);
+                    if (CurrentContent != null)
+                    {
+                        TelemetryService.Current.SetContentVersionToContext(CurrentContent.Version);
+                    }
                 }
                 finally
                 {
