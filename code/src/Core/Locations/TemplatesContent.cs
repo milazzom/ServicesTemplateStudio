@@ -201,12 +201,15 @@ namespace Microsoft.Templates.Core.Locations
             {
                 var di = new DirectoryInfo(TemplatesFolder);
 
-                foreach (var sdi in di.EnumerateDirectories().Where(d => d.FullName != Current.Path))
+                if (Current != null)
                 {
-                    Version.TryParse(sdi.Name, out Version v);
-                    if (!v.IsNull() && v < Current.Version)
+                    foreach (var sdi in di.EnumerateDirectories().Where(d => d.FullName != Current.Path))
                     {
-                        Fs.SafeDeleteDirectory(sdi.FullName, false);
+                        Version.TryParse(sdi.Name, out Version v);
+                        if (!v.IsNull() && v < Current.Version)
+                        {
+                            Fs.SafeDeleteDirectory(sdi.FullName, false);
+                        }
                     }
                 }
             }
