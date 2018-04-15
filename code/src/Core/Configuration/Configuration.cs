@@ -19,18 +19,18 @@ namespace Microsoft.Templates.Core
     {
         public string Environment { get; set; } = "LocalEnv";
 
-        public string CdnUrl { get; set; } = "https://wtsrepository.blob.core.windows.net/dev";
+        public string CdnUrl { get; set; } = "https://msftappswts.blob.core.windows.net/templates";
 
         // Set your Application Insights telemetry instrumentation key here (configure it in a WindowsTemplateStudio.config.json located in the working folder).
         public string RemoteTelemetryKey { get; set; } = "<SET_YOUR_OWN_KEY>";
 
         public string LogFileFolderPath { get; set; } = @"WindowsTemplateStudio\Logs";
 
-        public string RepositoryFolderName { get; set; } = @"WindowsTemplateStudio";
+        public string RepositoryFolderName { get; set; } = @"ServicesTemplateStudio";
 
-        public string BackupFolderPath { get; set; } = @"WindowsTemplateStudio\Backups";
+        public string BackupFolderPath { get; set; } = @"ServicesTemplateStudio\Backups";
 
-        public string TempGenerationFolderPath { get; set; } = "WTSTempGeneration";
+        public string TempGenerationFolderPath { get; set; } = "STSTempGeneration";
 
         public TraceEventType DiagnosticsTraceLevel { get; set; } = TraceEventType.Verbose;
 
@@ -42,7 +42,7 @@ namespace Microsoft.Templates.Core
 
         public string CustomTelemetryEndpoint { get; set; } = string.Empty;
 
-        public string GitHubDocsUrl { get; set; } = "https://github.com/Microsoft/WindowsTemplateStudio/blob/master/docs/";
+        public string GitHubDocsUrl { get; set; } = "https://github.com/milazzom/ServicesTemplateStudio/blob/master/docs/";
 
         public static string LoadedConfigFile { get; private set; }
 
