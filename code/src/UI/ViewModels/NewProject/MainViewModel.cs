@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -65,6 +66,9 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
         public override async Task InitializeAsync(string platform, string language)
         {
             WizardStatus.Title = $" ({GenContext.Current.ProjectName})";
+            var platforms = GenContext.ToolBox.Repo.GetPlatforms();
+            var platformDisplayName = platforms.FirstOrDefault(x => string.Compare(x.Name, platform, true) == 0)?.DisplayName;
+            WizardStatus.PlatformTitle = string.Format(StringRes.NewProjectTitle, platformDisplayName);
             await base.InitializeAsync(platform, language);
         }
 
