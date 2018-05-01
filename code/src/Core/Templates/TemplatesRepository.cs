@@ -122,6 +122,20 @@ namespace Microsoft.Templates.Core
             return GetMetadataInfo("frameworks");
         }
 
+        public IEnumerable<MetadataInfo> GetPlatforms()
+        {
+            var folderName = Path.Combine(Sync?.CurrentContent.Path, Catalog);
+
+            if (!Directory.Exists(folderName))
+            {
+                return Enumerable.Empty<MetadataInfo>();
+            }
+
+            var metadataFile = Path.Combine(folderName, $"platforms.json");
+            var metadata = JsonConvert.DeserializeObject<List<MetadataInfo>>(File.ReadAllText(metadataFile));
+            return metadata;
+        }
+
         public IEnumerable<MetadataInfo> GetFrameworks(string platform)
         {
             return GetFrameworks().Where(m => m.Platforms.Contains(platform));

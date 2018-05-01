@@ -294,7 +294,7 @@
     <comment>New project: Navigation step two</comment>
   </data>
   <data name="NewProjectTitle" xml:space="preserve">
-    <value>New Universal Windows Platform app</value>
+    <value>New {0} app</value>
     <comment>Wizard title on WizardShell page</comment>
   </data>
   <data name="NotificationRemoveError_Dependency" xml:space="preserve">

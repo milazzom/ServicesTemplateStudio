@@ -18,6 +18,7 @@ namespace Microsoft.Templates.UI.ViewModels.Common
     public class WizardStatus : Observable
     {
         private string _title;
+        private string _platformTitle;
         private string _versions;
         private bool _isBusy;
         private bool _isNotBusy;
@@ -36,6 +37,12 @@ namespace Microsoft.Templates.UI.ViewModels.Common
         {
             get => _title;
             set => SetProperty(ref _title, value);
+        }
+
+        public string PlatformTitle
+        {
+            get => _platformTitle;
+            set => SetProperty(ref _platformTitle, value);
         }
 
         public string Versions
