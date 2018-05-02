@@ -1,0 +1,10 @@
+[
+    {
+        "name": "UWP",
+        "displayName": "Universal Windows Platform"
+    },
+    {
+        "name": "Xamarin",
+        "displayName": "Xamarin Forms"
+    }
+]
