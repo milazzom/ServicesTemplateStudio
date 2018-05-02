@@ -727,7 +727,7 @@ namespace Microsoft.Templates.UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Universal Windows Platform app.
+        ///   Looks up a localized string similar to New {0} app.
         /// </summary>
         public static string NewProjectTitle {
             get {
