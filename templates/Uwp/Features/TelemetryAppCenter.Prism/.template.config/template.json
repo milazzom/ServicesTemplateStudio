@@ -1,10 +1,10 @@
 ﻿{
   "author": "Microsoft Community",
   "classifications": [ "Universal" ],
-  "name": "Telemetry - Hockey App",
-  "groupIdentity": "wts.Feat.TelemetryHockeyApp",
-  "identity": "wts.Feat.TelemetryHockeyApp.Prism",
-  "description": "Adds Telemetry via HockeyApp API's. Adds Crash reporting and Page Views by default.",
+  "name": "Telemetry - AppCenter",
+  "groupIdentity": "wts.Feat.TelemetryAppCenter",
+  "identity": "wts.Feat.TelemetryAppCenter.Prism",
+  "description": "Add Telemetry via AppCenter API's. Adds Page Views by default.",
   "tags": {
     "language": "C#",
     "type": "item",
@@ -12,14 +12,14 @@
     "wts.framework": "Prism",
     "wts.platform": "Uwp",
     "wts.version": "1.0.0",
-    "wts.displayOrder": "1",
+    "wts.displayOrder": "2",
     "wts.group": "Telemetry",
     "wts.licenses": "[Microsoft.Toolkit.Uwp](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/license.md)",
     "wts.multipleInstance": "false",
-    "wts.defaultInstance": "TelemetryHockeyApp",
+    "wts.defaultInstance": "TelemetryAppCenter",
     "wts.rightClickEnabled": "true"
   },
-  "sourceName": "TelemetryHockeyAppFeature",
+  "sourceName": "TelemetryAppCenterFeature",
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
@@ -28,7 +28,7 @@
     {
       "path": ".\\Services\\TrackingServiceBase.cs"
     },    {
-      "path": ".\\Services\\TrackingServiceHockeyApp.cs"
+      "path": ".\\Services\\TrackingServiceAppCenter.cs"
     }
   ],
   "symbols": {

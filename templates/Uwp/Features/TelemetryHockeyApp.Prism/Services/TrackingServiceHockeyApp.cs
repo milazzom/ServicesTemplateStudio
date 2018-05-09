@@ -141,7 +141,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="properties"></param>
         /// <param name="duration"></param>
         /// <param name="loggingLevel"></param>
-        public void TrackMetric(string name, double value, IDictionary<string, string> properties, TimeSpan duration, LoggingLevel loggingLevel = LoggingLevel.Warning)
+        public void TrackAggregateMetric(string name, double value, IDictionary<string, string> properties, TimeSpan duration, LoggingLevel loggingLevel = LoggingLevel.Warning)
         {
             lock (_lockObject)
             {
