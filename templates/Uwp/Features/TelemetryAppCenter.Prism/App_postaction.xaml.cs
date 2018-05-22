@@ -33,7 +33,7 @@ namespace Param_RootNamespace
         private void FrameFacade_NavigatedFrom(object sender, NavigatingFromEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine($"Navigated From: {e.SourcePageType}");
-            trackingService.TrackEvent($"Navigated From: {e.SourcePageType}");
+            trackingService.TrackPageView(e.SourcePageType.ToString());
         }
 
         private void InitializeTelemetry()

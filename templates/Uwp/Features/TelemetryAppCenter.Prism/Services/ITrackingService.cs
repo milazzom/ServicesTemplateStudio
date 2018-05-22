@@ -1,15 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Windows.Foundation.Diagnostics;
 
 namespace Param_ItemNamespace.Services
 {
+    public enum TrackingLoggingLevel
+    {
+        Off = 0,
+        Error = 1,
+        Warning = 2,
+        Information = 3,
+        Verbose = 4
+    }
+
     /// <summary>
     /// Tracks the application application usage.
     /// </summary>
     public interface ITrackingService
     {
+        TrackingLoggingLevel AppLoggingLevel { get; set; }
+        TrackingLoggingLevel TrackEventLogLevel { get; set; }
+        TrackingLoggingLevel TrackDependencyLogLevel { get; set; }
+        TrackingLoggingLevel TrackPageViewLogLevel { get; set; }
+        TrackingLoggingLevel TrackExceptionLogLevel { get; set; }
+        TrackingLoggingLevel TrackMetricLogLevel { get; set; }
+        int AggregateMetricLoggingDelay { get; set; }
+
         /// <summary>
         /// Tracks custom events.
         /// </summary>
@@ -21,7 +37,7 @@ namespace Param_ItemNamespace.Services
         /// </summary>
         /// <param name="eventName">Name of the event.</param>
         /// <param name="loggingLevel"></param>
-        void TrackEvent(string eventName, LoggingLevel loggingLevel = LoggingLevel.Warning);
+        void TrackEvent(string eventName, TrackingLoggingLevel loggingLevel = TrackingLoggingLevel.Warning);
 
         /// <summary>
         /// Tracks a service call and tracks timing
@@ -56,7 +72,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="properties"></param>
         /// <param name="duration"></param>
         /// <param name="loggingLevel"></param>
-        void TrackAggregateMetric(string name, double value, IDictionary<string, string> properties, TimeSpan duration, LoggingLevel loggingLevel = LoggingLevel.Warning);
+        void TrackAggregateMetric(string name, double value, IDictionary<string, string> properties, TimeSpan duration, TrackingLoggingLevel loggingLevel = TrackingLoggingLevel.Warning);
 
         /// <summary>
         /// Tracks PageViews

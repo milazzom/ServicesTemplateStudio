@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Foundation.Diagnostics;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using System.ComponentModel;
@@ -23,12 +22,12 @@ namespace Param_ItemNamespace.Services
             {
                 while (!stop)
                 {
-                    await Task.Delay(MetricLoggingDelay).ConfigureAwait(false);
+                    await Task.Delay(AggregateMetricLoggingDelay).ConfigureAwait(false);
                     lock (_lockObject)
                     {
                         foreach (var item in TrackingServiceMetricCollection)
                         {
-                            if (item.Value.Measurements.Count > 0 && item.Value.Start.Add(item.Value.MetricTimeSpan) <= DateTime.Now && AppLoggingLevel <= item.Value.MetricLoggingLevel)
+                            if (item.Value.Measurements.Count > 0 && item.Value.Start.Add(item.Value.MetricTimeSpan) <= DateTime.Now && AppLoggingLevel >= item.Value.MetricLoggingLevel)
                             {
                                 Debug.WriteLine($"TrackingMetric sent - metric:{item.Key}, Number of Measurements:{ item.Value.Measurements.Count}");
                                 Analytics.TrackEvent("TrackAggegrateMetric", Aggregrate(item.Key));
@@ -50,7 +49,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="success"></param>
         public void TrackDependency(string dependencyName, string commandName, DateTimeOffset startTime, TimeSpan duration, bool success)
         {
-            if (AppLoggingLevel <= TrackDependencyLogLevel)
+            if (AppLoggingLevel >= TrackDependencyLogLevel)
             {
                 Analytics.TrackEvent("TrackDependency", new Dictionary<string, string>
                 {
@@ -67,7 +66,8 @@ namespace Param_ItemNamespace.Services
         /// <param name="eventName">Name of the event.</param>
         public void TrackEvent(string eventName)
         {
-            Analytics.TrackEvent(eventName);
+            if (AppLoggingLevel >= TrackEventLogLevel)
+                Analytics.TrackEvent(eventName);
         }
 
         /// <summary>
@@ -75,9 +75,9 @@ namespace Param_ItemNamespace.Services
         /// </summary>
         /// <param name="eventName">Name of the event.</param>
         /// <param name="loggingLevel"></param>   
-        public void TrackEvent(string eventName, LoggingLevel loggingLevel = LoggingLevel.Warning)
+        public void TrackEvent(string eventName, TrackingLoggingLevel loggingLevel = TrackingLoggingLevel.Warning)
         {
-            if (AppLoggingLevel <= TrackEventLogLevel)
+            if (AppLoggingLevel >= TrackEventLogLevel)
                 Analytics.TrackEvent(eventName);
         }
 
@@ -88,7 +88,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="properties"></param>
         public void TrackException(Exception exception, IDictionary<string, string> properties)
         {
-            if (exception != null && AppLoggingLevel <= TrackExceptionLogLevel)
+            if (exception != null && AppLoggingLevel >= TrackExceptionLogLevel)
             {
                 // check if task was cancelled 
                 if (exception.GetType() != typeof(TaskCanceledException) || !((TaskCanceledException)(exception)).CancellationToken.IsCancellationRequested)
@@ -124,9 +124,14 @@ namespace Param_ItemNamespace.Services
             };
             var mean = TrackingServiceMetricCollection[name].Measurements.Sum() / metric.Count;
             metric.Add("StandardDeviation", Math.Sqrt((double)(TrackingServiceMetricCollection[name].Measurements.Sum(v => { var diff = v - mean; return diff * diff; }) / metric.Count)).ToString());
-            foreach (var item in TrackingServiceMetricCollection[name].MetricProperties)
+            
+            //copy metric properties
+            if (TrackingServiceMetricCollection[name] != null && TrackingServiceMetricCollection[name].MetricProperties != null)
             {
-                metric.Add(item.Key, item.Value);
+                foreach (var item in TrackingServiceMetricCollection[name].MetricProperties)
+                {
+                    metric.Add(item.Key, item.Value);
+                }
             }
 
             TrackingServiceMetricCollection[name].Start = DateTime.Now; // sets new time and clears out the collection
@@ -135,18 +140,21 @@ namespace Param_ItemNamespace.Services
 
         public void TrackMetric(string name, double value, IDictionary<string, string> properties)
         {
-             var eventProperties = new Dictionary<string, string>
+            if (AppLoggingLevel >= TrackMetricLogLevel)
             {
-                {name,  value.ToString()}
-            };
+                var eventProperties = new Dictionary<string, string>
+                {
+                    {name,  value.ToString()}
+                };
 
-            if (properties != null)
-            {
-                foreach (var property in properties)
-                    eventProperties.Add(property.Key, property.Value);
+                if (properties != null)
+                {
+                    foreach (var property in properties)
+                        eventProperties.Add(property.Key, property.Value);
+                }
+
+                Analytics.TrackEvent("TrackAggregateMetric", eventProperties);
             }
-
-            Analytics.TrackEvent("TrackAggregateMetric", eventProperties);
         }
 
         /// <summary>
@@ -157,7 +165,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="properties"></param>
         /// <param name="duration"></param>
         /// <param name="loggingLevel"></param>
-        public void TrackAggregateMetric(string name, double value, IDictionary<string, string> properties, TimeSpan duration, LoggingLevel loggingLevel = LoggingLevel.Warning)
+        public void TrackAggregateMetric(string name, double value, IDictionary<string, string> properties, TimeSpan duration, TrackingLoggingLevel loggingLevel = TrackingLoggingLevel.Warning)
         {
             lock (_lockObject)
             {
@@ -175,10 +183,13 @@ namespace Param_ItemNamespace.Services
         /// <param name="name"></param>    
         public void TrackPageView(string name)
         {
-            Analytics.TrackEvent("PageView", new Dictionary<string, string>
+            if (AppLoggingLevel >= TrackPageViewLogLevel)
             {
-                {"PageName", name }
-            });
+                Analytics.TrackEvent("PageView", new Dictionary<string, string>
+                {
+                    {"PageName", name }
+                });
+            }
         }
     }
 }
