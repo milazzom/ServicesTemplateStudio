@@ -5,19 +5,27 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Foundation.Diagnostics;
 
 namespace Param_ItemNamespace.Services
 {
+    internal static class TelemetryConstants
+    {
+        public const string PageView = "STS:Track PageView";
+        public const string Exception = "STS:Track Exception";
+        public const string Dependency = "STS:Track Dependency";
+        public const string Metric = "STS:Track Metric";
+        public const string AggregatedMetric = "STS:Track Aggregated Metric";
+    }
+
     public class TrackingServiceBase
     {
-        public LoggingLevel AppLoggingLevel { get; set; } = LoggingLevel.Information;
-        public LoggingLevel TrackEventLogLevel { get; set; } = LoggingLevel.Information;
-        public LoggingLevel TrackDependencyLogLevel { get; set; } = LoggingLevel.Information;
-        public LoggingLevel TrackPageLogLevel { get; set; } = LoggingLevel.Information;
-        public LoggingLevel TrackExceptionLogLevel { get; set; } = LoggingLevel.Error;
-        public LoggingLevel TrackMetricLogLevel { get; set; } = LoggingLevel.Warning;
-        public int MetricLoggingDelay { get; set; } = 60000;
+        public TrackingLoggingLevel AppLoggingLevel { get; set; } = TrackingLoggingLevel.Information;
+        public TrackingLoggingLevel TrackEventLogLevel { get; set; } = TrackingLoggingLevel.Information;
+        public TrackingLoggingLevel TrackDependencyLogLevel { get; set; } = TrackingLoggingLevel.Information;
+        public TrackingLoggingLevel TrackPageViewLogLevel { get; set; } = TrackingLoggingLevel.Information;
+        public TrackingLoggingLevel TrackExceptionLogLevel { get; set; } = TrackingLoggingLevel.Error;
+        public TrackingLoggingLevel TrackMetricLogLevel { get; set; } = TrackingLoggingLevel.Warning;
+        public int AggregateMetricLoggingDelay { get; set; } = 60000;
         protected readonly Dictionary<string, TrackingServiceMetric> TrackingServiceMetricCollection = new Dictionary<string, TrackingServiceMetric>();
         public BackgroundWorker thread;
         protected readonly Boolean stop = false;
@@ -49,7 +57,7 @@ namespace Param_ItemNamespace.Services
 
         public IDictionary<string, string> MetricProperties { get; set; }
         public TimeSpan MetricTimeSpan { get; set; } = TimeSpan.FromSeconds(60);
-        public LoggingLevel MetricLoggingLevel { get; set; } = LoggingLevel.Warning;
+        public TrackingLoggingLevel MetricLoggingLevel { get; set; } = TrackingLoggingLevel.Warning;
     }
 
     /// <summary>
@@ -91,7 +99,7 @@ namespace Param_ItemNamespace.Services
         public void Dispose()
         {
             s_stopwatch.Stop();
-            _trackingService.TrackDependency(_eventName, _commandName, _startTime, s_stopwatch.Elapsed, true);
+            _trackingService.TrackMetric(_eventName, s_stopwatch.ElapsedMilliseconds, null);
         }
     }
 }

@@ -25,12 +25,12 @@ namespace Param_ItemNamespace.Services
             {
                 while (!stop)
                 {
-                    await Task.Delay(MetricLoggingDelay).ConfigureAwait(false);
+                    await Task.Delay(AggregateMetricLoggingDelay).ConfigureAwait(false);
                     lock (_lockObject)
                     {
                         foreach (var item in TrackingServiceMetricCollection)
                         {
-                            if (item.Value.Measurements.Count > 0 && item.Value.Start.Add(item.Value.MetricTimeSpan) <= DateTime.Now && AppLoggingLevel <= item.Value.MetricLoggingLevel)
+                            if (item.Value.Measurements.Count > 0 && item.Value.Start.Add(item.Value.MetricTimeSpan) >= DateTime.Now && AppLoggingLevel <= item.Value.MetricLoggingLevel)
                             {
                                 Debug.WriteLine($"TrackingMetric sent - metric:{item.Key}, Number of Measurements:{ item.Value.Measurements.Count}");
                                 HockeyClient.Current.TrackMetric(Aggregrate(item.Key));
@@ -48,7 +48,8 @@ namespace Param_ItemNamespace.Services
         /// <param name="eventName">Name of the event.</param>
         public void TrackEvent(string eventName)
         {
-            HockeyClient.Current.TrackEvent(eventName);
+            if (AppLoggingLevel >= TrackEventLogLevel)   
+                HockeyClient.Current.TrackEvent(eventName);
         }
 
         /// <summary>
@@ -58,9 +59,9 @@ namespace Param_ItemNamespace.Services
         /// <param name="loggingLevel"></param>        
         public void TrackEvent(
             string eventName,
-            LoggingLevel loggingLevel = LoggingLevel.Warning)
+            TrackingLoggingLevel loggingLevel = TrackingLoggingLevel.Warning)
         {
-            if (AppLoggingLevel <= TrackEventLogLevel)
+            if (AppLoggingLevel >= TrackEventLogLevel)
                 HockeyClient.Current.TrackEvent(eventName);
         }
 
@@ -74,7 +75,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="success"></param>
         public void TrackDependency(string dependencyName, string commandName, DateTimeOffset startTime, TimeSpan duration, bool success)
         {
-            if (AppLoggingLevel <= TrackDependencyLogLevel)
+            if (AppLoggingLevel >= TrackDependencyLogLevel)
                 HockeyClient.Current.TrackDependency(dependencyName, commandName, startTime, duration, success);
         }
 
@@ -85,7 +86,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="properties"></param>        
         public void TrackException(Exception exception, IDictionary<string, string> properties)
         {
-            if (exception != null && AppLoggingLevel <= TrackExceptionLogLevel)
+            if (exception != null && AppLoggingLevel >= TrackExceptionLogLevel)
             {
                 // check if task was cancelled 
                 if (exception.GetType() != typeof(TaskCanceledException) || !((TaskCanceledException)(exception)).CancellationToken.IsCancellationRequested)
@@ -110,9 +111,13 @@ namespace Param_ItemNamespace.Services
 
             metric.Properties.Add("MetricAvg", TrackingServiceMetricCollection[name].Measurements.Average().ToString());
             //copy metric properties
-            foreach (var item in TrackingServiceMetricCollection[name].MetricProperties)
+            // TODO 
+            if (TrackingServiceMetricCollection[name] != null && TrackingServiceMetricCollection[name].MetricProperties != null)
             {
-                metric.Properties.Add(item.Key, item.Value);
+                foreach (var item in TrackingServiceMetricCollection[name].MetricProperties)
+                {
+                    metric.Properties.Add(item.Key, item.Value);
+                }
             }
             metric.Timestamp = DateTime.Now;
             var mean = TrackingServiceMetricCollection[name].Measurements.Sum() / metric.Count;
@@ -129,7 +134,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="properties"></param>         
         public void TrackMetric(string name, double value, IDictionary<string, string> properties)
         {
-            if (AppLoggingLevel <= TrackMetricLogLevel)
+            if (AppLoggingLevel >= TrackMetricLogLevel)
                 HockeyClient.Current.TrackMetric(name, value, properties);
         }
 
@@ -141,7 +146,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="properties"></param>
         /// <param name="duration"></param>
         /// <param name="loggingLevel"></param>
-        public void TrackAggregateMetric(string name, double value, IDictionary<string, string> properties, TimeSpan duration, LoggingLevel loggingLevel = LoggingLevel.Warning)
+        public void TrackAggregateMetric(string name, double value, IDictionary<string, string> properties, TimeSpan duration, TrackingLoggingLevel loggingLevel = TrackingLoggingLevel.Warning)
         {
             lock (_lockObject)
             {
@@ -159,7 +164,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="name"></param>        
         public void TrackPageView(string name)
         {
-            if (AppLoggingLevel <= TrackPageLogLevel)
+            if (AppLoggingLevel >= TrackPageViewLogLevel)
             {
                 HockeyClient.Current.TrackPageView(name);
             }
