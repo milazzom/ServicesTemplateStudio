@@ -9,8 +9,8 @@
     "language": "C#",
     "type": "item",
     "wts.type": "feature",
-    "wts.framework": "MVVMBasic|CodeBehind|Prism",
-    "wts.platform": "Uwp",
+    "wts.framework": "MVVMBasic|CodeBehind|Prism|PrismXamarinSharedProject|PrismXamarinNETStd|MVVMBasic",
+    "wts.platform": "Uwp|Xamarin",
     "wts.version": "1.0.0",
     "wts.displayOrder": "1",
     "wts.defaultInstance": "SampleDataService",
@@ -40,3 +40,4 @@
     }
   }
 }
+
