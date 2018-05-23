@@ -30,7 +30,7 @@ namespace Param_ItemNamespace.Services
                             if (item.Value.Measurements.Count > 0 && item.Value.Start.Add(item.Value.MetricTimeSpan) <= DateTime.Now && AppLoggingLevel >= item.Value.MetricLoggingLevel)
                             {
                                 Debug.WriteLine($"TrackingMetric sent - metric:{item.Key}, Number of Measurements:{ item.Value.Measurements.Count}");
-                                Analytics.TrackEvent("TrackAggegrateMetric", Aggregrate(item.Key));
+                                Analytics.TrackEvent($"Metric:{item.Key}", Aggregrate(item.Key));
                             }
                         }
                     }
@@ -51,7 +51,7 @@ namespace Param_ItemNamespace.Services
         {
             if (AppLoggingLevel >= TrackDependencyLogLevel)
             {
-                Analytics.TrackEvent("TrackDependency", new Dictionary<string, string>
+                Analytics.TrackEvent($"Dependency:{dependencyName} - Command:{commandName}", new Dictionary<string, string>
                 {
                     {"DependencyName",  dependencyName},
                     {"CommandName", commandName },
@@ -105,7 +105,7 @@ namespace Param_ItemNamespace.Services
                         foreach (var property in properties)
                             eventProperties.Add(property.Key, property.Value);
                     }
-                    Analytics.TrackEvent("TrackException", eventProperties);
+                    Analytics.TrackEvent($"Exception:{exception.Message}", eventProperties);
                 }
             }
         }
@@ -115,7 +115,7 @@ namespace Param_ItemNamespace.Services
             var metric = new Dictionary<string, string>()
             {
                 {"Name", name },
-                {"Cound",  TrackingServiceMetricCollection[name].Measurements.Count.ToString()},
+                {"Count",  TrackingServiceMetricCollection[name].Measurements.Count.ToString()},
                 {"Max",  TrackingServiceMetricCollection[name].Measurements.Max().ToString()},
                 {"Min", TrackingServiceMetricCollection[name].Measurements.Min().ToString()},
                 {"Value",  TrackingServiceMetricCollection[name].Measurements.Average().ToString()},
@@ -153,7 +153,7 @@ namespace Param_ItemNamespace.Services
                         eventProperties.Add(property.Key, property.Value);
                 }
 
-                Analytics.TrackEvent("TrackAggregateMetric", eventProperties);
+                Analytics.TrackEvent($"Metric:{name}", eventProperties);
             }
         }
 
@@ -185,7 +185,7 @@ namespace Param_ItemNamespace.Services
         {
             if (AppLoggingLevel >= TrackPageViewLogLevel)
             {
-                Analytics.TrackEvent("PageView", new Dictionary<string, string>
+                Analytics.TrackEvent("Page View", new Dictionary<string, string>
                 {
                     {"PageName", name }
                 });

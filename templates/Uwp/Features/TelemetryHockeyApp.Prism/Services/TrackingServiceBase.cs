@@ -8,15 +8,6 @@ using System.Threading.Tasks;
 
 namespace Param_ItemNamespace.Services
 {
-    internal static class TelemetryConstants
-    {
-        public const string PageView = "STS:Track PageView";
-        public const string Exception = "STS:Track Exception";
-        public const string Dependency = "STS:Track Dependency";
-        public const string Metric = "STS:Track Metric";
-        public const string AggregatedMetric = "STS:Track Aggregated Metric";
-    }
-
     public class TrackingServiceBase
     {
         public TrackingLoggingLevel AppLoggingLevel { get; set; } = TrackingLoggingLevel.Information;
