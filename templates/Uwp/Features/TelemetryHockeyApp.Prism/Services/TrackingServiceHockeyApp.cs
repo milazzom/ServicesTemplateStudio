@@ -48,7 +48,7 @@ namespace Param_ItemNamespace.Services
         /// <param name="eventName">Name of the event.</param>
         public void TrackEvent(string eventName)
         {
-            if (AppLoggingLevel >= TrackEventLogLevel)   
+            if (AppLoggingLevel >= TrackEventLogLevel)
                 HockeyClient.Current.TrackEvent(eventName);
         }
 
