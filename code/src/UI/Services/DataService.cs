@@ -65,7 +65,7 @@ namespace Microsoft.Templates.UI.Services
                 var templates = GenContext.ToolBox.Repo.Get(t =>
                                     t.GetTemplateType() == templateType &&
                                     t.GetFrameworkList().Contains(frameworkName) &&
-                                    t.GetPlatform() == platform &&
+                                    t.GetPlatform().Contains(platform) &&
                                     !t.GetIsHidden())
                                     .Select(t => new TemplateInfoViewModel(t, frameworkName, platform));
 
