@@ -1,0 +1,38 @@
+{
+    "author": "Microsoft",
+    "classifications": [
+      "Universal"
+    ],
+    "name": "Page.WebView",
+    "tags": {
+      "language": "C#",
+      "type": "page",
+      "wts.type": "composition",
+      "wts.platform" : "Xamarin",
+      "wts.dependencies": "wts.Feat.Localization.Xamarin",
+      "wts.version": "1.0.0",
+      "wts.compositionFilter": "$framework == MVVMBasic|CodeBehind & identity == wts.Page.WebView.MVVMBasic|wts.Page.WebView.CodeBehind"
+   },
+    "sourceName": "wts.ItemName",
+    "preferNameDirectory": true,
+    "PrimaryOutputs": [
+      {
+        "path": ".\\Param_ProjectName\\Views\\wts.ItemNamePage.xaml"
+      }
+    ],
+    "symbols": {
+      "wts.rootNamespace": {
+        "type": "parameter",
+        "replaces": "Param_RootNamespace"
+      },
+      "wts.itemNamespace": {
+        "type": "parameter",
+        "replaces": "Param_ItemNamespace"
+      },
+      "wts.homePageName": {
+        "type":"parameter",
+        "replaces":"Param_HomeName"
+      }
+    }
+  }
+  
