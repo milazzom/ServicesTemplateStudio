@@ -9,7 +9,7 @@
       "language": "C#",
       "type": "item",
       "wts.type": "feature",
-      "wts.framework": "MVVMBasic|CodeBehind",
+      "wts.framework": "MVVMBasic|CodeBehind|Prism|PrismXamarinSharedProject|PrismXamarinNETStd",
       "wts.platform": "Xamarin",
       "wts.version": "1.0.0",
       "wts.displayOrder": "1",
@@ -21,22 +21,22 @@
     "preferNameDirectory": true,
     "PrimaryOutputs": [
       {
-        "path": "..\\Param_ProjectName\\Services\\ILocalizer.cs"
+        "path": ".\\Param_ProjectName\\Services\\ILocalizer.cs"
       },
       {
-        "path": "..\\Param_ProjectName\\Services\\ILocalizationInfo.cs"
+        "path": ".\\Param_ProjectName\\Services\\ILocalizationInfo.cs"
       },
       {
-        "path": "..\\Param_ProjectName\\Services\\Localizer.cs"
+        "path": ".\\Param_ProjectName\\Services\\Localizer.cs"
       },
       {
-        "path": "..\\Param_ProjectName\\Strings\\AppResources.resx"
+        "path": ".\\Param_ProjectName\\Strings\\AppResources.resx"
       },
       {
-        "path": "..\\Param_ProjectName.Android\\Services\\LocalizationInfo.cs"
+        "path": ".\\Param_ProjectName.Android\\Services\\LocalizationInfo.cs"
       },
       {
-        "path": "..\\Param_ProjectName.iOS\\Services\\LocalizationInfo.cs"
+        "path": ".\\Param_ProjectName.iOS\\Services\\LocalizationInfo.cs"
       }
     ],
     "symbols": {
