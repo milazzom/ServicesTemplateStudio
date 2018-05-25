@@ -15,7 +15,7 @@ namespace Param_ProjectName.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class wts.ItemNamePage : ContentPage
 	{
-        private wts.ItemNameViewModel ViewModel;
+        private wts.ItemNamePageViewModel ViewModel;
 		public wts.ItemNamePage ()
 		{
 			InitializeComponent ();
