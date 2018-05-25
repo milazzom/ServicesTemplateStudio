@@ -22,10 +22,10 @@
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
-      "path": "..\\Param_ProjectName\\Services\\ITrackingService.cs"
+      "path": ".\\Param_ProjectName\\Services\\ITrackingService.cs"
     },
     {
-      "path": "..\\Param_ProjectName\\Services\\TrackingServiceBase.cs"
+      "path": ".\\Param_ProjectName\\Services\\TrackingServiceBase.cs"
     }
   ],
   "symbols": {
