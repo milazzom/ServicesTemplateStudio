@@ -247,8 +247,10 @@ EndProject
         public void AddProjectToSolution(string platform, string projectName, string projectGuid, string projectRelativeToSolutionPath)
         {
             var slnContent = File.ReadAllText(_path);
-            var slnFormatProjectName = $"\"{projectName}\",";
-            if (slnContent.IndexOf(slnFormatProjectName, StringComparison.Ordinal) == -1)
+
+            // Don't match just on projectName as if it's a string also used in the solution such as "App" which is also in "AppStore"
+            // it will cause the project to not be added. Solutions have project name wrapped in " characters and followed by a ,
+            if (slnContent.IndexOf($"\"{projectName}\",", StringComparison.Ordinal) == -1)
             {
                 var globalIndex = slnContent.IndexOf("Global", StringComparison.Ordinal);
                 var projectTemplate = GetProjectTemplate(Path.GetExtension(projectRelativeToSolutionPath));
