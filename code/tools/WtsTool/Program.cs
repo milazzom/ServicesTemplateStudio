@@ -19,7 +19,7 @@ namespace WtsTool
         {
             var chrono = Stopwatch.StartNew();
 
-            Console.Out.WriteHeader("Wts Tool v1.0.0.0");
+            Console.Out.WriteHeader("Wts Tool (STS Fork) v1.0.0.0");
 
             Parser.Default.ParseArguments<PackageOptions, RemoteSourceListOptions, RemoteSourceDownloadOptions, RemoteSourcePublishOptions>(args)
             .WithParsed<CommonOptions>(opts => TextWriterExtensions.Verbose = opts.Verbose)
