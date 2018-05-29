@@ -3,22 +3,26 @@
     "classifications": [
       "Universal"
     ],
-    "name": "Page.WebView",
+    "name": "Web View",
     "identity": "wts.Page.WebView.Xamarin",
+    "description": "The web view page renders web content using the platform-specific web rendering engine.",
     "tags": {
       "language": "C#",
-      "type": "page",
-      "wts.type": "composition",
+      "type": "item",
+      "wts.type": "page",
       "wts.platform" : "Xamarin",
       "wts.dependencies": "wts.Feat.Localization.Xamarin",
       "wts.version": "1.0.0",
-      "wts.framework": "MVVMBasic|CodeBehind|Prism|PrismXamarinSharedProject|PrismXamarinNETStd"
+      "wts.framework": "MVVMBasic|CodeBehind|Prism|PrismXamarinSharedProject|PrismXamarinNETStd",
+      "wts.displayOrder": "1",
+      "wts.genGroup": "0",
+      "wts.rightClickEnabled":"true" 
    },
-    "sourceName": "wts.ItemName",
+    "sourceName": "WebView",
     "preferNameDirectory": true,
     "PrimaryOutputs": [
       {
-        "path": ".\\Param_ProjectName\\Views\\wts.ItemNamePage.xaml"
+        "path": ".\\Param_ProjectName\\Views\\WebViewPage.xaml"
       }
     ],
     "symbols": {
