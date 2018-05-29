@@ -13,16 +13,22 @@
       "wts.platform" : "Xamarin",
       "wts.dependencies": "wts.Feat.Localization.Xamarin",
       "wts.version": "1.0.0",
-      "wts.framework": "MVVMBasic|CodeBehind|Prism|PrismXamarinSharedProject|PrismXamarinNETStd",
+      "wts.framework": "MVVMBasic",
       "wts.displayOrder": "1",
       "wts.genGroup": "0",
       "wts.rightClickEnabled":"true" 
    },
-    "sourceName": "WebView",
+    "sourceName": "WebViewPageTemplate",
     "preferNameDirectory": true,
     "PrimaryOutputs": [
       {
-        "path": ".\\Param_ProjectName\\Views\\WebViewPage.xaml"
+        "path": ".\\Param_ProjectName\\Views\\WebViewPageTemplatePage.xaml"
+      },
+      {
+        "path": ".\\Param_ProjectName\\Views\\WebViewPageTemplatePage.xaml.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName\\ViewModels\\WebViewPageTemplateViewModel.cs"
       }
     ],
     "symbols": {

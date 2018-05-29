@@ -4,25 +4,26 @@
       "Universal"
     ],
     "name": "Web View",
-    "groupIdentity": "wts.Page.WebView",
-    "identity": "wts.Page.WebView.CodeBehind.Xamarin",
-    "description": "The web view page renders web content using the Microsoft Edge rendering engine.",
+    "identity": "wts.Page.WebView.Xamarin.CodeBehind",
+    "description": "The web view page renders web content using the platform-specific web rendering engine.",
     "tags": {
       "language": "C#",
       "type": "item",
-      "wts.type": "composition",
-      "wts.framework": "CodeBehind",
-      "wts.platform": "Xamarin",
-      "wts.version": "2.0.0",
-      "wts.displayOrder": "3",
+      "wts.type": "page",
+      "wts.platform" : "Xamarin",
       "wts.dependencies": "wts.Feat.Localization.Xamarin",
-      "wts.rightClickEnabled":"true",
-      "wts.compositionFilter": "$framework == CodeBehind & identity == wts.Page.WebView.Xamarin",
-      "wts.genGroup": "0"
-    },
+      "wts.version": "1.0.0",
+      "wts.framework": "CodeBehind",
+      "wts.displayOrder": "1",
+      "wts.genGroup": "0",
+      "wts.rightClickEnabled":"true" 
+   },
     "sourceName": "wts.ItemName",
     "preferNameDirectory": true,
     "PrimaryOutputs": [
+      {
+        "path": ".\\Param_ProjectName\\Views\\wts.ItemNamePage.xaml"
+      },
       {
         "path": ".\\Param_ProjectName\\Views\\wts.ItemNamePage.xaml.cs"
       }
@@ -42,13 +43,9 @@
         "type": "parameter",
         "replaces": "Param_ItemNamespace"
       },
-      "baseclass": {
-        "type": "parameter",
-        "replaces": "System.ComponentModel.INotifyPropertyChanged"
-      },
-      "setter": {
-        "type": "parameter",
-        "replaces": "Param_Setter"
+      "wts.homePageName": {
+        "type":"parameter",
+        "replaces":"Param_HomeName"
       }
     }
   }
