@@ -10,7 +10,7 @@
   "tags": {
     "language": "C#",
     "type": "item",
-    "wts.type": "page",
+    "wts.type": "composition",
     "wts.framework": "MVVMBasic",
     "wts.platform": "Xamarin",
     "wts.version": "2.0.0",

@@ -1,0 +1,21 @@
+<!--{**-->
+<!--This xml blocks include string resources for the BlankViewPage to your project.-->
+<!--**}-->
+
+<root>
+  <!--^^-->
+  <!--{[{-->
+  <data name="WebViewGoButton" xml:space="preserve">
+    <value>Go</value>
+    <comment>Button text for the Go button in WebViewPage.</comment>
+  </data>
+  <data name="WebViewBackButton" xml:space="preserve">
+    <value>Back</value>
+    <comment>Button text for the Back button in WebViewPage.</comment>
+  </data>
+  <data name="WebViewForwardButton" xml:space="preserve">
+    <value>Forward</value>
+    <comment>Button text for the Forward button in WebViewPage.</comment>
+  </data>
+  <!--}]}-->
+</root>
