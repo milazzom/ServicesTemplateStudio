@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Param_ProjectName.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,6 +16,9 @@ namespace Param_ProjectName.Views
         public wts.ItemNamePage ()
 		{
 			InitializeComponent ();
+            GoButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameGoButton");
+            ForwardButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameForwardButton");
+            BackButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameBackButton");
             UrlEntry.Text = "https://developer.microsoft.com";
             _webView.Source = new UrlWebViewSource()
             {
