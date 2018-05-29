@@ -17,6 +17,7 @@
     "wts.displayOrder": "3",
     "wts.dependencies": "wts.Feat.Localization.Xamarin",
     "wts.rightClickEnabled":"true",
+    "wts.compositionFilter": "$framework == MVVMBasic & identity == wts.Page.WebView.Xamarin",
     "wts.genGroup": "0"
   },
   "sourceName": "wts.ItemName",
