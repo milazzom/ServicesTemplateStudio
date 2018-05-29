@@ -12,27 +12,25 @@ using Param_ProjectName.ViewModels;
 
 namespace Param_ProjectName.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class wts.ItemNamePage : ContentPage
-	{
-        private wts.ItemNamePageViewModel ViewModel;
-		public wts.ItemNamePage ()
-		{
-			InitializeComponent ();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class WebViewPageTemplatePage : ContentPage
+    {
+        private WebViewPageTemplateViewModel ViewModel;
+        public WebViewPageTemplatePage ()
+        {
+            InitializeComponent ();
             Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetUseSafeArea(On<Xamarin.Forms.PlatformConfiguration.iOS>(), true);
-            ViewModel = new wts.ItemNamePageViewModel(_webView);
+            ViewModel = BindingContext as WebViewPageTemplateViewModel;
+            ViewModel.WebView = _webView;
             ViewModel.Url = "https://developer.microsoft.com";
             ViewModel.GoCommand.Execute(null);
-            BindingContext = ViewModel;
             BackButton.SetBinding(Button.CommandProperty, nameof(ViewModel.BackCommand));
             ForwardButton.SetBinding(Button.CommandProperty, nameof(ViewModel.ForwardCommand));
             UrlEntry.SetBinding(Entry.TextProperty, nameof(ViewModel.Url));
             GoButton.SetBinding(Button.CommandProperty, nameof(ViewModel.GoCommand));
-            GoButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameGoButton");
-            BackButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameBackButton");
-            ForwardButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameForwardButton");
-		}
-
-
-	}
+            GoButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("WebViewPageTemplateGoButton");
+            BackButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("WebViewPageTemplateBackButton");
+            ForwardButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("WebViewPageTemplateForwardButton");
+        }
+    }
 }

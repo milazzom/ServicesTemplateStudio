@@ -6,20 +6,38 @@ using Xamarin.Forms;
 
 namespace Param_ProjectName.ViewModels
 {
-    class wts.ItemNameViewModel : BaseViewModel
+    class WebViewPageTemplateViewModel : BaseViewModel
     {
         public Command GoCommand { get; set; }
         public Command BackCommand { get; set; }
         public Command ForwardCommand { get; set; }
+        public Xamarin.Forms.WebView {
+            get
+            {
+                return _webView;
+            }
+            set {
+                InternalViewUpdated(value);
+            }
+        }
         private Xamarin.Forms.WebView _webView;
 
-        public wts.ItemNameViewModel(Xamarin.Forms.WebView webView)
+        public WebViewPageTemplateViewModel()
         {
-            _webView = webView;
-            _webView.Navigated += OnNavigated;
             GoCommand = new Xamarin.Forms.Command(GoButton_Clicked, () => { return !string.IsNullOrEmpty(Url); });
             BackCommand = new Command(BackButton_Clicked, () => CanGoBack);
             ForwardCommand = new Command(ForwardButton_Clicked, () => CanGoForward);
+        }
+
+        private void InternalViewUpdated(Xamarin.Forms.WebView webView)
+        {
+            if (_webView != null)
+            {
+                _webView.Navigated -= OnNavigated;
+                _webView = null;
+            }
+            _webView = webView;
+            _webView.OnNavigated += OnNavigated;
         }
 
         private void OnNavigated(object sender, WebNavigatedEventArgs e)
@@ -33,7 +51,9 @@ namespace Param_ProjectName.ViewModels
         {
             get
             {
-                return _webView.CanGoBack;
+                return _webView != null
+                ? _webView.CanGoBack
+                : false;
             }
         }
 
@@ -41,7 +61,9 @@ namespace Param_ProjectName.ViewModels
         {
             get
             {
-                return _webView.CanGoForward;
+                return _webView != null
+                ? _webView.CanGoForward
+                : false;
             }
         }
 
@@ -57,14 +79,14 @@ namespace Param_ProjectName.ViewModels
 
         private void BackButton_Clicked()
         {
-            _webView.GoBack();
+            _webView?.GoBack();
             BackCommand?.ChangeCanExecute();
             ForwardCommand?.ChangeCanExecute();
         }
 
         private void ForwardButton_Clicked()
         {
-            _webView.GoForward();
+            _webView?.GoForward();
             BackCommand?.ChangeCanExecute();
             ForwardCommand?.ChangeCanExecute();
 
@@ -72,7 +94,7 @@ namespace Param_ProjectName.ViewModels
 
         private void GoButton_Clicked()
         {
-            _webView.Source = Url;
+            _webView?.Source = Url;
             BackCommand?.ChangeCanExecute();
             ForwardCommand?.ChangeCanExecute();
         }
