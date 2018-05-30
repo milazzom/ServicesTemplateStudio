@@ -9,7 +9,7 @@
     "language": "C#",
     "type": "item",
     "wts.type": "feature",
-    "wts.framework": "MVVMBasic|CodeBehind|Prism|PrismXamarinSharedProject|PrismXamarinNETStd|MVVMBasic",
+    "wts.framework": "MVVMBasic|CodeBehind|Prism|PrismXamarinSharedProject|PrismXamarinNETStd",
     "wts.platform": "Uwp|Xamarin",
     "wts.version": "1.0.0",
     "wts.displayOrder": "1",
@@ -23,13 +23,19 @@
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
-      "path": ".\\Services\\SampleDataService.cs"
+      "path": ".\\Param_ProjectName\\Services\\SampleDataService.cs"
     },
     {
-      "path": ".\\Models\\SampleOrder.cs"
+      "path": ".\\Param_ProjectName\\Models\\SampleOrder.cs"
     }
   ],
   "symbols": {
+    "wts.projectName":
+     	{
+     	"type": "parameter",
+     	"replaces": "Param_ProjectName",
+     	"fileRename": "Param_ProjectName"
+     	},
     "wts.rootNamespace": {
       "type": "parameter",
       "replaces": "Param_RootNamespace"

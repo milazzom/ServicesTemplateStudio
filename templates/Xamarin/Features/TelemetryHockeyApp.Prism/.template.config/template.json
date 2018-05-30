@@ -1,0 +1,46 @@
+﻿{
+  "author": "Microsoft Community",
+  "classifications": [ "Universal" ],
+  "name": "Telemetry - Hockey App",
+  "groupIdentity": "wts.Feat.TelemetryHockeyApp.Xamarin",
+  "identity": "wts.Feat.TelemetryHockeyApp.Xamarin.Prism",
+  "description": "Adds Telemetry via HockeyApp API's. Adds Crash reporting and Page Views by default.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "feature",
+    "wts.framework": "PrismXamarinSharedProject|PrismXamarinNETStd",
+    "wts.platform": "Xamarin",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "1",
+    "wts.group": "Telemetry",
+    "wts.multipleInstance": "false",
+    "wts.defaultInstance": "TelemetryHockeyApp",
+    "wts.rightClickEnabled": "true"
+  },
+  "sourceName": "TelemetryHockeyAppFeature",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+    {
+      "path": ".\\Param_ProjectName\\Services\\ITrackingService.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName\\Services\\TrackingServiceBase.cs"
+    }
+  ],
+  "symbols": {
+    "wts.projectName":{
+     	"type": "parameter",
+     	"replaces": "Param_ProjectName",
+     	"fileRename": "Param_ProjectName"
+    }, 
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    }
+  }
+}
