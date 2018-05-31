@@ -26,6 +26,15 @@
     },
     {
       "path": ".\\Param_ProjectName\\Services\\TrackingServiceBase.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName.UWP\\Services\\TrackingService_UWP.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName.Android\\Services\\TrackingService_Droid.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName.iOS\\Services\\TrackingService_iOS.cs"
     }
   ],
   "symbols": {
