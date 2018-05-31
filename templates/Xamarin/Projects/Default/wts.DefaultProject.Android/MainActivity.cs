@@ -20,7 +20,7 @@ namespace wts.DefaultProject.Droid
             base.OnCreate (bundle);
 
             global::Xamarin.Forms.Forms.Init (this, bundle);
-            LoadApplication (new wts.DefaultProject.App ());
+            LoadApplication (new global::wts.DefaultProject.App ());
         }
     }
 }

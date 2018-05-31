@@ -11,7 +11,7 @@ namespace Param_RootNamespace
             containerRegistry.RegisterForNavigation<NavigationPage>();
             //^^
             //{[{
-            containerRegistry.RegisterForNavigation<wts.ItemNamePage>();
+            containerRegistry.RegisterForNavigation<wts.ItemNamePage, wts.ItemNameViewModel >();
             //}]}
         }
     }
