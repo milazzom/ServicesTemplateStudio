@@ -23,7 +23,7 @@ namespace wts.DefaultProject.UWP
         {
             InitializeComponent();
 
-            LoadApplication(new wts.DefaultProject.App(new UwpInitializer()));
+            LoadApplication(new global::wts.DefaultProject.App(new UwpInitializer()));
         }
     }
 

@@ -21,7 +21,7 @@ namespace wts.DefaultProject.UWP
         {
             InitializeComponent();
 
-            LoadApplication(new wts.DefaultProject.App());
+            LoadApplication(new global::wts.DefaultProject.App());
         }
     }
 }
