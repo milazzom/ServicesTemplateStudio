@@ -126,6 +126,7 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
     <PackageReference Include="Prism.Unity.Forms" Version="7.0.0.396" />
+    <!-- Nuget package references -->
   </ItemGroup>
   <Import Project="..\wts.DefaultProject\wts.DefaultProject.projitems" Label="Shared" Condition="Exists('..\wts.DefaultProject\wts.DefaultProject.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
