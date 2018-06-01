@@ -12,13 +12,13 @@ using Param_ProjectName.ViewModels;
 
 namespace Param_ProjectName.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class wts.ItemNamePage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class wts.ItemNamePage : ContentPage
+    {
         private wts.ItemNamePageViewModel ViewModel;
-		public wts.ItemNamePage ()
-		{
-			InitializeComponent ();
+        public wts.ItemNamePage ()
+        {
+            InitializeComponent ();
             Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetUseSafeArea(On<Xamarin.Forms.PlatformConfiguration.iOS>(), true);
             ViewModel = new wts.ItemNamePageViewModel(_webView);
             ViewModel.Url = "https://developer.microsoft.com";
