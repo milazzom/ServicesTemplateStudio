@@ -52,7 +52,7 @@ namespace Microsoft.Templates.Core
 
             foreach (var mp in Instance?.Settings.SettingsLoader.MountPoints)
             {
-                if (mp != null && Directory.Exists(mp.Place) && IsHigherVersion(result, mp.Place) && (mp.Place.IndexOf(sourceId, StringComparison.OrdinalIgnoreCase) != -1))
+                if (mp != null && Directory.Exists(mp.Place) && mp.Place.Contains(workingFolder) && IsHigherVersion(result, mp.Place) && (mp.Place.IndexOf(sourceId, StringComparison.OrdinalIgnoreCase) != -1))
                 {
                     result = mp.Place;
                 }
