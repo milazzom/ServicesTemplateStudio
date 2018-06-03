@@ -45,6 +45,11 @@ namespace Microsoft.Templates.UI.Generation
             {
                 // TODO: Adapt to read project configuration for xamarin forms (X-ref: https://github.com/Microsoft/WindowsTemplateStudio/issues/1350)
                 var path = Path.Combine(GenContext.ToolBox.Shell.GetActiveProjectPath(), "Package.appxmanifest");
+                if (!File.Exists(path))
+                {
+                    path = Path.Combine(Path.Combine(GenContext.ToolBox.Shell.GetActiveProjectPath(), $"{GenContext.ToolBox.Shell.GetActiveProjectName()}.UWP"), "Package.appxmanifest");
+                }
+
                 if (File.Exists(path))
                 {
                     var manifest = XElement.Load(path);

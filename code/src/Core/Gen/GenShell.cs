@@ -91,6 +91,14 @@ namespace Microsoft.Templates.Core.Gen
                     var fileContent = File.ReadAllText(appManifestFilePath);
                     result = fileContent.Contains("genTemplate:Metadata");
                 }
+
+                // check for Xamarin projects which will have the UWP project in a subdirectory called ProjectName.UWP
+                appManifestFilePath = Path.Combine(activeProjectPath, $"{GetActiveProjectName()}.UWP", "Package.appxmanifest");
+                if (File.Exists(appManifestFilePath))
+                {
+                    var fileContent = File.ReadAllText(appManifestFilePath);
+                    result = fileContent.Contains("genTemplate:Metadata");
+                }
             }
 
             return result;
