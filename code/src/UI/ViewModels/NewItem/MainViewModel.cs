@@ -183,6 +183,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewItem
                     ProjectConfigInfo.SaveProjectConfiguration(configInfo.ProjectType, configInfo.Framework, configInfo.Platform);
                     ConfigFramework = configInfo.Framework;
                     ConfigProjectType = configInfo.ProjectType;
+                    ConfigPlatform = configInfo.Platform;
                 }
                 else
                 {
