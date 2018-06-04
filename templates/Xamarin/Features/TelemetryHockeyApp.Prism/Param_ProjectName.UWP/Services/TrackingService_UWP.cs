@@ -112,7 +112,7 @@ namespace Param_ItemNamespace.UWP.Services
 
             metric.Properties.Add("MetricAvg", TrackingServiceMetricCollection[name].Measurements.Average().ToString());
             //copy metric properties
-            if (TrackingServiceMetricCollection[name] != null && TrackingServiceMetricCollection[name].MetricProperties != null)
+            if (TrackingServiceMetricCollection[name]?.MetricProperties != null)
             {
                 foreach (var item in TrackingServiceMetricCollection[name].MetricProperties)
                 {
@@ -121,7 +121,7 @@ namespace Param_ItemNamespace.UWP.Services
             }
 
             metric.Timestamp = DateTime.Now;
-            
+
             var mean = TrackingServiceMetricCollection[name].Measurements.Sum() / metric.Count;
             metric.StandardDeviation = Math.Sqrt((double)(TrackingServiceMetricCollection[name].Measurements.Sum(v => { var diff = v - mean; return diff * diff; }) / metric.Count));
             TrackingServiceMetricCollection[name].Start = DateTime.Now; // sets new time and clears out the collection
