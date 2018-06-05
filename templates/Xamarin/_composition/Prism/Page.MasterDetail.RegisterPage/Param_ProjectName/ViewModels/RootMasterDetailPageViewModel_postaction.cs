@@ -6,7 +6,7 @@
         {
             //^^
             //{[{
-            new MasterDetailPageMenuItem { Title = "wts.ItemName", TargetPage = "wts.ItemNamePage", IconSource = "blank.png"},
+            new MasterDetailPageMenuItem { Title = "wts.ItemName", TargetPage = PageTokens.wts.ItemName, IconSource = "blank.png"},
             //}]}
         };
     }
