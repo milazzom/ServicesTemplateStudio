@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using Param_RootNamespace.Models;
 using Param_RootNamespace.Views;
+using Param_RootNamespace;
 using Prism.Navigation;
 using Prism.Commands;
 
