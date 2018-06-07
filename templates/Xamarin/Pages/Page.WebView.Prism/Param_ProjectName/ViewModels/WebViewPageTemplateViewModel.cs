@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Prism.Navigation;
 
 namespace Param_ProjectName.ViewModels
 {
-    class WebViewPageTemplateViewModel : BaseViewModel
+    class WebViewPageTemplateViewModel : ViewModelBase
     {
         public Command GoCommand { get; set; }
         public Command BackCommand { get; set; }
@@ -22,7 +23,7 @@ namespace Param_ProjectName.ViewModels
         }
         private Xamarin.Forms.WebView _webView;
 
-        public WebViewPageTemplateViewModel()
+        public WebViewPageTemplateViewModel(INavigationService navigationService) : base (navigationService)
         {
             GoCommand = new Xamarin.Forms.Command(GoButton_Clicked, () => { return !string.IsNullOrEmpty(Url); });
             BackCommand = new Command(BackButton_Clicked, () => CanGoBack);
@@ -79,22 +80,14 @@ namespace Param_ProjectName.ViewModels
 
         private void BackButton_Clicked()
         {
-            if(_webView != null)
-            {
-                _webView.GoBack();
-            }
-
+            _webView?.GoBack();
             BackCommand?.ChangeCanExecute();
             ForwardCommand?.ChangeCanExecute();
         }
 
         private void ForwardButton_Clicked()
         {
-            if(_webView != null)
-            {
-                _webView.GoForward();
-            }
-
+            _webView?.GoForward();
             BackCommand?.ChangeCanExecute();
             ForwardCommand?.ChangeCanExecute();
 
