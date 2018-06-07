@@ -4,7 +4,7 @@
       "Universal"
     ],
     "name": "Web View",
-    "identity": "wts.Page.WebView.Xamarin",
+    "identity": "wts.Page.WebView.Xamarin.MVVMBasic",
     "description": "The web view page renders web content using the platform-specific web rendering engine.",
     "tags": {
       "language": "C#",
