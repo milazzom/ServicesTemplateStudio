@@ -79,25 +79,16 @@ namespace Param_ProjectName.ViewModels
 
         private void BackButton_Clicked()
         {
-            if(_webView != null)
-            {
-                _webView.GoBack();
-            }
-
+            _webView?.GoBack();
             BackCommand?.ChangeCanExecute();
             ForwardCommand?.ChangeCanExecute();
         }
 
         private void ForwardButton_Clicked()
         {
-            if(_webView != null)
-            {
-                _webView.GoForward();
-            }
-
+            _webView?.GoForward();
             BackCommand?.ChangeCanExecute();
             ForwardCommand?.ChangeCanExecute();
-
         }
 
         private void GoButton_Clicked()
