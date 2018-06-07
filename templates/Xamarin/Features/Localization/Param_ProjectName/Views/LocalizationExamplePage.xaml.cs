@@ -12,7 +12,8 @@ namespace Param_ItemNamespace.Views
         {
             InitializeComponent ();
             BindingContext = new LocalizationExampleViewModel();
-            GreetingLabel.SetBinding(Label.TextProperty, )
+            GreetingLabel.SetBinding(Label.TextProperty, nameof(LocalizationExampleViewModel.Greeting));
+
         }
     }
 }
