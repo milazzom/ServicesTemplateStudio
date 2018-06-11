@@ -1,20 +1,20 @@
 # Using and extending your generated project
 
-Projects created with Windows Template Studio are intended as a starting point, and will require modification and extension before they're finished. This page explains common ways to extend what is generated for you.
+Projects created with Services Template Studio are intended as a starting point, and will require modification and extension before they're finished. This page explains common ways to extend what is generated for you.
 
 ## Understanding generated code from Windows Template Studio 
 The final generated code is the result of a project configuration (project type and design pattern) and a multiple template choice (pages and features). There are a few concepts to understand before start working on the generated code.
 
 - [Application activation](activation.md)
 - [Navigation between pages](navigation.md)
-- [Notifications in Windows Template Studio](notifications.md)
+- [Notifications in Services Template Studio](notifications.md)
 
-## Understanding concepts for Windows Template Studio
+## Understanding concepts for Services Template Studio
 
-Windows Template Studio approaches UWP app creation using the following four attribute sets to decide how to best generate your app.  Below we will describe everything you can do.
+Services Template Studio approaches app creation using the following four attribute sets to decide how to best generate your app.  Below we will describe everything you can do.
 
 ### Project Types
-**Project types** define the basic look and feel of your UWP app.
+**Project types** define the basic look and feel of your app (where applicable).
 
 | Project type | Description |
 |-------------:|:------------|
@@ -24,7 +24,7 @@ Windows Template Studio approaches UWP app creation using the following four att
 
 ### Design patterns
 
-**App Design patterns** define the coding pattern that will be used across the project, tying your UI and code together. Windows Template Studio currently supports the three most common patterns:
+**App Design patterns** define the coding pattern that will be used across the project, tying your UI and code together. Services Template Studio currently supports the three most common patterns:
 
 | Design pattern| Description |
 |--------------:|:------------|
