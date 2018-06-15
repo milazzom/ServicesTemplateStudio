@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Prism.Navigation;
+using Param_ProjectName.Services;
 
 namespace Param_ProjectName.ViewModels
 {
@@ -21,13 +22,52 @@ namespace Param_ProjectName.ViewModels
                 InternalViewUpdated(value);
             }
         }
+        private string _goButtonText;
+        public string GoButtonText
+        {
+            get
+            {
+                return _goButtonText;
+            }
+            set
+            {
+                SetProperty(ref _goButtonText, value);
+            }
+        }
+        private string _forwardButtonText;
+        public string ForwardButtonText
+        {
+            get
+            {
+                return _forwardButtonText;
+            }
+            set
+            {
+                SetProperty(ref _forwardButtonText, value);
+            }
+        }
+        private string _backButtonText;
+        public string BackButtonText
+        {
+            get
+            {
+                return _backButtonText;
+            }
+            set
+            {
+                SetProperty(ref _backButtonText, value);
+            }
+        }
         private Xamarin.Forms.WebView _webView;
 
-        public WebViewPageTemplateViewModel(INavigationService navigationService) : base (navigationService)
+        public WebViewPageTemplateViewModel(INavigationService navigationService, ILocalizer localizer) : base (navigationService)
         {
             GoCommand = new Xamarin.Forms.Command(GoButton_Clicked, () => { return !string.IsNullOrEmpty(Url); });
             BackCommand = new Command(BackButton_Clicked, () => CanGoBack);
             ForwardCommand = new Command(ForwardButton_Clicked, () => CanGoForward);
+            GoButtonText = localizer.GetStringForKey("WebViewPageTemplateGoButton");
+            ForwardButtonText = localizer.GetStringForKey("WebViewPageTemplateForwardButton");
+            BackButtonText = localizer.GetStringForKey("WebViewPageTemplateBackButton");
         }
 
         private void InternalViewUpdated(Xamarin.Forms.WebView webView)
