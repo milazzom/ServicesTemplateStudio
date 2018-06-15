@@ -3,7 +3,7 @@
   "classifications": [ "Universal" ],
   "name": "Telemetry - AppCenter",
   "groupIdentity": "wts.Feat.TelemetryAppCenter.Xamarin",
-  "identity": "wts.Feat.TelemetryAppCenter.Xmarin.Prism",
+  "identity": "wts.Feat.TelemetryAppCenter.Xamarin.Prism",
   "description": "Add Telemetry via AppCenter API's. Adds Page Views by default.",
   "tags": {
     "language": "C#",

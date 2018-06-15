@@ -1,0 +1,55 @@
+﻿{
+  "author": "Microsoft",
+  "classifications": [
+    "Universal"
+  ],
+  "name": "Telemetry",
+  "groupIdentity": "wts.Page.TelemetryPage.Xamarin",
+  "identity": "wts.Page.TelemetryPage.Xamarin.Prism",
+  "description": "This page  demonstrates using the Telemetry Feature",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "page",
+    "wts.framework": "PrismXamarinSharedProject|PrismXamarinNETStd",
+    "wts.platform" : "Xamarin",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "2",
+    "wts.genGroup": "0",
+    "wts.dependencies": "wts.Feat.TelemetryAppCenter.Xamarin.Prism",
+    "wts.rightClickEnabled":"true" 
+  },
+  "sourceName": "TelemetryView",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+    {
+      "path": ".\\Param_ProjectName\\Views\\TelemetryViewPage.xaml"
+    },
+    {
+      "path": ".\\Param_ProjectName\\Views\\TelemetryViewPage.xaml.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName\\ViewModels\\TelemetryViewPageViewModel.cs"
+    }
+  ],
+  "symbols": {
+    "wts.projectName":
+     	{
+     	"type": "parameter",
+     	"replaces": "Param_ProjectName",
+     	"fileRename": "Param_ProjectName"
+     	},  
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    },
+    "baseclass": {
+      "type": "parameter",
+      "replaces": "System.ComponentModel.INotifyPropertyChanged"
+    }
+  }
+}
