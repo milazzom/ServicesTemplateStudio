@@ -28,9 +28,9 @@ namespace Param_ProjectName.Views
             ForwardButton.SetBinding(Button.CommandProperty, nameof(ViewModel.ForwardCommand));
             UrlEntry.SetBinding(Entry.TextProperty, nameof(ViewModel.Url));
             GoButton.SetBinding(Button.CommandProperty, nameof(ViewModel.GoCommand));
-            GoButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("WebViewPageTemplateGoButton");
-            BackButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("WebViewPageTemplateBackButton");
-            ForwardButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("WebViewPageTemplateForwardButton");
+            GoButton.SetBinding(Button.TextProperty, nameof(ViewModel.GoButtonText));
+            BackButton.SetBinding(Button.TextProperty, nameof(ViewModel.BackButtonText));
+            ForwardButton.SetBinding(Button.TextProperty, nameof(ViewModel.ForwardButtonText));
         }
     }
 }
