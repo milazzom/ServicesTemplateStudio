@@ -1231,6 +1231,15 @@ namespace Microsoft.Templates.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Telemetry.
+        /// </summary>
+        public static string TemplateGroup_Telemetry {
+            get {
+                return ResourceManager.GetString("TemplateGroup_Telemetry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User Interaction.
         /// </summary>
         public static string TemplateGroup_UserInteraction {

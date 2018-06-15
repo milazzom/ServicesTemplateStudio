@@ -132,6 +132,7 @@
       <Project>{c84d6ab8-12fc-46e8-838e-30056ca6c432}</Project>
       <Name>wts.DefaultProject</Name>
     </ProjectReference>
-  </ItemGroup>  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  </ItemGroup>  
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
 <!--/+:msbuild-conditional:noEmit -->
