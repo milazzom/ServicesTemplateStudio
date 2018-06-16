@@ -33,13 +33,13 @@
         "path": ".\\Param_ProjectName\\Strings\\AppResources.resx"
       },
       {
-        "path": ".\\Param_ProjectName\\Strings\\AppResources.Designer.cs"
-      },
-      {
         "path": ".\\Param_ProjectName.Android\\Services\\LocalizationInfo.cs"
       },
       {
         "path": ".\\Param_ProjectName.iOS\\Services\\LocalizationInfo.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.UWP\\Services\\LocalizationInfo.cs"
       }
     ],
     "symbols": {
