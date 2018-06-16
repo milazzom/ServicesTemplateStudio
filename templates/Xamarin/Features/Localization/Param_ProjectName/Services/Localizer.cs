@@ -20,10 +20,10 @@ namespace Param_ProjectName.Services
             switch(Device.RuntimePlatform)
             {
                 case Device.Android:
-                    resourceName = "Param_ProjectName.Android.Strings.AppResources";
+                    resourceName = "Param_ProjectName.Droid.Strings.AppResources";
                     break;
                 case Device.iOS:
-                    resourceName = "Param_ProjectName.iOS.AppResources";
+                    resourceName = "Param_ProjectName.iOS.Strings.AppResources";
                     break;
                 case Device.UWP:
                     resourceName = "Param_ProjectName.UWP.Strings.AppResources";
