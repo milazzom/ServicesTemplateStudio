@@ -33,9 +33,6 @@
         "path": ".\\Param_ProjectName\\Strings\\AppResources.resx"
       },
       {
-        "path": ".\\Param_ProjectName\\Strings\\AppResources.Designer.cs"
-      },
-      {
         "path": ".\\Param_ProjectName.Android\\Services\\LocalizationInfo.cs"
       },
       {
