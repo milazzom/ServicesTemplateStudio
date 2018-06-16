@@ -25,12 +25,12 @@ namespace Param_ProjectName.Views
             ViewModel.GoCommand.Execute(null);
             BindingContext = ViewModel;
             BackButton.SetBinding(Button.CommandProperty, nameof(ViewModel.BackCommand));
+            BackButton.SetBinding(Button.TextProperty, nameof(ViewModel.BackButtonText));
             ForwardButton.SetBinding(Button.CommandProperty, nameof(ViewModel.ForwardCommand));
+            ForwardButton.SetBinding(Button.TextProperty, nameof(ViewModel.ForwardButtonText));
             UrlEntry.SetBinding(Entry.TextProperty, nameof(ViewModel.Url));
             GoButton.SetBinding(Button.CommandProperty, nameof(ViewModel.GoCommand));
-            GoButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameGoButton");
-            BackButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameBackButton");
-            ForwardButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameForwardButton");
+            GoButton.SetBinding(Button.TextProperty, nameof(ViewModel.GoButtonText));
 		}
 
 
