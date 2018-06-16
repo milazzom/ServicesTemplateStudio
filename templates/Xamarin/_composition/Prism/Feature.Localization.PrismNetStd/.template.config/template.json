@@ -15,6 +15,9 @@
     "sourceName": "wts.ItemName",
     "preferNameDirectory": true,
     "PrimaryOutputs": [
+        {
+            "path": ".\\Param_ProjectName\\Strings\\AppResources.Designer.cs"
+        }
     ],
     "symbols": {
       "wts.projectName":
