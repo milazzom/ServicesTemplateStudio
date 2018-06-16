@@ -13,7 +13,7 @@
       "wts.platform" : "Xamarin",
       "wts.dependencies": "wts.Feat.Localization.Xamarin.Prism",
       "wts.version": "1.0.0",
-      "wts.framework": "PrismXamarinNETStd",
+      "wts.framework": "PrismXamarinSharedProject|PrismXamarinNETStd",
       "wts.displayOrder": "1",
       "wts.genGroup": "0",
       "wts.rightClickEnabled":"true" 

@@ -95,6 +95,7 @@
     <PackageReference Include="Prism.Unity.Forms" Version="7.0.0.396" />
     <!-- Nuget package references -->
   </ItemGroup>
+  <!-- Add Custom Post-action Entries Here -->
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
