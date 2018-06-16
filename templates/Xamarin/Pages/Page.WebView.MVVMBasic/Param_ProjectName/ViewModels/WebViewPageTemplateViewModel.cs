@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Param_ProjectName.Services;
 
 namespace Param_ProjectName.ViewModels
 {
@@ -20,6 +21,42 @@ namespace Param_ProjectName.ViewModels
                 InternalViewUpdated(value);
             }
         }
+        private string goButtonText;
+        public string GoButtonText
+        {
+            get
+            {
+                return goButtonText;
+            }
+            set
+            {
+                SetProperty(ref goButtonText, value);
+            }
+        }
+        private string backButtonText;
+        public string BackButtonText
+        {
+            get
+            {
+                return backButtonText;
+            }
+            set
+            {
+                SetProperty(ref backButtonText, value);
+            }
+        }
+        private string forwardButtonText;
+        public string ForwardButtonText
+        {
+            get
+            {
+                return forwardButtonText;
+            }
+            set
+            {
+                SetProperty(ref forwardButtonText, value);
+            }
+        }
         private Xamarin.Forms.WebView _webView;
 
         public WebViewPageTemplateViewModel()
@@ -27,6 +64,9 @@ namespace Param_ProjectName.ViewModels
             GoCommand = new Xamarin.Forms.Command(GoButton_Clicked, () => { return !string.IsNullOrEmpty(Url); });
             BackCommand = new Command(BackButton_Clicked, () => CanGoBack);
             ForwardCommand = new Command(ForwardButton_Clicked, () => CanGoForward);
+            GoButtonText = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameGoButton");
+            BackButtonText = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameBackButton");
+            ForwardButtonText = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameForwardButton");
         }
 
         private void InternalViewUpdated(Xamarin.Forms.WebView webView)

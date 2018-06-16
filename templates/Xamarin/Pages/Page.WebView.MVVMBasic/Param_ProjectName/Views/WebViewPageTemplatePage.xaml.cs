@@ -13,24 +13,26 @@ using Param_ProjectName.ViewModels;
 namespace Param_ProjectName.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class WebViewPageTemplatePage : ContentPage
+    public partial class wts.ItemNamePage : ContentPage
     {
-        private WebViewPageTemplateViewModel ViewModel;
-        public WebViewPageTemplatePage ()
+        private wts.ItemNamePageViewModel ViewModel;
+        public wts.ItemNamePage ()
         {
             InitializeComponent ();
             Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetUseSafeArea(On<Xamarin.Forms.PlatformConfiguration.iOS>(), true);
-            ViewModel = BindingContext as WebViewPageTemplateViewModel;
-            ViewModel.WebView = _webView;
+            ViewModel = new wts.ItemNamePageViewModel(_webView);
             ViewModel.Url = "https://developer.microsoft.com";
             ViewModel.GoCommand.Execute(null);
+            BindingContext = ViewModel;
             BackButton.SetBinding(Button.CommandProperty, nameof(ViewModel.BackCommand));
+            BackButton.SetBinding(Button.TextProperty, nameof(ViewModel.BackButtonText));
             ForwardButton.SetBinding(Button.CommandProperty, nameof(ViewModel.ForwardCommand));
+            ForwardButton.SetBinding(Button.TextProperty, nameof(ViewModel.ForwardButtonText));
             UrlEntry.SetBinding(Entry.TextProperty, nameof(ViewModel.Url));
             GoButton.SetBinding(Button.CommandProperty, nameof(ViewModel.GoCommand));
-            GoButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("WebViewPageTemplateGoButton");
-            BackButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("WebViewPageTemplateBackButton");
-            ForwardButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("WebViewPageTemplateForwardButton");
-        }
-    }
+            GoButton.SetBinding(Button.TextProperty, nameof(ViewModel.GoButtonText));
+		}
+
+
+	}
 }
