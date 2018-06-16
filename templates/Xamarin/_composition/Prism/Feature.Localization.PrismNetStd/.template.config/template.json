@@ -1,0 +1,36 @@
+{
+    "author": "Microsoft",
+    "classifications": [
+      "Universal"
+    ],
+    "name": "Prism.Feature.Localization.PrismStd",
+    "tags": {
+      "language": "C#",
+      "type": "item",
+      "wts.type": "composition",
+      "wts.platform" : "Xamarin",
+      "wts.version": "1.0.0",
+      "wts.compositionFilter": "$framework == PrismXamarinNETStd & identity == wts.Feat.Localization.Xamarin.Prism"
+    },
+    "sourceName": "wts.ItemName",
+    "preferNameDirectory": true,
+    "PrimaryOutputs": [
+    ],
+    "symbols": {
+      "wts.projectName":
+      {
+        "type": "parameter",
+        "replaces": "Param_ProjectName",
+        "fileRename": "Param_ProjectName"
+      },
+      "wts.rootNamespace": {
+        "type": "parameter",
+        "replaces": "Param_RootNamespace"
+      },
+      "wts.itemNamespace": {
+        "type": "parameter",
+        "replaces": "Param_ItemNamespace"
+      }
+    }
+  }
+  
