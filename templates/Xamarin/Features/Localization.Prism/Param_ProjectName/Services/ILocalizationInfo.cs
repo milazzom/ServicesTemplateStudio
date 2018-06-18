@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Globalization;
 
 namespace Param_ProjectName.Services
@@ -9,10 +9,10 @@ namespace Param_ProjectName.Services
     public interface ILocalizationInfo
     {
         ///	<summary>
-		/// This method must evaluate platform-specific locale settings
-		/// and convert them (when necessary) to a valid .NET locale.
-		/// </summary>
-		CultureInfo GetCurrentCultureInfo();
+        /// This method must evaluate platform-specific locale settings
+        /// and convert them (when necessary) to a valid .NET locale.
+        /// </summary>
+        CultureInfo GetCurrentCultureInfo();
 
         /// <summary>
         /// CurrentCulture and CurrentUICulture must be set in the platform project,

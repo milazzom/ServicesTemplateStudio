@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
@@ -14,11 +14,11 @@ namespace Param_ProjectName.Services
     {
         private static string resourceName = GetResourceId();
         private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(() => new ResourceManager(resourceName, IntrospectionExtensions.GetTypeInfo(typeof(Localizer)).Assembly));
-        private ILocalizationInfo localizationInfo;
+        private ILocalizationInfo _localizationInfo;
 
         public Localizer(ILocalizationInfo localizationInfo)
         {
-            this.localizationInfo = localizationInfo;
+            _localizationInfo = localizationInfo;
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace Param_ProjectName.Services
         public string GetStringForKey(string key)
         {
             string text = string.Empty;
-            var currentCulture = localizationInfo.GetCurrentCultureInfo();
+            var currentCulture = _localizationInfo.GetCurrentCultureInfo();
             if(currentCulture == null)
             {
                 currentCulture = CultureInfo.CurrentUICulture;
