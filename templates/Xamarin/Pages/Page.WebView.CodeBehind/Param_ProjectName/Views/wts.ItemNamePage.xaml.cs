@@ -9,13 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace Param_ProjectName.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class wts.ItemNamePage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class wts.ItemNamePage : ContentPage
+    {
 
         public wts.ItemNamePage ()
-		{
-			InitializeComponent ();
+        {
+            InitializeComponent ();
             GoButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameGoButton");
             ForwardButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameForwardButton");
             BackButton.Text = DependencyService.Get<ILocalizer>().GetStringForKey("wts.ItemNameBackButton");
@@ -25,7 +25,7 @@ namespace Param_ProjectName.Views
                 Url = UrlEntry.Text
             };
             UpdateButtonStates();
-		}
+        }
 
         protected override void OnAppearing()
         {

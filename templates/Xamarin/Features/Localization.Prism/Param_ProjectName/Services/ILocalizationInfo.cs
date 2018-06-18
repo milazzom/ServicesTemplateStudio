@@ -8,7 +8,7 @@ namespace Param_ProjectName.Services
     /// </summary>
     public interface ILocalizationInfo
     {
-        ///	<summary>
+        /// <summary>
         /// This method must evaluate platform-specific locale settings
         /// and convert them (when necessary) to a valid .NET locale.
         /// </summary>

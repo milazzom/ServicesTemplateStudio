@@ -31,8 +31,8 @@ namespace Param_ProjectName.Views
             UrlEntry.SetBinding(Entry.TextProperty, nameof(ViewModel.Url));
             GoButton.SetBinding(Button.CommandProperty, nameof(ViewModel.GoCommand));
             GoButton.SetBinding(Button.TextProperty, nameof(ViewModel.GoButtonText));
-		}
+        }
 
 
-	}
+    }
 }
