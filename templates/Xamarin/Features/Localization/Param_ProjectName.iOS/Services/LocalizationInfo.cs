@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Param_ProjectName.Services;
 using Foundation;
 using System.Globalization;
@@ -70,7 +70,7 @@ namespace Param_ProjectName.iOS.Services
                 case "ms-SG":   // "Malaysian (Singapore)" not supported .NET culture
                     netLanguage = "ms"; // closest supported
                     break;
-                case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
+                case "gsw-CH":  // "SchwiizertÃ¼Ã¼tsch (Swiss German)" not supported .NET culture
                     netLanguage = "de-CH"; // closest supported
                     break;
                     // add more application-specific cases here (if required)

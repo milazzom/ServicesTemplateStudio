@@ -1,4 +1,4 @@
-using System.Globalization;
+﻿using System.Globalization;
 using Xamarin.Forms;
 using Param_ProjectName.Services;
 

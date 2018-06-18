@@ -1,4 +1,4 @@
-<!-- Add Custom Post-action Entries Here -->
+﻿<!-- Add Custom Post-action Entries Here -->
 //{[{
   <ItemGroup>
     <EmbeddedResource Update="Strings\AppResources.resx"/>

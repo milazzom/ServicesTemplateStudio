@@ -1,4 +1,4 @@
-using System.Globalization;
+﻿using System.Globalization;
 using Param_ProjectName.Services;
 
 namespace Param_ProjectName.UWP.Services

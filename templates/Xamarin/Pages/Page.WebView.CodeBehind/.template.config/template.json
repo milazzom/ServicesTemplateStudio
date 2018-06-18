@@ -1,4 +1,4 @@
-{
+﻿{
     "author": "Microsoft",
     "classifications": [
       "Universal"
@@ -31,11 +31,11 @@
     ],
     "symbols": {
       "wts.projectName":
-     	{
-     	  "type": "parameter",
-     	  "replaces": "Param_ProjectName",
-     	  "fileRename": "Param_ProjectName"
-     	},  
+    Â 	{
+    Â 	  "type":Â "parameter",
+    Â 	  "replaces":Â "Param_ProjectName",
+    Â 	  "fileRename":Â "Param_ProjectName"
+    Â 	},  
       "wts.rootNamespace": {
         "type": "parameter",
         "replaces": "Param_RootNamespace"

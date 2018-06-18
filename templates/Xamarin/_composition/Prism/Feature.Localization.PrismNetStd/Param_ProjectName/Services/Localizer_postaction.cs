@@ -1,4 +1,4 @@
-        private static string GetResourceId()
+﻿        private static string GetResourceId()
         {
 //{[{
             string resourceName = "Param_ProjectName.Strings.AppResources";
