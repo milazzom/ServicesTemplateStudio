@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Windows Template Studio (Universal Windows; local)</Name>
-    <Description>Windows Template Studio erstellt schnell eine UWP-App und verwendet dabei eine assistentenbasierte Benutzeroberfläche, um Ihre Anforderungen in eine Grundlage von Windows 10-Mustern und bewährten Methoden umzuwandeln.</Description>
+    <Name>Services Template Studio (Universal Windows; local)</Name>
+    <Description>Services Template Studio erstellt schnell eine UWP-App und verwendet dabei eine assistentenbasierte Benutzeroberfläche, um Ihre Anforderungen in eine Grundlage von Windows 10-Mustern und bewährten Methoden umzuwandeln.</Description>
     <Icon>windowsTemplateStudio_Logo_256x256.ico</Icon>
     <ProjectType>VisualBasic</ProjectType>
     <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>

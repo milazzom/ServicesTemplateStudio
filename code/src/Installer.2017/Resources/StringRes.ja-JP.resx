@@ -127,11 +127,11 @@ value   : The object must be serialized into a byte array
     <value>プロジェクトの追加</value>
   </data>
   <data name="UIMessageBoxTitlePattern" xml:space="preserve">
-    <value>Windows Template Studio:{0}</value>
+    <value>Services Template Studio:{0}</value>
     <comment>Generic MessageBox Title</comment>
   </data>
   <data name="UIStatusMsgPattern" xml:space="preserve">
-    <value>Windows Template Studio:{0}</value>
+    <value>Services Template Studio:{0}</value>
   </data>
   <data name="UnexpectedExPattern" xml:space="preserve">
     <value>予期しない例外。\n{0}</value>
