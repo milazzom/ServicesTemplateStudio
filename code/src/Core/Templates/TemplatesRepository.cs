@@ -143,7 +143,9 @@ namespace Microsoft.Templates.Core
 
         private IEnumerable<MetadataInfo> GetMetadataInfo(string type)
         {
-            var folderName = Path.Combine(Sync?.CurrentContent.Path, Catalog);
+            var folderName = Sync.CurrentContent != null
+                ? Path.Combine(Sync?.CurrentContent.Path, Catalog)
+                : string.Empty;
 
             if (!Directory.Exists(folderName))
             {

@@ -1,6 +1,6 @@
-# Windows Template Studio
+# Services Template Studio
 
-Windows Template Studio (WTS) is a Visual Studio 2017 Extension that accelerates the creation of new Universal Windows Platform (UWP) apps using a wizard-based experience. The resulting UWP project is well-formed, readable code that incorporates the latest Windows 10 features while implementing proven patterns and best practices. Sprinkled throughout the generated code we have links Docs, Stack Overflow and blogs to provide useful insights. WTS supports creating apps in C# or VB.Net.
+Services Template Studio (STS), a fork of the Windows Template Studio (WTS) project, is a Visual Studio 2017 Extension that accelerates the creation of new Universal Windows Platform (UWP), Xamarin Forms, and Bot Framework apps using a wizard-based experience. The resulting projects consist of well-formed, readable code that incorporates the latest platform features while implementing proven patterns and best practices. Sprinkled throughout the generated code we have links Docs, Stack Overflow and blogs to provide useful insights. STS supports creating apps in C#.
 
 **Example scenario:**
 I need an app that uses MVVM Light, uses master detail, can suspend and resume, settings, maps on one of the pages and will need Azure hub notifications.   It will need a background service that does a query every 5 minutes.
@@ -27,7 +27,7 @@ I need an app that uses MVVM Light, uses master detail, can suspend and resume, 
 
 ## Features
 
-Windows Template Studio approaches UWP app creation using the following four attribute sets:
+Services Template Studio and Windows Template Studio approach UWP app creation using the following four attribute sets:
 
 * **Project type**: First, how do you want your app's UI navigation to behave? We currently support three project types: *basic*, *[navigation pane](docs/projectTypes/navigationpane.md)*, and *pivot and tabs*.
 * **App design pattern**: Next, what coding pattern do you want to use in your project, we currently support three common patterns: *code behind*, *basic MVVM*, *[MVVMLight](http://www.mvvmlight.net/)*, *[Caliburn.Micro](https://caliburnmicro.com/)*, and *[Prism](https://github.com/PrismLibrary/Prism)*.
@@ -44,7 +44,7 @@ Once you select the attributes you want your new UWP app to have, you can quickl
 * [Getting started with the generator codebase](docs/getting-started-developers.md)
 * [Authoring Templates](docs/templates.md)
 
-## Known issues
+## Known issues (inherited from WTS)
 * Issue ([#1753](https://github.com/Microsoft/WindowsTemplateStudio/issues/1753)): Wack tests are currently failing in our build server due to a machine configuration issue. All tests pass correctly if locally executed. We are working on getting them back to green.
 * Issue ([#1629](https://github.com/Microsoft/WindowsTemplateStudio/issues/1629)): the Master-Detail view has an issue if you set the background to Transparent in the MastertDetailControl. We are actively working with the UWPCommunityTookit team to get this solved as soon as possible.
 * Issue ([#1532](https://github.com/Microsoft/WindowsTemplateStudio/issues/1532)): when uninstalling / upgrading where you may get an error of "A value for 'Component' needs to be specified in the catalog."  If you get this error, we need logs to help track this with the help of the Visual Studio team.  We don't know how to reproduce it but we know a few people have hit this scenario.  We have how to capture these logs in the [tracking issue on GitHub.](https://github.com/Microsoft/WindowsTemplateStudio/issues/1532)
@@ -52,9 +52,9 @@ Once you select the attributes you want your new UWP app to have, you can quickl
 
 ## Feedback, Requests and Roadmap
 
-Please use [GitHub issues](https://github.com/Microsoft/WindowsTemplateStudio/issues) for feedback, questions or comments.
+Please use [GitHub issues](https://github.com/milazzom/ServicesTemplateStudio/issues) for feedback, questions or comments.
 
-If you have specific feature requests or would like to vote on what others are recommending, please go to the [GitHub issues](https://github.com/Microsoft/WindowsTemplateStudio/issues) section as well.  We would love to see what you are thinking.
+If you have specific feature requests or would like to vote on what others are recommending, please go to the [GitHub issues](https://github.com/milazzom/ServicesTemplateStudio/issues) section as well.  We would love to see what you are thinking.
 
 Here is what we're currently thinking in our [roadmap](docs/roadmap.md).
 

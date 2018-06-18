@@ -32,10 +32,10 @@
     <Menus>
       <Menu guid="guidRelayCommandPackageCmdSet" id="AddItemContextMenu" type="Context" priority="0x0100">
         <Strings>
-          <CommandName>Windows Template Studio (local)</CommandName>
-          <ButtonText>Windows Template Studio (místní)</ButtonText>
-          <MenuText>Windows Template Studio (local)</MenuText>
-          <ToolTipText>Windows Template Studio (local)</ToolTipText>
+          <CommandName>Services Template Studio (local)</CommandName>
+          <ButtonText>Services Template Studio (místní)</ButtonText>
+          <MenuText>Services Template Studio (local)</MenuText>
+          <ToolTipText>Services Template Studio (local)</ToolTipText>
         </Strings>
       </Menu>
     </Menus>
