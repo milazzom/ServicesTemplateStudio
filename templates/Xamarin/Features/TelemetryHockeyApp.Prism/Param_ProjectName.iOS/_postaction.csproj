@@ -1,0 +1,6 @@
+﻿<!-- Nuget package references -->
+<!--{[{-->
+<PackageReference Include="HockeySDK.Xamarin">
+  <Version>5.1.2</Version>
+</PackageReference>
+<!--}]}-->

@@ -68,21 +68,16 @@ namespace Param_ItemNamespace.Services
     /// </code>
     /// 
     /// </remarks>
-    internal struct TrackedTimedEvent : IDisposable
+    internal class TrackedTimedEvent : IDisposable
     {
-        private static readonly Stopwatch s_stopwatch = Stopwatch.StartNew();
+        private readonly Stopwatch s_stopwatch = new Stopwatch();
 
-        private readonly string _eventName;
-        private readonly long _startTicks;
-        private readonly DateTime _startTime;
-        private readonly ITrackingService _trackingService;
         private readonly string _commandName;
+        private readonly ITrackingService _trackingService;
 
-        public TrackedTimedEvent(string eventName, string commandName, ITrackingService trackingService)
+        public TrackedTimedEvent(string commandName, ITrackingService trackingService)
         {
-            _eventName = eventName;
-            _startTicks = s_stopwatch.ElapsedTicks;
-            _startTime = DateTime.UtcNow;
+            s_stopwatch.Start();
             _trackingService = trackingService;
             _commandName = commandName;
         }
@@ -90,7 +85,8 @@ namespace Param_ItemNamespace.Services
         public void Dispose()
         {
             s_stopwatch.Stop();
-            _trackingService.TrackMetric(_eventName, s_stopwatch.ElapsedMilliseconds, null);
+            _trackingService.TrackMetric(_commandName, s_stopwatch.ElapsedMilliseconds, new Dictionary<string, string> { { "Elapsed Time (msec)", s_stopwatch.ElapsedMilliseconds.ToString()} });
+
         }
     }
 }
