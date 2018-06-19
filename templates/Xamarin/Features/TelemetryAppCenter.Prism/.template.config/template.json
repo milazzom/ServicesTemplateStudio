@@ -1,0 +1,59 @@
+﻿{
+  "author": "Microsoft Community",
+  "classifications": [ "Universal" ],
+  "name": "Telemetry - AppCenter",
+  "groupIdentity": "wts.Feat.TelemetryAppCenter.Xamarin",
+  "identity": "wts.Feat.TelemetryAppCenter.Xamarin.Prism",
+  "description": "Add Telemetry via AppCenter API's. Adds Page Views by default.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "feature",
+    "wts.framework": "PrismXamarinSharedProject|PrismXamarinNETStd",
+    "wts.platform": "Xamarin",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "2",
+    "wts.group": "Telemetry",
+    "wts.licenses": "[Microsoft.Toolkit.Uwp](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/license.md)",
+    "wts.multipleInstance": "false",
+    "wts.defaultInstance": "TelemetryAppCenter",
+    "wts.rightClickEnabled": "true"
+  },
+  "sourceName": "TelemetryAppCenterFeature",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+      {
+      "path": ".\\Param_ProjectName\\Services\\ITrackingAPI.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName\\Services\\ITrackingService.cs"
+      },      
+      {
+      "path": ".\\Param_ProjectName\\Services\\TrackingService.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.UWP\\Services\\TrackingAPI.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.Android\\Services\\TrackingAPI.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.iOS\\Services\\TrackingAPI.cs"
+      }
+  ],
+  "symbols": {
+    "wts.projectName":{
+        "type": "parameter",
+        "replaces": "Param_ProjectName",
+        "fileRename": "Param_ProjectName"
+    },
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    }
+  }
+}

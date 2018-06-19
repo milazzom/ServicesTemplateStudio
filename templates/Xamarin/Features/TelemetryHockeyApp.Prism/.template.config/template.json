@@ -26,14 +26,23 @@
     },
     {
       "path": ".\\Param_ProjectName\\Services\\TrackingServiceBase.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName.UWP\\Services\\TrackingService_UWP.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName.Android\\Services\\TrackingService_Droid.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName.iOS\\Services\\TrackingService_iOS.cs"
     }
   ],
   "symbols": {
     "wts.projectName":{
-     	"type": "parameter",
-     	"replaces": "Param_ProjectName",
-     	"fileRename": "Param_ProjectName"
-    }, 
+      "type": "parameter",
+      "replaces": "Param_ProjectName",
+      "fileRename": "Param_ProjectName"
+    },
     "wts.rootNamespace": {
       "type": "parameter",
       "replaces": "Param_RootNamespace"
