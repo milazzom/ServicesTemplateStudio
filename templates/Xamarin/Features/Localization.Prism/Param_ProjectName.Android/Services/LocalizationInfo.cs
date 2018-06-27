@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Globalization;
@@ -15,7 +16,7 @@ namespace Param_ProjectName.Android.Services
             Thread.CurrentThread.CurrentCulture = ci;
             Thread.CurrentThread.CurrentUICulture = ci;
 
-            Console.WriteLine("CurrentCulture set: " + ci.Name);
+            Debug.WriteLine("CurrentCulture set: " + ci.Name);
         }
 
         public CultureInfo GetCurrentCultureInfo()
@@ -37,13 +38,13 @@ namespace Param_ProjectName.Android.Services
                 try
                 {
                     var fallback = ToDotnetFallbackLanguage(new PlatformCulture(netLanguage));
-                    Console.WriteLine(netLanguage + " failed, trying " + fallback + " (" + e1.Message + ")");
+                    Debug.WriteLine(netLanguage + " failed, trying " + fallback + " (" + e1.Message + ")");
                     ci = new System.Globalization.CultureInfo(fallback);
                 }
                 catch (CultureNotFoundException e2)
                 {
                     // iOS language not valid .NET culture, falling back to English
-                    Console.WriteLine(netLanguage + " couldn't be set, using 'en' (" + e2.Message + ")");
+                    Debug.WriteLine(netLanguage + " couldn't be set, using 'en' (" + e2.Message + ")");
                     ci = new System.Globalization.CultureInfo("en");
                 }
             }
@@ -53,7 +54,7 @@ namespace Param_ProjectName.Android.Services
 
         string AndroidToDotnetLanguage(string androidLanguage)
         {
-            Console.WriteLine("Android Language:" + androidLanguage);
+            Debug.WriteLine("Android Language:" + androidLanguage);
             var netLanguage = androidLanguage;
 
             //certain languages need to be converted to CultureInfo equivalent
@@ -74,12 +75,12 @@ namespace Param_ProjectName.Android.Services
                     // ONLY use cultures that have been tested and known to work
             }
 
-            Console.WriteLine(".NET Language/Locale:" + netLanguage);
+            Debug.WriteLine(".NET Language/Locale:" + netLanguage);
             return netLanguage;
         }
         string ToDotnetFallbackLanguage(PlatformCulture platCulture)
         {
-            Console.WriteLine(".NET Fallback Language:" + platCulture.LanguageCode);
+            Debug.WriteLine(".NET Fallback Language:" + platCulture.LanguageCode);
             var netLanguage = platCulture.LanguageCode; // use the first part of the identifier (two chars, usually);
 
             switch (platCulture.LanguageCode)
@@ -91,7 +92,7 @@ namespace Param_ProjectName.Android.Services
                     // ONLY use cultures that have been tested and known to work
             }
 
-            Console.WriteLine(".NET Fallback Language/Locale:" + netLanguage + " (application-specific)");
+            Debug.WriteLine(".NET Fallback Language/Locale:" + netLanguage + " (application-specific)");
             return netLanguage;
         }
 
