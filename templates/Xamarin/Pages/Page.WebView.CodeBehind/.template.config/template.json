@@ -30,11 +30,11 @@
     ],
     "symbols": {
       "wts.projectName":
-    Â 	{
-    Â 	  "type":Â "parameter",
-    Â 	  "replaces":Â "Param_ProjectName",
-    Â 	  "fileRename":Â "Param_ProjectName"
-    Â 	},  
+       {
+         "type": "parameter",
+         "replaces": "Param_ProjectName",
+         "fileRename": "Param_ProjectName"
+       },  
       "wts.rootNamespace": {
         "type": "parameter",
         "replaces": "Param_RootNamespace"
