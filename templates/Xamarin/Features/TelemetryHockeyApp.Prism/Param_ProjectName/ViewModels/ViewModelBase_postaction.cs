@@ -1,6 +1,7 @@
 ﻿using Prism.Navigation;
 //{[{
 using Xamarin.Forms;
+using Prism.Unity;
 using Param_RootNamespace.Services;
 //}]}
 
@@ -10,23 +11,24 @@ namespace Param_RootNamespace.ViewModels
     {
         protected INavigationService NavigationService { get; private set; }
 //{[{
-        private readonly ITrackingService trackingService;
+        protected ITrackingService TrackingService { get; private set; }
 //}]}
         public ViewModelBase(INavigationService navigationService)
         {
             NavigationService = navigationService;
 //{[{
-            this.trackingService = DependencyService.Get<ITrackingService>(DependencyFetchTarget.GlobalInstance); // Singleton is the default
+            var container = ((PrismApplication)(App.Current)).Container as Prism.Ioc.IContainerProvider;
+            TrackingService = container.Resolve(typeof(ITrackingService)) as ITrackingService;
 //}]}
         }
 
         public virtual void OnNavigatedTo(NavigationParameters parameters)
         {
 //{[{
-            var pageName =  this.GetType().Name.Replace("ViewModel", string.Empty); // TODO - Figure out navigation enum for MasterDetail
+            var pageName =  this.GetType().Name.Replace("ViewModel", string.Empty);
             if (pageName != "RootMasterDetailPage")
             {
-                trackingService.TrackEvent(string.Format("Navigated To: {0}", pageName));
+                TrackingService.TrackEvent(string.Format("Navigated To: {0}", pageName));
             }
 //}]}
         }
