@@ -21,12 +21,6 @@ namespace Param_RootNamespace.UWP
  //{[{
         private void InitialIzeTelemetry()
         {
-#if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                //                this.DebugSettings.EnableFrameRateCounter = true;
-            }
-#endif
             if (!string.IsNullOrEmpty(HockeyAppId))
             {
                 TelemetryConfiguration telemetryConfig = new TelemetryConfiguration
@@ -37,7 +31,7 @@ namespace Param_RootNamespace.UWP
 
                 HockeyClient.Current.Configure(HockeyAppId, telemetryConfig);
             }
-        } 
-//}]}    
+        }
+//}]}
     }
 }

@@ -3,10 +3,10 @@
   "classifications": [
     "Universal"
   ],
-  "name": "Telemetry",
+  "name": "AppCenter",
   "groupIdentity": "wts.Page.TelemetryPage.Xamarin",
-  "identity": "wts.Page.TelemetryPage.Xamarin.Prism",
-  "description": "This page  demonstrates using the Telemetry Feature",
+  "identity": "wts.Page.TelemetryPage.Xamarin.AC.Prism",
+  "description": "This page  demonstrates using the AppCenter Telemetry Feature",
   "tags": {
     "language": "C#",
     "type": "item",
@@ -16,20 +16,19 @@
     "wts.version": "1.0.0",
     "wts.displayOrder": "2",
     "wts.genGroup": "0",
-    "wts.dependencies": "wts.Feat.TelemetryAppCenter.Xamarin.Prism",
     "wts.rightClickEnabled":"true" 
   },
-  "sourceName": "TelemetryView",
+  "sourceName": "AppCenterView",
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
-      "path": ".\\Param_ProjectName\\Views\\TelemetryViewPage.xaml"
+      "path": ".\\Param_ProjectName\\Views\\AppCenterViewPage.xaml"
     },
     {
-      "path": ".\\Param_ProjectName\\Views\\TelemetryViewPage.xaml.cs"
+      "path": ".\\Param_ProjectName\\Views\\AppCenterViewPage.xaml.cs"
     },
     {
-      "path": ".\\Param_ProjectName\\ViewModels\\TelemetryViewPageViewModel.cs"
+      "path": ".\\Param_ProjectName\\ViewModels\\AppCenterViewPageViewModel.cs"
     }
   ],
   "symbols": {
