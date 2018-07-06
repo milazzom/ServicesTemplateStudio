@@ -85,6 +85,7 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
+<!-- Add Custom Post-action Entries Here -->
   <Import Project="..\wts.DefaultProject\wts.DefaultProject.projitems" Label="Shared" Condition="Exists('..\wts.DefaultProject\wts.DefaultProject.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />

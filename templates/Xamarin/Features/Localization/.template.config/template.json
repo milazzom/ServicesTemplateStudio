@@ -1,0 +1,70 @@
+﻿{
+    "author": "Microsoft",
+    "classifications": [ "Universal" ],
+    "name": "Localization",
+    "groupIdentity": "wts.Feat.Localization.Xamarin",
+    "identity": "wts.Feat.Localization.Xamarin",
+    "description": "Adds support for cross-platform application localization.",
+    "tags": {
+      "language": "C#",
+      "type": "item",
+      "wts.type": "feature",
+      "wts.framework": "MVVMBasic|CodeBehind",
+      "wts.platform": "Xamarin",
+      "wts.version": "1.0.0",
+      "wts.displayOrder": "1",
+      "wts.group": "Localization",
+      "wts.multipleInstance": "false",
+      "wts.defaultInstance": "Localization",
+      "wts.rightClickEnabled":"true"
+    },
+    "preferNameDirectory": true,
+    "PrimaryOutputs": [
+      {
+        "path": ".\\Param_ProjectName\\Services\\ILocalizer.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName\\Services\\ILocalizationInfo.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName\\Services\\Localizer.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName\\Strings\\AppResources.resx"
+      },
+      {
+        "path": ".\\Param_ProjectName.Android\\Services\\LocalizationInfo.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.iOS\\Services\\LocalizationInfo.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.UWP\\Services\\LocalizationInfo.cs"
+      }
+    ],
+    "symbols": {
+      "wts.projectName":
+       {
+         "type": "parameter",
+         "replaces": "Param_ProjectName",
+         "fileRename": "Param_ProjectName"
+       },  
+      "wts.rootNamespace": {
+        "type": "parameter",
+        "replaces": "Param_RootNamespace"
+      },
+      "wts.itemNamespace": {
+        "type": "parameter",
+        "replaces": "Param_ItemNamespace"
+      },
+      "baseclass": {
+        "type": "parameter",
+        "replaces": "System.ComponentModel.INotifyPropertyChanged"
+      },
+      "setter": {
+        "type": "parameter",
+        "replaces": "Param_Setter"
+      }
+    }
+  }
+  

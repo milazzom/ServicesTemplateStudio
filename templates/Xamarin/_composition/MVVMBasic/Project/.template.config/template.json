@@ -20,6 +20,9 @@
     },
     {
       "path": ".\\Param_ProjectName\\Helpers\\Observable.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName\\ViewModels\\BaseViewModel.cs"
     }
   ],
   "symbols": {

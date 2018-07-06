@@ -1,0 +1,55 @@
+﻿{
+    "author": "Microsoft",
+    "classifications": [
+      "Universal"
+    ],
+    "name": "Web View",
+    "identity": "wts.Page.WebView.Xamarin",
+    "description": "The web view page renders web content using the platform-specific web rendering engine.",
+    "tags": {
+      "language": "C#",
+      "type": "item",
+      "wts.type": "page",
+      "wts.platform" : "Xamarin",
+      "wts.dependencies": "wts.Feat.Localization.Xamarin.Prism",
+      "wts.version": "1.0.0",
+      "wts.framework": "PrismXamarinSharedProject|PrismXamarinNETStd",
+      "wts.displayOrder": "1",
+      "wts.genGroup": "0",
+      "wts.rightClickEnabled":"true" 
+   },
+    "sourceName": "WebViewPageTemplate",
+    "preferNameDirectory": true,
+    "PrimaryOutputs": [
+      {
+        "path": ".\\Param_ProjectName\\Views\\WebViewPageTemplatePage.xaml"
+      },
+      {
+        "path": ".\\Param_ProjectName\\Views\\WebViewPageTemplatePage.xaml.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName\\ViewModels\\WebViewPageTemplateViewModel.cs"
+      }
+    ],
+    "symbols": {
+      "wts.projectName":
+       {
+         "type": "parameter",
+         "replaces": "Param_ProjectName",
+         "fileRename": "Param_ProjectName"
+       },
+      "wts.rootNamespace": {
+        "type": "parameter",
+        "replaces": "Param_RootNamespace"
+      },
+      "wts.itemNamespace": {
+        "type": "parameter",
+        "replaces": "Param_ItemNamespace"
+      },
+      "wts.homePageName": {
+        "type":"parameter",
+        "replaces":"Param_HomeName"
+      }
+    }
+  }
+  
