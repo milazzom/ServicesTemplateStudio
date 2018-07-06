@@ -1,0 +1,1 @@
+﻿Provides interfaces, classes, and a resource file to support i18n support for Xamarin.Forms projects.  This feature registers a concrete implementation of ILocalizer with the Xamarin.Forms DependencyService for use in your applications.
