@@ -15,6 +15,7 @@
     "wts.platform" : "Xamarin",
     "wts.version": "1.0.0",
     "wts.displayOrder": "3",
+    "wts.dependencies": "wts.Feat.TelemetryHockeyApp.Xamarin.Prism",
     "wts.genGroup": "0",
     "wts.rightClickEnabled":"true" 
   },

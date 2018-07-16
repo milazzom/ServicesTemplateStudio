@@ -15,6 +15,7 @@
     "wts.platform" : "Xamarin",
     "wts.version": "1.0.0",
     "wts.displayOrder": "2",
+    "wts.dependencies": "wts.Feat.TelemetryAppCenter.Xamarin.Prism",
     "wts.genGroup": "0",
     "wts.rightClickEnabled":"true" 
   },
@@ -28,7 +29,7 @@
       "path": ".\\Param_ProjectName\\Views\\AppCenterViewPage.xaml.cs"
     },
     {
-      "path": ".\\Param_ProjectName\\ViewModels\\AppCenterViewPageViewModel.cs"
+      "path": ".\\Param_ProjectName\\ViewModels\\AppCenterViewViewModel.cs"
     }
   ],
   "symbols": {
