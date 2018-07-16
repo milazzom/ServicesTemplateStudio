@@ -1,0 +1,6 @@
+<!-- Placeholder for Merge -->
+//{[{
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Strings\AppResources.resx" />
+  </ItemGroup>
+//}]}
