@@ -25,4 +25,5 @@
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
   </ItemGroup>
+<!-- Placeholder for Merge -->
 </Project>
