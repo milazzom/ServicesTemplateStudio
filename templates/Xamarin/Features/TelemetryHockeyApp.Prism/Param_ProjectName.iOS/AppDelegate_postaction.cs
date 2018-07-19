@@ -1,6 +1,8 @@
 ﻿using Prism.Ioc;
 //^^
 //{[{
+using Param_RootNamespace.Services;
+using Param_RootNamespace.iOS.Services;
 using HockeyApp.iOS;
 //}]}
 
@@ -19,8 +21,8 @@ namespace Param_RootNamespace.iOS
             InitializeTelemetry();
 //}]}
         }
-//{[{
-    
+//{[{       
+
         private void InitializeTelemetry()
         {
             var manager = BITHockeyManager.SharedHockeyManager;
@@ -28,9 +30,18 @@ namespace Param_RootNamespace.iOS
             {
                 manager.Configure(HockeyAppId);
                 manager.StartManager();
-                manager.Authenticator.AuthenticateInstallation(); // This line is obsolete in crash only builds
             }
         }
 //}]}
+    }
+
+    public class iOSInitializer : IPlatformInitializer
+    {
+        public void RegisterTypes(IContainerRegistry container)
+        {
+//{[{
+            container.Register(typeof(ITrackingAPI), typeof(TrackingAPI));
+//}]}
+        }
     }
 }

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Param_ItemNamespace.Views.HockeyAppViewPage"
+             Title="Telemetry Page">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="0,0,0,0" HorizontalOptions="StartAndExpand">
+                <Label Margin="15,15,0,0" Text="Test Telemetry Options"/>
+                <Grid Margin="15,15,15,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Track Event (Logging Level : Information)" Grid.Row="2" Margin="0,10,0,0" HorizontalOptions="Start"/>
+                    <Switch Grid.Row="2" Margin="0,0,12,0" HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding TrackEventToggle}" Grid.Column="2"/>
+                    <Label Text="Track Dependencey (Logging Level : Information)" Grid.Row="3" Margin="0,10,0,0" HorizontalOptions="Start"/>
+                    <Switch Grid.Row="3" Margin="0,0,12,0" HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding TrackDependencyToggle}" Grid.Column="2"/>
+                    <Label Text="Track Exception (Logging Level : Error)" Grid.Row="4" Margin="0,10,0,0" HorizontalOptions="Start"/>
+                    <Switch Grid.Row="4" Margin="0,0,12,0" HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding TrackExceptionToggle}" Grid.Column="2"/>
+                    <Label Text="Track Metric (Logging Level : Warning)" Grid.Row="5" Margin="0,10,0,0" HorizontalOptions="Start"/>
+                    <Switch Grid.Row="5" Margin="0,0,12,0" HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding TrackMetricToggle}" Grid.Column="2"/>
+                    <Label Text="Track Page (Logging Level : Information)" Grid.Row="6" Margin="0,10,0,0" HorizontalOptions="Start"/>
+                    <Switch Grid.Row="6" Margin="0,0,12,0" HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding TrackPageToggle}" Grid.Column="2"/>
+                    <Label Text="TrackedTimedEvent (Logging Level : Warning)" Grid.Row="7" Margin="0,10,0,0" HorizontalOptions="Start"/>
+                    <Switch Grid.Row="7" Margin="0,0,12,0" HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding TrackedTimeEventToggle}" Grid.Column="2"/>
+                    <Label Text="Track Aggregated Metric (Logging Level : Warning)" Grid.Row="8" Margin="0,10,0,0" HorizontalOptions="Start"/>
+                    <Switch Grid.Row="8" Margin="0,0,12,0" HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding TrackAggregatedMetricToggle}" Grid.Column="2"/>
+                    <Label Text="Application Logging Level (Default is set to Information)"  Margin="0,10,0,0" HorizontalOptions="Start" Grid.Row="9"/>
+                    <Picker Grid.Column="2" Grid.Row="9" SelectedItem="{Binding LoggingLevelItem }">
+                        <Picker.Items>
+                            <x:String>Off</x:String>
+                            <x:String>Error</x:String>
+                            <x:String>Warning</x:String>
+                            <x:String>Information</x:String>
+                            <x:String>Verbose</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Metric Logging Delay (msecs)"  Grid.Row="10" Margin="0,10,0,0" HorizontalOptions="Start"/>
+                    <Entry x:Name="MetricLoggingDelay" TextColor="Black" HeightRequest="40" Grid.Row="10"  Grid.Column="2" Text="{Binding MetricLoggingDelay}" />
+                </Grid>
+                <StackLayout>
+                    <Button x:Name="numTelemetry" Text="Run Telemetry" Command="{Binding TelemetryCommand}" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

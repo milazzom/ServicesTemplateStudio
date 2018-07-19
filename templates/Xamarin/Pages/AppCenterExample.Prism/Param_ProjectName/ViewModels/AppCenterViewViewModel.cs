@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Param_ItemNamespace.ViewModels
 {
-	public class TelemetryViewPageViewModel : ViewModelBase
+	public class AppCenterViewViewModel : ViewModelBase
     {
         public Boolean TrackEventToggle { get; set; }
         public Boolean TrackDependencyToggle { get; set; }
@@ -23,7 +23,7 @@ namespace Param_ItemNamespace.ViewModels
         public  string LoggingLevelItem { get; set; }
 
         public DelegateCommand TelemetryCommand { get; private set; }
-        public TelemetryViewPageViewModel(INavigationService navigationService) : base(navigationService)
+        public AppCenterViewViewModel(INavigationService navigationService) : base(navigationService)
         {
             TelemetryCommand = new DelegateCommand(OnTelemetryCommand);
             TrackEventToggle = true;
