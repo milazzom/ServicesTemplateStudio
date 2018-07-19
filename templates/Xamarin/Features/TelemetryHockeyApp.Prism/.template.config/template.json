@@ -12,7 +12,7 @@
     "wts.framework": "PrismXamarinSharedProject|PrismXamarinNETStd",
     "wts.platform": "Xamarin",
     "wts.version": "1.0.0",
-    "wts.displayOrder": "1",
+    "wts.displayOrder": "2",
     "wts.group": "Telemetry",
     "wts.multipleInstance": "false",
     "wts.defaultInstance": "TelemetryHockeyApp",
@@ -22,19 +22,22 @@
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
+      "path": ".\\Param_ProjectName\\Services\\ITrackingAPI.cs"
+    },
+    {
       "path": ".\\Param_ProjectName\\Services\\ITrackingService.cs"
+    }, 
+    {
+      "path": ".\\Param_ProjectName\\Services\\TrackingService.cs"
     },
     {
-      "path": ".\\Param_ProjectName\\Services\\TrackingServiceBase.cs"
+      "path": ".\\Param_ProjectName.UWP\\Services\\TrackingAPI.cs"
     },
     {
-      "path": ".\\Param_ProjectName.UWP\\Services\\TrackingService_UWP.cs"
+      "path": ".\\Param_ProjectName.Android\\Services\\TrackingAPI.cs"
     },
     {
-      "path": ".\\Param_ProjectName.Android\\Services\\TrackingService_Droid.cs"
-    },
-    {
-      "path": ".\\Param_ProjectName.iOS\\Services\\TrackingService_iOS.cs"
+      "path": ".\\Param_ProjectName.iOS\\Services\\TrackingAPI.cs"
     }
   ],
   "symbols": {
