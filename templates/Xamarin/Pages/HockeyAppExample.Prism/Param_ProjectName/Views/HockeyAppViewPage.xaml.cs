@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Param_ItemNamespace.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TelemetryViewPage : ContentPage
+	public partial class HockeyAppViewPage : ContentPage
     {
-		public TelemetryViewPage()
+		public HockeyAppViewPage()
 		{
 			InitializeComponent ();
 		}

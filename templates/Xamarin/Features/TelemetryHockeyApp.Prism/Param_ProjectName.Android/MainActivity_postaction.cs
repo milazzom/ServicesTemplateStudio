@@ -1,6 +1,8 @@
 ﻿using Prism.Ioc;
 //^^
 //{[{
+using Param_RootNamespace.Services;
+using Param_RootNamespace.Droid.Services;
 using HockeyApp.Android;
 //}]}
 
@@ -33,6 +35,17 @@ namespace Param_RootNamespace.Droid
             }
         }
 //}]}
+    }
+
+    public class AndroidInitializer : IPlatformInitializer
+    {
+        public void RegisterTypes(IContainerRegistry container)
+        {
+            // Register any platform specific implementations
+//{[{
+            container.Register(typeof(ITrackingAPI), typeof(TrackingAPI));
+//}]}
+        }
     }
 }
 

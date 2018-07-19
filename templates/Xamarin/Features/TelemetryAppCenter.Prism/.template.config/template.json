@@ -12,7 +12,7 @@
     "wts.framework": "PrismXamarinSharedProject|PrismXamarinNETStd",
     "wts.platform": "Xamarin",
     "wts.version": "1.0.0",
-    "wts.displayOrder": "2",
+    "wts.displayOrder": "1",
     "wts.group": "Telemetry",
     "wts.licenses": "[Microsoft.Toolkit.Uwp](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/license.md)",
     "wts.multipleInstance": "false",
