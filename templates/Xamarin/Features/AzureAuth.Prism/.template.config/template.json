@@ -1,0 +1,56 @@
+﻿{
+  "author": "Microsoft Community",
+  "classifications": [ "Universal" ],
+  "name": "Authentication - Azure",
+  "groupIdentity": "wts.Feat.AzureAuth.Xamarin",
+  "identity": "wts.Feat.AzureAuth.Xamarin.Prism",
+  "description": "Adds Azure Authentication using ADAL API's.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "feature",
+    "wts.framework": "PrismXamarinSharedProject|PrismXamarinNETStd",
+    "wts.platform": "Xamarin",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "1",
+    "wts.group": "Authentication",
+    "wts.licenses": "[Microsoft.Toolkit.Uwp](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/license.md)",
+    "wts.multipleInstance": "false",
+    "wts.defaultInstance": "AuthenticationAzure",
+    "wts.rightClickEnabled": "true"
+  },
+  "sourceName": "TelemetryAppCenterFeature",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+      {
+      "path": ".\\Param_ProjectName\\Services\\IAuthenticateService.cs"
+      },    
+      {
+      "path": ".\\Param_ProjectName\\Services\\AuthenticateServiceADAL.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.UWP\\Services\\AuthenticatePlatformService.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.Android\\Services\\AuthenticatePlatformService.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.iOS\\Services\\AuthenticatePlatformService.cs"
+      }
+  ],
+  "symbols": {
+    "wts.projectName":{
+        "type": "parameter",
+        "replaces": "Param_ProjectName",
+        "fileRename": "Param_ProjectName"
+    },
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    }
+  }
+}

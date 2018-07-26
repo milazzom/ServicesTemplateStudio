@@ -3,10 +3,10 @@
   "classifications": [
     "Xamarin"
   ],
-  "name": "HockeyApp",
-  "groupIdentity": "wts.Page.TelemetryPage.Xamarin",
-  "identity": "wts.Page.TelemetryPage.Xamarin.HA.Prism",
-  "description": "This page  demonstrates using the HockeyApp Telemetry Feature",
+  "name": "AzureAuth",
+  "groupIdentity": "wts.Page.AzureAuth.Xamarin",
+  "identity": "wts.Page.AzureAuth.Xamarin.Prism",
+  "description": "This page demonstrates using the Azure Authication Feature",
   "tags": {
     "language": "C#",
     "type": "item",
@@ -14,22 +14,22 @@
     "wts.framework": "PrismXamarinSharedProject|PrismXamarinNETStd",
     "wts.platform" : "Xamarin",
     "wts.version": "1.0.0",
-    "wts.displayOrder": "3",
-    "wts.dependencies": "wts.Feat.TelemetryHockeyApp.Xamarin.Prism",
+    "wts.displayOrder": "4",
+    "wts.dependencies": "wts.Feat.AzureAuth.Xamarin.Prism",
     "wts.genGroup": "0",
     "wts.rightClickEnabled":"true" 
   },
-  "sourceName": "HockeyAppView",
+  "sourceName": "AzureAuthView",
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
-      "path": ".\\Param_ProjectName\\Views\\HockeyAppViewPage.xaml"
+      "path": ".\\Param_ProjectName\\Views\\AzureAuthViewPage.xaml"
     },
     {
-      "path": ".\\Param_ProjectName\\Views\\HockeyAppViewPage.xaml.cs"
+      "path": ".\\Param_ProjectName\\Views\\AzureAuthViewPage.xaml.cs"
     },
     {
-      "path": ".\\Param_ProjectName\\ViewModels\\HockeyAppViewViewModel.cs"
+      "path": ".\\Param_ProjectName\\ViewModels\\AzureAuthViewViewModel.cs"
     }
   ],
   "symbols": {

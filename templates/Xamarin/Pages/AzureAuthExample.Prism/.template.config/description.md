@@ -1,0 +1,1 @@
+﻿This is a sample page that demonstrates using the AzureAuth feature. 

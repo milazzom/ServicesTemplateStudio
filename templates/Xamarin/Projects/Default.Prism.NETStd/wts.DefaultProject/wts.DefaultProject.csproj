@@ -14,5 +14,6 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
     <PackageReference Include="Prism.Unity.Forms" Version="7.0.0.396" />
+    <!-- Nuget package references -->
   </ItemGroup>
 </Project><!--/+:msbuild-conditional:noEmit -->

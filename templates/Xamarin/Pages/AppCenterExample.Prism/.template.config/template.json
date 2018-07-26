@@ -1,7 +1,7 @@
 ﻿{
   "author": "Microsoft",
   "classifications": [
-    "Universal"
+    "Xamarin"
   ],
   "name": "AppCenter",
   "groupIdentity": "wts.Page.TelemetryPage.Xamarin",

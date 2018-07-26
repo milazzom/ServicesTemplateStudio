@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Param_ItemNamespace.Views.AzureAuthViewPage"
+             Title="Azure Auth Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="Login" Text="Login" Command="{Binding LoginCommand}" />
+            <Button x:Name="Logout" Text="Logout" Command="{Binding LogoutCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

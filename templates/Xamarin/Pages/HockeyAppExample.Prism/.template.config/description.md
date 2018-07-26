@@ -1,1 +1,1 @@
-﻿This is the most basic page. A blank canvas to mold into whatever you wish. The blank page leaves pretty much everything up to you.
+﻿This is a sample page that demonstrates using the HockeyApp feature. 

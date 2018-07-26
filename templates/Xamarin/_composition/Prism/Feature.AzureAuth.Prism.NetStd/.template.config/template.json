@@ -1,0 +1,28 @@
+﻿{
+    "author": "Microsoft",
+    "classifications": [
+      "Xamarin"
+    ],
+    "name": "Prism.Feature.AzureAuth.Prism.NetStd.Project",
+    "tags": {
+      "language": "C#",
+      "type": "item",
+      "wts.type": "composition",
+      "wts.platform" : "Xamarin",
+      "wts.version": "1.0.0",
+      "wts.compositionFilter": "$framework == PrismXamarinNETStd & identity == wts.Feat.AzureAuth.Xamarin.Prism"
+    },
+    "sourceName": "wts.ItemName",
+    "preferNameDirectory": true,
+    "PrimaryOutputs": [
+    ],
+    "symbols": {
+      "wts.projectName":
+      {
+        "type": "parameter",
+        "replaces": "Param_ProjectName",
+        "fileRename": "Param_ProjectName"
+      }
+    }
+  }
+  
