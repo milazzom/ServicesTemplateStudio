@@ -6,5 +6,9 @@
     {
         "name": "Xamarin",
         "displayName": "Xamarin Forms"
+    }, 
+    {
+        "name": "Bot",
+        "displayName": "Bot Projects"
     }
 ]

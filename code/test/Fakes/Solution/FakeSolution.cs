@@ -316,7 +316,7 @@ EndProject
 
         private static string GetProjectConfigurationTemplate(string platform, string projectName)
         {
-            if (platform == Platforms.Uwp)
+            if (platform == Platforms.Uwp || platform == Platforms.Bot)
             {
                 return UwpProjectConfigurationTemplate;
             }

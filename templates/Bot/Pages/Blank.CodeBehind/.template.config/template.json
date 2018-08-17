@@ -1,7 +1,7 @@
 ﻿{
   "author": "Microsoft",
   "classifications": [
-    "Universal"
+    "Bot"
   ],
   "name": "Blank",
   "groupIdentity": "wts.Page.Blank.Bot",
@@ -12,7 +12,7 @@
     "type": "item",
     "wts.type": "page",
     "wts.framework": "CodeBehind",
-    "wts.platform" : "Bot",
+    "wts.platform": "Bot",
     "wts.version": "1.0.0",
     "wts.displayOrder": "1",
     "wts.genGroup": "0",
@@ -22,19 +22,13 @@
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
-      "path": ".\\Param_ProjectName\\Views\\BlankViewPage.xaml"
+      "path": ".\\Views\\BlankViewPage.xaml"
     },
     {
-      "path": ".\\Param_ProjectName\\Views\\BlankViewPage.xaml.cs"
+      "path": ".\\Views\\BlankViewPage.xaml.cs"
     }
   ],
   "symbols": {
-    "wts.projectName":
-     	{
-     	"type": "parameter",
-     	"replaces": "Param_ProjectName",
-     	"fileRename": "Param_ProjectName"
-     	},  
     "wts.rootNamespace": {
       "type": "parameter",
       "replaces": "Param_RootNamespace"
@@ -42,6 +36,14 @@
     "wts.itemNamespace": {
       "type": "parameter",
       "replaces": "Param_ItemNamespace"
+    },
+    "baseclass": {
+      "type": "parameter",
+      "replaces": "System.ComponentModel.INotifyPropertyChanged"
+    },
+    "setter": {
+      "type": "parameter",
+      "replaces": "Param_Setter"
     }
   }
 }

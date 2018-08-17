@@ -188,7 +188,7 @@ namespace Microsoft.Templates.UI.Generation
             {
                 return Platforms.Uwp;
             }
-
+            
             if (IsBot())
             {
                 return Platforms.Bot;
@@ -230,9 +230,11 @@ namespace Microsoft.Templates.UI.Generation
             }
         }
 
+        
         private static bool IsBot()
         {
             var searchPath = new DirectoryInfo(GenContext.ToolBox.Shell.GetActiveProjectPath()).Parent.FullName;
+
             string[] fileExtensions = { ".json", ".config", ".csproj" };
 
             var files = Directory.GetFiles(searchPath, "*.*", SearchOption.AllDirectories)

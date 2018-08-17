@@ -1,6 +1,6 @@
 ﻿{
   "author": "Microsoft",
-  "classifications": ["Universal"],
+  "classifications": ["Bot"],
   "name": "Default",
   "groupIdentity": "wts.Proj.Default",
   "identity": "wts.Proj.Default.Bot",
@@ -9,27 +9,19 @@
     "language": "C#",
     "type": "project",
     "wts.type": "project",
-    "wts.framework": "MVVMBasic|CodeBehind",
+    "wts.framework": "CodeBehind",
     "wts.platform" : "Bot",
-    "wts.projecttype":"Blank|MasterDetailBot",
+    "wts.projecttype":"Blank",
     "wts.version": "1.0.0",
     "wts.displayOrder": "1"
   },
   "sourceName": "wts.DefaultProject",
   "preferNameDirectory": true,
-  "guids": [  "c84d6ab8-12fc-46e8-838e-30056ca6c432", //Shared Project
-              "79C005B2-6B1A-4968-ABB6-627639B18B06", //Android Project
-              "72bdc44f-c588-44f3-b6df-9aace7daafdd", //IOs Assembly
-              "776A3BCF-437F-4034-BABD-4B4087E0F0B7", //IOs Project
-              "add8d809-5ed1-418e-b6e0-f02858f58a31", //UWP aapxmanifest
-              "f736c883-f105-4d30-a719-4bf328872f5e", //UWP Phone product id??
-              "18E93540-F89F-42D6-9D2E-EBDA91F2D5C6"],//UWP Project
+  "guids": [  "54c08899-524b-4e48-9f35-381dcd4af411", //Bot Project
+              "48d31f89-b6c8-4d98-9c5b-34042f74fc6b"],//UWP Project
   "PrimaryOutputs":
   [
-    { "path": "Param_ProjectName/wts.DefaultProject.shproj" }, //shared project
-    { "path": "Param_ProjectName.Android/wts.DefaultProject.Android.csproj" }, // Android project
-    { "path": "Param_ProjectName.iOS/wts.DefaultProject.iOS.csproj" }, // iOS project
-    { "path": "Param_ProjectName.UWP/wts.DefaultProject.UWP.csproj" } //UWP project
+    { "path": "Param_ProjectName.UWP/wts.DefaultProject.csproj" } //Bot project
   ],
   "symbols":
   {
@@ -66,6 +58,11 @@
     {
       "type": "parameter",
       "replaces": "Param_Framework"
+    },
+    "wts.generationPlatform":
+    {
+      "type": "parameter",
+      "replaces": "Param_Platform"
     },
     "copyrightYear": {
         "type": "generated",

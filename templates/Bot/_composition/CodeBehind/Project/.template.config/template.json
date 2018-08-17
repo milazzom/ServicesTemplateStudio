@@ -1,7 +1,7 @@
 ﻿{
   "author": "Microsoft",
   "classifications": [
-    "Universal"
+    "Bot"
   ],
   "name": "CodeBehind.Project.Bot",
   "tags": {
@@ -11,21 +11,15 @@
     "wts.platform" : "Bot",
     "wts.version": "1.0.0",
     "wts.compositionFilter": "$framework == CodeBehind & wts.type == project"
- },
+  },
   "sourceName": "wts.ItemName",
   "preferNameDirectory": true,
   "PrimaryOutputs": [
     {
-      "path": ".\\Param_ProjectName\\Services\\NavigationService.cs"
+      "path": ".\\Services\\NavigationService.cs"
     }
   ],
   "symbols": {
-    "wts.projectName":
-    {
-      "type": "parameter",
-      "replaces": "Param_ProjectName",
-      "fileRename": "Param_ProjectName"
-    },
     "wts.rootNamespace": {
       "type": "parameter",
       "replaces": "Param_RootNamespace"
