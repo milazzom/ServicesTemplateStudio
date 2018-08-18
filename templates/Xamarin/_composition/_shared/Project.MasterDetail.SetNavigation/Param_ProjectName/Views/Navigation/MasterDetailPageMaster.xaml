@@ -14,7 +14,7 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="30"/>
                         <RowDefinition Height="10"/>
                     </Grid.RowDefinitions>
                     <Label
@@ -43,7 +43,6 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
             <ListView x:Name="PrimaryMenuItemsListView"
                   VerticalOptions="FillAndExpand"
                   SeparatorVisibility="None"
@@ -52,6 +51,5 @@
                       Header="{DynamicResource MenuHeaderTemplate}"
                       ItemTemplate="{StaticResource MenuItemTemplate}">
             </ListView>
-        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
