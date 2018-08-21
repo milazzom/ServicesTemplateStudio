@@ -242,7 +242,7 @@ namespace Microsoft.Templates.UI.Generation
 
             foreach (string file in files)
             {
-                if (File.ReadAllText(file).Contains("Bots"))
+                if (File.ReadAllText(file).Contains("Bot"))
                 {
                     return true;
                 }
