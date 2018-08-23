@@ -6,7 +6,7 @@ using Microsoft.Bot.Builder.Dialogs;
 using System.Web.Http.Description;
 using System.Net.Http;
 
-namespace SimpleEchoBot
+namespace Param_ProjectName
 {
     [BotAuthentication]
     public class MessagesController : ApiController

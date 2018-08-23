@@ -21,12 +21,6 @@
   "sourceName": "BlankView",
   "preferNameDirectory": true,
   "PrimaryOutputs": [
-    {
-      "path": ".\\Views\\BlankViewPage.xaml"
-    },
-    {
-      "path": ".\\Views\\BlankViewPage.xaml.cs"
-    }
   ],
   "symbols": {
     "wts.rootNamespace": {

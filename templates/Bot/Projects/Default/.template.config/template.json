@@ -17,11 +17,10 @@
   },
   "sourceName": "wts.DefaultProject",
   "preferNameDirectory": true,
-  "guids": [  "54c08899-524b-4e48-9f35-381dcd4af411", //Bot Project
-              "48d31f89-b6c8-4d98-9c5b-34042f74fc6b"],//UWP Project
+  "guids": ["54c08899-524b-4e48-9f35-381dcd4af411"], 
   "PrimaryOutputs":
   [
-    { "path": "Param_ProjectName.UWP/wts.DefaultProject.csproj" } //Bot project
+    { "path": "wts.DefaultProject.csproj" }
   ],
   "symbols":
   {

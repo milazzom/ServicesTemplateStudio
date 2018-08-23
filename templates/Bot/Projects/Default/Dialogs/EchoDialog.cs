@@ -6,7 +6,7 @@ using Microsoft.Bot.Builder.Dialogs;
 using System.Net.Http;
 
 
-namespace SimpleEchoBot
+namespace Param_ProjectName
 {
     [Serializable]
     public class EchoDialog : IDialog<object>
