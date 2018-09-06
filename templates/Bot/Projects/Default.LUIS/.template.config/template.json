@@ -1,9 +1,9 @@
 ﻿{
   "author": "Microsoft",
   "classifications": ["Bot"],
-  "name": "Default",
+  "name": "Luis",
   "groupIdentity": "wts.Proj.Default",
-  "identity": "wts.Proj.Default.Bot",
+  "identity": "wts.Proj.Bot.Luis",
   "description": "",
   "tags": {
     "language": "C#",
@@ -11,16 +11,24 @@
     "wts.type": "project",
     "wts.framework": "CodeBehind",
     "wts.platform" : "Bot",
-    "wts.projecttype":"EchoBot",
+    "wts.projecttype":"LUISBot",
     "wts.version": "1.0.0",
     "wts.displayOrder": "1"
   },
   "sourceName": "wts.DefaultProject",
   "preferNameDirectory": true,
-  "guids": ["54c08899-524b-4e48-9f35-381dcd4af411"], 
+  "guids": ["3d89efba-0117-407e-8233-2cf40290d84b", // Bot Project
+            "27644281-ca01-477c-b178-25074a200107", // Common Assembly
+            "2196152a-b1d2-4783-9312-c918f827020d", // Schema Project
+            "dff0c805-5c1e-4e5c-bde7-24f5519147e9", // Test Project
+            "50c80f4b-474d-4846-b326-e87cbf9a6b22"], // Bot Host Project
   "PrimaryOutputs":
   [
-    { "path": "wts.DefaultProject.csproj" }
+    { "path": "Param_ProjectName/wts.DefaultProject.csproj" }, // Bot Project
+    { "path": "Common/wts.DefaultProject.Common.csproj" }, // Common Assembly
+    { "path": "Schema/wts.DefaultProject.Schema.csproj" }, // Schema Project
+    { "path": "Test/Param_ProjectName.Tests/wts.DefaultProject.Tests.csproj" }, // Test Project 
+    { "path": "Param_ProjectName.Host/wts.DefaultProject.Host.csproj" }, // Bot Host Project
   ],
   "symbols":
   {

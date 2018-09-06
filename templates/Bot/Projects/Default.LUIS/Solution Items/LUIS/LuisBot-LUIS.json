@@ -1,0 +1,210 @@
+{
+  "luis_schema_version": "3.0.0",
+  "versionId": "0.1",
+  "name": "LuisBot",
+  "desc": "LUIS Model for Ready demos",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "BookRestaurant"
+    },
+    {
+      "name": "ConfirmNo"
+    },
+    {
+      "name": "ConfirmYes"
+    },
+    {
+      "name": "KBQuestion"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "anything else",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "book a flight",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "book a restaurant",
+      "intent": "BookRestaurant",
+      "entities": []
+    },
+    {
+      "text": "book a table",
+      "intent": "BookRestaurant",
+      "entities": []
+    },
+    {
+      "text": "definitely",
+      "intent": "ConfirmYes",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "how should i call you",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "in car productivity",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "make a reservation",
+      "intent": "BookRestaurant",
+      "entities": []
+    },
+    {
+      "text": "make an appointment",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "n",
+      "intent": "ConfirmNo",
+      "entities": []
+    },
+    {
+      "text": "no",
+      "intent": "ConfirmNo",
+      "entities": []
+    },
+    {
+      "text": "no way",
+      "intent": "ConfirmNo",
+      "entities": []
+    },
+    {
+      "text": "no, that's ok",
+      "intent": "ConfirmNo",
+      "entities": []
+    },
+    {
+      "text": "nope",
+      "intent": "ConfirmNo",
+      "entities": []
+    },
+    {
+      "text": "not really",
+      "intent": "ConfirmNo",
+      "entities": []
+    },
+    {
+      "text": "reservation",
+      "intent": "BookRestaurant",
+      "entities": []
+    },
+    {
+      "text": "reserve a restaurant",
+      "intent": "BookRestaurant",
+      "entities": []
+    },
+    {
+      "text": "sure",
+      "intent": "ConfirmYes",
+      "entities": []
+    },
+    {
+      "text": "what is that red circle light on my dash",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "what is that yellow light",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "what is that yellow tire light on my dash",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "what is your name",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "what's new?",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "what's the weather like",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's up",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "who are you",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "winter is coming",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "y",
+      "intent": "ConfirmYes",
+      "entities": []
+    },
+    {
+      "text": "yeah",
+      "intent": "ConfirmYes",
+      "entities": []
+    },
+    {
+      "text": "yeppers",
+      "intent": "ConfirmYes",
+      "entities": []
+    },
+    {
+      "text": "yes",
+      "intent": "ConfirmYes",
+      "entities": []
+    },
+    {
+      "text": "yo brother",
+      "intent": "KBQuestion",
+      "entities": []
+    },
+    {
+      "text": "yup",
+      "intent": "ConfirmYes",
+      "entities": []
+    }
+  ]
+}

@@ -3,10 +3,10 @@
   "classifications": [
     "Bot"
   ],
-  "name": "Blank",
+  "name": "Echo",
   "groupIdentity": "wts.Page.Blank.Bot",
-  "identity": "wts.Page.Blank.CodeBehind.Bot",
-  "description": "This is the most basic page. A blank canvas to mold into whatever you wish.",
+  "identity": "wts.Page.Echo.CodeBehind.Bot",
+  "description": "This is the echo bot. A blank canvas to mold into whatever you wish.",
   "tags": {
     "language": "C#",
     "type": "item",
@@ -18,7 +18,7 @@
     "wts.genGroup": "0",
     "wts.rightClickEnabled":"true" 
   },
-  "sourceName": "BlankView",
+  "sourceName": "EchoDialog",
   "preferNameDirectory": true,
   "PrimaryOutputs": [
   ],

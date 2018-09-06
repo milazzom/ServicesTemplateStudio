@@ -6,7 +6,7 @@
         "author": "Microsoft",
         "order": "2",
         "licenses": "",
-        "platforms": ["Uwp", "Xamarin", "Bot"],
+        "platforms": ["Uwp", "Xamarin"],
         "languages": [ "C#", "VisualBasic" ]
     },
     {
@@ -48,5 +48,25 @@
         "licenses": "",
         "platforms": ["Uwp"],
         "languages": [ "C#", "VisualBasic" ]
+    },
+    {
+        "name": "EchoBot",
+        "displayName": "Echo Bot",
+        "summary": "This basic bot is a blank canvas upon which to build your app.",
+        "author": "Microsoft",
+        "order": "1",
+        "licenses": "",
+        "platforms": ["Bot"],
+        "languages": [ "C#"]
+    },
+    {
+        "name": "LUISBot",
+        "displayName": "LUIS Bot",
+        "summary": "This a LUIS Bot Project that integrates the Bot framwork with the LUIS App.",
+        "author": "Microsoft",
+        "order": "2",
+        "licenses": "",
+        "platforms": ["Bot"],
+        "languages": [ "C#"]
     }
 ]

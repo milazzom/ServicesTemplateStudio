@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>Microsoft.Services.BotTemplates.LuisBot.Common</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdaptiveCards" Version="1.0.3" />
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.7.0-beta4" />
+    <PackageReference Include="Microsoft.Azure.CognitiveServices.ContentModerator" Version="0.9.0-preview" />
+    <PackageReference Include="Microsoft.Azure.CognitiveServices.Language" Version="1.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Ai.LUIS" Version="4.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Ai.QnA" Version="4.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Core" Version="4.0.1-preview" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Validation" Version="2.4.18" />
+  </ItemGroup>
+
+</Project>
