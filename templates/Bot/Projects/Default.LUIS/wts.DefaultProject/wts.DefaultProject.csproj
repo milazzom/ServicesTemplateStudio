@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>Microsoft.Services.BotTemplates.LuisBot</RootNamespace>
-    <ApplicationInsightsResourceId>/subscriptions/e22ecb8b-b948-4bce-a709-667b4d1600d6/resourcegroups/ggdebugbot/providers/microsoft.insights/components/ggdebugbot-AppInsights</ApplicationInsightsResourceId>
-    <ApplicationInsightsAnnotationResourceId>/subscriptions/e22ecb8b-b948-4bce-a709-667b4d1600d6/resourcegroups/ggdebugbot/providers/microsoft.insights/components/ggdebugbot-AppInsights</ApplicationInsightsAnnotationResourceId>
+    <ApplicationInsightsResourceId></ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId></ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <ItemGroup>
