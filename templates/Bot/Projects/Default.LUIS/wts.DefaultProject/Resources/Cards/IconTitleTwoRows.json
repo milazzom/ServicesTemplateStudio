@@ -1,0 +1,67 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "speak": "{Speak}",
+  "id": "IconTitleTwoRows",
+  "body": [
+    {
+      "type": "Container",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "separator": true,
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Image",
+                  "url": "{IconUrl}",
+                  "size": "small",
+                  "horizontalAlignment": "left"
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "{Title}",
+                  "horizontalAlignment": "left",
+                  "size": "medium",
+                  "color": "accent",
+                  "wrap": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "{Row1Text}"
+            },
+            {
+              "type": "TextBlock",
+              "text": "{Row2Text}"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.Submit",
+        "title": "Submit action",
+        "data": {
+          "selectedItem": "{SelectedItemData}"
+        }
+      }
+    }
+  ]
+}

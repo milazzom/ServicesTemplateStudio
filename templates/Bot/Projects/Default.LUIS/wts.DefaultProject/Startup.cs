@@ -13,12 +13,12 @@ using Microsoft.Bot.Builder.TraceExtensions;
 using Microsoft.Cognitive.LUIS;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Services.BotTemplates.LuisBot.Common.AI.ContentModerator;
-using Microsoft.Services.BotTemplates.LuisBot.Common.AI.TextAnalytics;
-using Microsoft.Services.BotTemplates.LuisBot.Common.Telemetry;
-using Microsoft.Services.BotTemplates.LuisBot.Services;
+using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.ContentModerator;
+using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics;
+using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry;
+using Microsoft.Services.BotTemplates.wts.DefaultProject.Services;
 
-namespace Microsoft.Services.BotTemplates.LuisBot
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject
 {
     public class Startup
     {
@@ -57,13 +57,13 @@ namespace Microsoft.Services.BotTemplates.LuisBot
             var telemetryLogger = new TelemetryLogger(telemetryOptions);
             services.AddSingleton<ITelemetryLogger>(telemetryLogger);
 
-            services.AddBot<DemoBot>(options =>
+            services.AddBot<wts.DefaultProject>(options =>
             {
                 options.CredentialProvider = new ConfigurationCredentialProvider(Configuration);
 
                 options.Middleware.Add(new CatchExceptionMiddleware<Exception>(async (context, exception) =>
                 {
-                    await context.TraceActivity("DemoBot Exception", exception);
+                    await context.TraceActivity("wts.DefaultProject Exception", exception);
                     await context.SendActivity("Sorry, it looks like something went wrong!");
                 }));
 

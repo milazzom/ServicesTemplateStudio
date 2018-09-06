@@ -4,7 +4,7 @@ using Microsoft.Azure.CognitiveServices.ContentModerator;
 using Microsoft.CognitiveServices.ContentModerator;
 using Microsoft.CognitiveServices.ContentModerator.Models;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Common.AI.ContentModerator.Client
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.ContentModerator.Client
 {
     /// <summary>
     /// Provides access to the Content Moderator Service API.

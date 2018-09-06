@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using Microsoft.ApplicationInsights;
 using Newtonsoft.Json;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Common.AI.TextAnalytics.Client
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics.Client
 {
     /// <summary>
     /// Helper class to wrap calls to the Text Analytics Cognitive Service

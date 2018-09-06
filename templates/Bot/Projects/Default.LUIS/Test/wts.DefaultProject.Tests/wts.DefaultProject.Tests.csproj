@@ -1,5 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>dff0c805-5c1e-4e5c-bde7-24f5519147e9</ProjectGuid>
+  </PropertyGroup>
+
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
 
@@ -15,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\LuisBot\LuisBot.csproj" />
+    <ProjectReference Include="..\..\wts.DefaultProject\wts.DefaultProject.csproj" />
   </ItemGroup>
 
   <ItemGroup>

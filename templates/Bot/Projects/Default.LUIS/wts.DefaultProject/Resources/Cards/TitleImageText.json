@@ -1,0 +1,43 @@
+﻿{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "speak": "{Speak}",
+  "id": "TitleImageText",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "{Title}",
+          "wrap": true,
+          "size": "medium",
+          "maxLines": 2
+        },
+        {
+          "type": "Container",
+          "separator": true,
+          "items": [
+            {
+              "type": "Image",
+              "url": "{ImageUrl}",
+              "size": "{ImageSize}"
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "separator": true,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "{CardText}",
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

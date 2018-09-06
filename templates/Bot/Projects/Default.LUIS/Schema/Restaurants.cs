@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Schema
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Schema
 {
     public class Restaurants
     {

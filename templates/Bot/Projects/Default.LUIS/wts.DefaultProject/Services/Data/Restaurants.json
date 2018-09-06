@@ -1,0 +1,65 @@
+﻿[
+  {
+    "id": 1,
+    "category": "Chinese",
+    "pictureUrl": "https://localhost:44372/assets/en/images/restaurants/chens.jpg",
+    "location": "Seattle",
+    "name": "Chen's"
+  },
+  {
+    "id": 2,
+    "category": "Chinese",
+    "pictureUrl": "https://localhost:44372/assets/en/images/restaurants/bamboo-garden.jpg",
+    "location": "CA",
+    "name": "Bamboo Garden"
+  },
+  {
+    "id": 3,
+    "category": "Chinese",
+    "pictureUrl": "https://localhost:44372/assets/en/images/restaurants/mandarin.jpg",
+    "location": "New York",
+    "name": "Mandarin"
+  },
+  {
+    "id": 4,
+    "category": "Italian",
+    "pictureUrl": "https://localhost:44372/assets/en/images/restaurants/tonys.jpg",
+    "location": "Seattle",
+    "name": "Tony's"
+  },
+  {
+    "id": 5,
+    "category": "Italian",
+    "pictureUrl": "https://localhost:44372/assets/en/images/restaurants/tuscani-grill.jpg",
+    "location": "CA",
+    "name": "Tuscani Grill"
+  },
+  {
+    "id": 6,
+    "category": "Italian",
+    "pictureUrl": "https://localhost:44372/assets/en/images/restaurants/mamma-mia-pizza.jpg",
+    "location": "New York",
+    "name": "Mamma Mia Pizza"
+  },
+  {
+    "id": 7,
+    "category": "Indian",
+    "pictureUrl": "https://localhost:44372/assets/en/images/restaurants/biryani-house.jpg",
+    "location": "Seattle",
+    "name": "Biryani House"
+  },
+  {
+    "id": 8,
+    "category": "Indian",
+    "pictureUrl": "https://localhost:44372/assets/en/images/restaurants/kanishka-cuisine.jpg",
+    "location": "CA",
+    "name": "Kanishka Cuisine"
+  },
+  {
+    "id": 9,
+    "category": "Indian",
+    "pictureUrl": "https://localhost:44372/assets/en/images/restaurants/maharani-inside.jpg",
+    "location": "New York",
+    "name": "Mayuri Indian"
+  }
+]

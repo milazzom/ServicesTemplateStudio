@@ -4,7 +4,7 @@ using Microsoft.Bot.Schema;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Schema
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Schema
 {
     public class ChannelData
     {

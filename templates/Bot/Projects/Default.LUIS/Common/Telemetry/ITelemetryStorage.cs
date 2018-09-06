@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.ApplicationInsights.DataContracts;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Common.Telemetry
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry
 {
     /// <summary>
     /// Defines the operations available to store telemtry. 

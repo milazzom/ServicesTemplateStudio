@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Common.AI
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI
 {
     /// <summary>
     /// A delegate that can be used to prevent a middleware from running

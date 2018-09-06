@@ -1,0 +1,78 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "speak": "{Speak}",
+  "id": "DebugHistory",
+  "body": [
+    {
+      "type": "Container",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "separator": true,
+          "columns": [
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "FactSet",
+                  "facts": [
+                    {
+                      "title": "Activity Type:",
+                      "value": "{Type}"
+                    },
+                    {
+                      "title": "Activity Name:",
+                      "value": "{Name}"
+                    },
+                    {
+                      "title": "From:",
+                      "value": "{From}"
+                    },
+                    {
+                      "title": "Recipient:",
+                      "value": "{To}"
+                    },
+                    {
+                      "title": "Time:",
+                      "value": "{ConversationTime}"
+                    },
+                    {
+                      "title": "Attachments:",
+                      "value": "{NumberOfAttachments}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "seperator": true,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "**Text:** {MessageText}",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "seperator": true,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "**Speak:** {SpeakText}",
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

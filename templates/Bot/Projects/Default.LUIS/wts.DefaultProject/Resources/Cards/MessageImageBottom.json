@@ -1,0 +1,31 @@
+﻿{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "speak": "{Speak}",
+  "id": "MessageImageBottom",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "{CardText}",
+          "horizontalAlignment": "left",
+          "wrap": true
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "Image",
+          "url": "{ImageUrl}",
+          "size": "{ImageSize}",
+          "horizontalAlignment": "{ImageAlign}"
+        }
+      ]
+    }
+  ]
+}

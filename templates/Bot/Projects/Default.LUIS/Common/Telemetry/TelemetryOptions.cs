@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Common.Telemetry
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry
 {
     /// <summary>
     /// Defines the options to be used for logging telemetry.

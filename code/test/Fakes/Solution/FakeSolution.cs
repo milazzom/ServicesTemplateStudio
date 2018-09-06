@@ -346,8 +346,9 @@ EndProject
                 case Platforms.Uwp:
                     return File.ReadAllText(@"Solution\UwpSolutionTemplate.txt");
                 case Platforms.Xamarin:
-                case Platforms.Bot:
                     return File.ReadAllText(@"Solution\XamarinSolutionTemplate.txt");
+                case Platforms.Bot:
+                    return File.ReadAllText(@"Solution\BotSolutionTemplate.txt");
 
             }
 

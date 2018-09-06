@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Common.AI.ContentModerator
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.ContentModerator
 {
     /// <summary>
     /// Defines the options used by the content moderator service.

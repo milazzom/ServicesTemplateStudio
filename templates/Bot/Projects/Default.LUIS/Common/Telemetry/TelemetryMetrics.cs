@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Common.Telemetry
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry
 {
     /// <summary>
     /// Common property names for event metrics (logged in AppInsights under customMetrics).

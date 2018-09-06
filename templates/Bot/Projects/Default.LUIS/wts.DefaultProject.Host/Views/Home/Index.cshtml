@@ -1,0 +1,235 @@
+﻿@using Microsoft.Services.BotTemplates.LuisBot.Host.Controllers
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">IPA Bot Test Invocation</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="firstNameInput">First Name</label>
+                        <input id="firstNameInput" type="text" data-bind="value: firstName, enable: !isBotActive()" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastNameInput">Last Name</label>
+                        <input id="lastNameInput" type="text" data-bind="value: lastName, enable: !isBotActive()" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="VinNumberInput">VIN #</label>
+                        <input id="VinNumberInput" type="text" data-bind="value: vinNumber, enable: !isBotActive()" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="FobIdInput">FOB ID</label>
+                        <input id="FobIdInput" type="text" data-bind="value: fobId, enable: !isBotActive()" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="UserIdInput">User ID</label>
+                        <input id="UserIdInput" type="text" data-bind="value: userId, enable: !isBotActive()" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="EmailAddressInput">Email Address</label>
+                        <input id="EmailAddressInput" type="text" data-bind="value: emailAddress, enable: !isBotActive()" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="LanguageInput">Language:</label>
+                        <select id="LanguageInput" data-bind="value:locale, enable: !isBotActive()" class="form-control">
+                            <option value="en-US">English (US)</option>
+                            <option value="es-ES">Spanish (ES)</option>
+                            <option value="es-MX">Spanish (MX)</option>
+                            <option value="de-DE">German (DE)</option>
+                        </select>
+                    </div>
+                    <div class="form-group" data-bind="visible:locale() == 'en-US'">
+                        <label>Voice:</label>
+                        <div class="radio">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="BotVoice" value="Jessa24kRUS" data-bind="checked: botVoice, enable: !isBotActive()">
+                                    Jessa
+                                </label>
+                            </div>
+                            <label>
+                                <input type="radio" name="BotVoice" value="Guy24kRUS" data-bind="checked: botVoice, enable: !isBotActive()">
+                                Guy
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" data-bind="checked: debug"> <span>Show debug info</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <button id="StartButton" data-bind="click: toggleStartStop, text: startStopButtonLabel" class="btn btn-primary btn-ipa-host" type="button">Start</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default" data-bind="visible: isHeadUnitOn()">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Head Unit</h3>
+                </div>
+            </div>
+            <div id="BotChatGoesHere" data-bind="visible: isWebchatVisible()"></div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Car Data & Settings</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="LatitudeInput">Latitude (DD):</label>
+                        <input id="LatitudeInput" type="number" data-bind="value: latitude" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="LongitudeInput">Longitude (DD):</label>
+                        <input id="LongitudeInput" type="number" data-bind="value: longitude" class="form-control" />
+                    </div>
+                    <div class="form-group">                        
+                        <button id="Get Location" data-bind="click: pollForGeolocation, enable: !isHeadUnitOn() && canGetLocation()" class="btn btn-default btn-sm" type="button">Get My Location</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="OutsideTempInput">Outside (C):</label>
+                        <input id="OutsideTempInput" type="text" placeholder="5" data-bind="value:outsideTemperature" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="InsideTempInput">Inside (C):</label>
+                        <input id="InsideTempInput" type="text" placeholder="17" data-bind="value:insideTemperature" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="WeekDayInput">Day of the week:</label>
+                        <select id="WeekDayInput" data-bind="value:dayOfTheWeek" class="form-control">
+                            <option value="0">Monday</option>
+                            <option value="1">Tuesday</option>
+                            <option value="2">Wednesday</option>
+                            <option value="3">Thursday</option>
+                            <option value="4">Friday</option>
+                            <option value="5">Saturday</option>
+                            <option value="6">Sunday</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="CurrentHourInput">Hour of the Day:</label>
+                        <select id="CurrentHourInput" data-bind="value:hrOfTheDay" class="form-control">
+                            <option value="0">12:00 AM</option>
+                            <option value="1">1:00 AM</option>
+                            <option value="2">2:00 AM</option>
+                            <option value="3">3:00 AM</option>
+                            <option value="4">4:00 AM</option>
+                            <option value="5">5:00 AM</option>
+                            <option value="6">6:00 AM</option>
+                            <option value="7">7:00 AM</option>
+                            <option value="8">8:00 AM</option>
+                            <option value="9">9:00 AM</option>
+                            <option value="10">10:00 AM</option>
+                            <option value="11">11:00 AM</option>
+                            <option value="12">12:00 PM</option>
+                            <option value="13">1:00 PM</option>
+                            <option value="14">2:00 PM</option>
+                            <option value="15">3:00 PM</option>
+                            <option value="16">4:00 PM</option>
+                            <option value="17">5:00 PM</option>
+                            <option value="18">6:00 PM</option>
+                            <option value="19">7:00 PM</option>
+                            <option value="20">8:00 PM</option>
+                            <option value="21">9:00 PM</option>
+                            <option value="22">10:00 PM</option>
+                            <option value="23">11:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <button id="Send Telemetry" data-bind="click: sendTelemetryUpdate, enable: !isHeadUnitOn()" class="btn btn-default btn-sm" type="button">Send Telemetry</button>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Trunk:</label>
+                        <div class="radio">
+                                <label>
+                                    <input type="radio" name="TrunkStatus" value="closed" data-bind="checked: trunkStatus">
+                                    Closed
+                                </label>
+                            <label>
+                                <input type="radio" name="TrunkStatus" value="opened" data-bind="checked: trunkStatus">
+                                Opened
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" data-bind="visible: isBotActive()" style="display: none;">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Car Events</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group" data-bind="foreach: logMessages">
+                        <li class="list-group-item">
+                            <span data-bind="text: message"></span><br />
+                            <em class="small text-muted" data-bind="text: timeStamp"></em>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="@Url.Content("vendor/jquery/jquery.js")"></script>
+<script src="@Url.Content("vendor/knockout/knockout-latest.js")"></script>
+
+<script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+<script src="https://cdn.botframework.com/botframework-webchat/latest/CognitiveServices.js"></script>
+
+
+<script src="@Url.Content("app/CarEvents.js")"></script>
+<script src="@Url.Content("app/BotChatService.js")"></script>
+<script src="@Url.Content("app/GeolocationService.js")"></script>
+<script src="@Url.Content("app/IpaChatViewModel.js")"></script>
+
+<script type="text/javascript">
+        @{
+        var botChatCssHref = "https://cdn.botframework.com/botframework-webchat/latest/botchat.css";
+        var siteCssHref = Url.Content("css/all.min.css");
+        }
+        $("#siteStylesheet").attr("href", "@siteCssHref");
+        $("#botchatStylesheet").attr("href", "@botChatCssHref");
+</script>
+
+<script type="text/javascript">
+    var BotChat = window.BotChat;
+    $(function() {
+        var botChatService = new BotChatService(
+            $("#BotChatGoesHere"),
+            BotChat.queryParams(location.search),
+            '@ViewData[DataKeys.WebChatSecret]',
+            '@ViewData[DataKeys.SpeechRecognizerSecret]');
+
+        var geolocationService = new GeolocationService();
+        var viewModel = new IpaChatViewModel(botChatService, geolocationService);
+
+        viewModel.firstName('@ViewData[DataKeys.FirstName]');
+        viewModel.lastName('@ViewData[DataKeys.LastName]');
+        viewModel.vinNumber('@ViewData[DataKeys.Vin]');
+        viewModel.fobId('@ViewData[DataKeys.Fob]');
+        viewModel.userId('@ViewData[DataKeys.UserId]');
+        viewModel.emailAddress('@ViewData[DataKeys.EmailAddress]');
+        viewModel.botVoice("Jessa24kRUS");
+        viewModel.debug(false);
+        viewModel.locale("en-US");
+
+        ko.applyBindings(viewModel);
+    });
+</script>

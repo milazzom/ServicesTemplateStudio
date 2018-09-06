@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Common.Telemetry
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry
 {
     /// <summary>
     /// This middleware tracks incomming and outgoing activities.

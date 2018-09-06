@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Host
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Host
 {
     public class Program
     {

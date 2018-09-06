@@ -15,11 +15,11 @@ using Microsoft.Bot.Builder.Ai.LUIS;
 using Microsoft.Bot.Builder.Ai.QnA;
 using Microsoft.Bot.Builder.Core.Extensions;
 using Microsoft.Bot.Schema;
-using Microsoft.Services.BotTemplates.LuisBot.Common.AI.TextAnalytics.Client;
+using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics.Client;
 using Newtonsoft.Json;
 using Validation;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Common.Telemetry
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry
 {
     /// <summary>
     /// Simple helper for creating telemetry in a consistent way for a dashboard

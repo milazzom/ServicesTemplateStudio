@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Schema
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Schema
 {
 
     public class BingMapsResponse

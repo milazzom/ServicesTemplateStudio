@@ -1,0 +1,30 @@
+﻿{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "speak": "{Speak}",
+  "id": "MessageImageTop",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "Image",
+          "url": "https://contosoipabot.azurewebsites.net/assets/en/images/vendor/assistant-logo.jpg",
+          "size": "Stretch",
+          "horizontalAlignment": "Stretch"
+        }
+      ]
+    }, {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Hi {UserName}! I'm a simple demo bot. I can book restaurants or answer FAQs.",
+          "horizontalAlignment": "left",
+          "wrap": true
+        }
+      ]
+    }
+  ]
+}

@@ -11,21 +11,21 @@ using Microsoft.Bot.Builder.Ai.QnA;
 using Microsoft.Bot.Builder.Core.Extensions;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
-using Microsoft.Services.BotTemplates.LuisBot.Dialogs;
-using Microsoft.Services.BotTemplates.LuisBot.Dialogs.AdaptiveCards;
-using Microsoft.Services.BotTemplates.LuisBot.Services;
+using Microsoft.Services.BotTemplates.wts.DefaultProject.Dialogs;
+using Microsoft.Services.BotTemplates.wts.DefaultProject.Dialogs.AdaptiveCards;
+using Microsoft.Services.BotTemplates.wts.DefaultProject.Services;
 
-namespace Microsoft.Services.BotTemplates.LuisBot
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject
 {
     /// <summary>
     /// This is a very simple demo bot based on LUIS
     /// </summary>
-    public class DemoBot : IBot
+    public class wts.DefaultProject : IBot
     {
         private readonly DialogSet _dialogs;
         private readonly LuisRecognizer _luisRecognizer;
 
-        public DemoBot(LuisRecognizer luisRecognizer, QnAMaker qnaMaker, BingMaps bingMaps)
+        public wts.DefaultProject(LuisRecognizer luisRecognizer, QnAMaker qnaMaker, BingMaps bingMaps)
         {
             _luisRecognizer = luisRecognizer;
             _dialogs = new DialogSet();

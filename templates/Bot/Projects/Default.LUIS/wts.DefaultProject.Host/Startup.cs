@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Services.BotTemplates.LuisBot.Host.Extensions;
+using Microsoft.Services.BotTemplates.wts.DefaultProject.Host.Extensions;
 
-namespace Microsoft.Services.BotTemplates.LuisBot.Host
+namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Host
 {
     public class Startup
     {
