@@ -22,6 +22,19 @@ namespace Microsoft.Templates.Fakes
 
         private const string XamarinMSBuildProjectFilesTemplate = @"		{name}\{name}\{name}.projitems*{id}*SharedItemsImports = 4
 ";
+        private const string BotProjectConfigurationTemplate = @"		{0}.Debug|x64.ActiveCfg = Debug|x64
+		{0}.Debug|x64.Build.0 = Debug|x64
+		{0}.Debug|x64.Deploy.0 = Debug|x64
+		{0}.Debug|x86.ActiveCfg = Debug|x86
+		{0}.Debug|x86.Build.0 = Debug|x86
+		{0}.Debug|x86.Deploy.0 = Debug|x86
+		{0}.Release|x64.ActiveCfg = Release|x64
+		{0}.Release|x64.Build.0 = Release|x64
+		{0}.Release|x64.Deploy.0 = Release|x64
+		{0}.Release|x86.ActiveCfg = Release|x86
+		{0}.Release|x86.Build.0 = Release|x86
+		{0}.Release|x86.Deploy.0 = Release|x86
+";
 
         private const string UwpProjectConfigurationTemplate = @"		{0}.Debug|ARM.ActiveCfg = Debug|ARM
 		{0}.Debug|ARM.Build.0 = Debug|ARM
@@ -316,11 +329,15 @@ EndProject
 
         private static string GetProjectConfigurationTemplate(string platform, string projectName)
         {
-            if (platform == Platforms.Uwp || platform == Platforms.Bot)
+            if (platform == Platforms.Uwp)
             {
                 return UwpProjectConfigurationTemplate;
             }
-            else if (platform == Platforms.Xamarin || platform == Platforms.Bot)
+            else if (platform == Platforms.Bot)
+            {
+                return BotProjectConfigurationTemplate;
+            }
+            else if (platform == Platforms.Xamarin)
             {
                 if (projectName.Contains("Android"))
                 {
