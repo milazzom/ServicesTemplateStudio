@@ -5,9 +5,9 @@ using Microsoft.ApplicationInsights.DataContracts;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Ai.QnA;
 using Microsoft.Bot.Schema;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics.Client;
+using Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.AI.TextAnalytics.Client;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry
+namespace Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.Telemetry
 {
     /// <summary>
     /// Defines the operations available to log telemtry for the bot.

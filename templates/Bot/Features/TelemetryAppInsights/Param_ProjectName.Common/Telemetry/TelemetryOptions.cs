@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry
+namespace Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.Telemetry
 {
     /// <summary>
     /// Defines the options to be used for logging telemetry.

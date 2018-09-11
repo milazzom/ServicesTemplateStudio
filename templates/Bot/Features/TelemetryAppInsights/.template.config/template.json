@@ -1,0 +1,70 @@
+﻿{
+  "author": "Microsoft Community",
+  "classifications": [ "Bot" ],
+  "name": "Telemetry - AppInsights",
+  "groupIdentity": "wts.Feat.TelemetryAppInsights.Bot",
+  "identity": "wts.Feat.TelemetryAppInsights.Bot.CodeBehind",
+  "description": "Add Telemetry via AppInsights API's.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "feature",
+    "wts.framework": "CodeBehind",
+    "wts.platform": "Bot",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "1",
+    "wts.group": "Telemetry",
+    "wts.multipleInstance": "false",
+    "wts.defaultInstance": "TelemetryAppInsights",
+    "wts.rightClickEnabled": "true"
+  },
+  "sourceName": "TelemetryAppInsightsFeature",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+      {
+      "path": ".\\Param_ProjectName.Common\\Telemetry\\ITelemetryLogger.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.Common\\Telemetry\\ITelemetryStorage.cs"
+      },      
+      {
+      "path": ".\\Param_ProjectName.Common\\Telemetry\\ActivityTrackerMiddleware.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.Common\\Telemetry\\AppInsightsTelemetryStorage.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.Common\\Telemetry\\LuisTrackerMiddleware.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.Common\\Telemetry\\TelemetryEvents.cs"
+      }, 
+      {
+        "path": ".\\Param_ProjectName.Common\\Telemetry\\TelemetryLogger.cs"
+      }, 
+      {
+        "path": ".\\Param_ProjectName.Common\\Telemetry\\TelemetryMetrics.cs"
+      }, 
+      {
+        "path": ".\\Param_ProjectName.Common\\Telemetry\\TelemetryOptions.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\Telemetry\\TelemetryProperties.cs"
+      }
+  ],
+  "symbols": {
+    "wts.projectName":{
+        "type": "parameter",
+        "replaces": "Param_ProjectName",
+        "fileRename": "Param_ProjectName"
+    },
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    }
+  }
+}

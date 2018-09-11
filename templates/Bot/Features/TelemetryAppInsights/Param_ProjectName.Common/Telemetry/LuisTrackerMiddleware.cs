@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Ai.LUIS;
 using Microsoft.Bot.Builder.Core.Extensions;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI;
+using Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.AI;
 using Validation;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry
+namespace Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.Telemetry
 {
     /// <summary>
     /// This middleware tracks LUIS results.

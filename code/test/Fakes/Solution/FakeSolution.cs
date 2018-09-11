@@ -22,6 +22,7 @@ namespace Microsoft.Templates.Fakes
 
         private const string XamarinMSBuildProjectFilesTemplate = @"		{name}\{name}\{name}.projitems*{id}*SharedItemsImports = 4
 ";
+
         private const string BotProjectConfigurationTemplate = @"		{0}.Debug|x64.ActiveCfg = Debug|x64
 		{0}.Debug|x64.Build.0 = Debug|x64
 		{0}.Debug|x64.Deploy.0 = Debug|x64

@@ -5,7 +5,7 @@ using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.DataContracts;
 using Microsoft.ApplicationInsights.Extensibility;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry
+namespace Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.Telemetry
 {
     /// <summary>
     /// A teletry storage provide for app Insights.

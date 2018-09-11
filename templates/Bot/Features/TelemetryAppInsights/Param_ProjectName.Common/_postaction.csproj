@@ -1,0 +1,4 @@
+﻿<!-- Nuget package references -->
+<!--{[{-->
+  <PackageReference Include="Microsoft.ApplicationInsights" Version="2.7.0-beta4" />  
+<!--}]}-->
