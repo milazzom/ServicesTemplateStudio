@@ -1,0 +1,97 @@
+﻿{
+  "author": "Microsoft Community",
+  "classifications": [ "Bot" ],
+  "name": "AI - Text Analytics",
+  "groupIdentity": "wts.Feat.AITextAnalytics.Bot",
+  "identity": "wts.Feat.AITextAnalyticsr.Bot.CodeBehind",
+  "description": "Add Text Analytics to your bot project.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "feature",
+    "wts.framework": "CodeBehind",
+    "wts.platform": "Bot",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "2",
+    "wts.group": "AI",
+    "wts.multipleInstance": "false",
+    "wts.defaultInstance": "AITextAnalytics",
+    "wts.rightClickEnabled": "true"
+  },
+  "sourceName": "AITextAnalyticsFeature",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+      {
+      "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\TextAnalyticsMiddleware.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\TextAnalyticsOptions.cs"
+      },      
+      {
+      "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\Detectedlanguage.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\DetectLanguageResponse.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\Document.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\Error.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\ITextAnalyticsService.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\KeyPhraseDocument.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\KeyPhraseResponse.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\LanguageResponseDocument.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\ResponseDocument.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\SentimentRequest.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\SentimentResponse.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\SpellCheckResult.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\SpellCheckResult.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\SpellCheckTokenSuggestion.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\TextAnalyticsRequest.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\TextAnalyticsRequestDocument.cs"
+      },
+      {
+        "path": ".\\Param_ProjectName.Common\\AI\\TextAnalytics\\Client\\TextAnalyticsService.cs"
+      }
+  ],
+  "symbols": {
+    "wts.projectName":{
+        "type": "parameter",
+        "replaces": "Param_ProjectName",
+        "fileRename": "Param_ProjectName"
+    },
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    }
+  }
+}

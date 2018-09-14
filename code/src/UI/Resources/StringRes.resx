@@ -656,4 +656,8 @@
     <value>Telemetry</value>
     <comment>Group header for telemetry templates</comment>
   </data>
+  <data name="TemplateGroup_AI" xml:space="preserve">
+    <value>AI</value>
+    <comment>Group header for AI templates</comment>
+  </data>
 </root>

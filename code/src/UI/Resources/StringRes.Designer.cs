@@ -1195,6 +1195,15 @@ namespace Microsoft.Templates.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AI.
+        /// </summary>
+        public static string TemplateGroup_AI {
+            get {
+                return ResourceManager.GetString("TemplateGroup_AI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Application Launching.
         /// </summary>
         public static string TemplateGroup_ApplicationLaunching {

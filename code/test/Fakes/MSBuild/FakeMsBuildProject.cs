@@ -59,6 +59,15 @@ namespace Microsoft.Templates.Fakes
             }
         }
 
+        public bool IsNetCoreProject
+        {
+            get
+            {
+                var nsElement = _root.Descendants().FirstOrDefault(e => e.Name.LocalName == "TargetFramework");
+                return nsElement?.Value.Contains("netcoreapp") == true;
+            }
+        }
+
         private FakeMsBuildProject(string path)
         {
             _path = path;

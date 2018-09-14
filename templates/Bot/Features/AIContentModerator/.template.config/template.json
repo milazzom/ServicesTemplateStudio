@@ -1,0 +1,49 @@
+﻿{
+  "author": "Microsoft Community",
+  "classifications": [ "Bot" ],
+  "name": "AI - Content Moderator",
+  "groupIdentity": "wts.Feat.AIContentModerator.Bot",
+  "identity": "wts.Feat.AIContentModerator.Bot.CodeBehind",
+  "description": "Add Content Moderation to your bot project using Azure Cognitive Services.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "feature",
+    "wts.framework": "CodeBehind",
+    "wts.platform": "Bot",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "1",
+    "wts.group": "AI",
+    "wts.multipleInstance": "false",
+    "wts.defaultInstance": "AIContentModerator",
+    "wts.rightClickEnabled": "true"
+  },
+  "sourceName": "AIContentModeratorFeature",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+      {
+      "path": ".\\Param_ProjectName.Common\\AI\\ContentModerator\\ContentModeratorMiddleware.cs"
+      },
+      {
+      "path": ".\\Param_ProjectName.Common\\AI\\ContentModerator\\ContentModeratorOptions.cs"
+      },      
+      {
+      "path": ".\\Param_ProjectName.Common\\AI\\ContentModerator\\Client\\ContentModeratorService.cs"
+      }
+  ],
+  "symbols": {
+    "wts.projectName":{
+        "type": "parameter",
+        "replaces": "Param_ProjectName",
+        "fileRename": "Param_ProjectName"
+    },
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    }
+  }
+}

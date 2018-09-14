@@ -1,0 +1,1 @@
+﻿This feature adds the ability to detect sentiment, key phrases, and language from your text.
