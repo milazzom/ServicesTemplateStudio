@@ -263,3 +263,4 @@ templates/_composition/_shared/Page.Chart.SampleDataService/Services/SampleDataS
 /code/tools/Localization/Localization.sln
 /code/FinalTests.playlist
 templates/bot/projects/default/web.config
+/.git-rewrite
