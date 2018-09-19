@@ -6,9 +6,9 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Core.Extensions;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics.Client;
+using Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.AI.TextAnalytics.Client;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics
+namespace Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.AI.TextAnalytics
 {
     /// <summary>
     /// A middleware that uses the Text Analytics service to analyze the user's utterance (sentiment and key phrases)

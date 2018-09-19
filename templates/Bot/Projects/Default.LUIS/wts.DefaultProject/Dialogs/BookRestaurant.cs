@@ -8,12 +8,12 @@ using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Prompts;
 using Microsoft.Bot.Builder.Prompts.Choices;
 using Microsoft.Recognizers.Text;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Dialogs.Prompts;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Schema;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Services;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Dialogs.Prompts;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Schema;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Services;
 using ChoicePrompt = Microsoft.Bot.Builder.Dialogs.ChoicePrompt;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Dialogs
+namespace Microsoft.Services.BotTemplates.Param_ProjectName.Dialogs
 {
     public class BookRestaurant : DialogContainer
     {

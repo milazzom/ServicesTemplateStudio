@@ -7,7 +7,7 @@ using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Prompts;
 using ConfirmPrompt = Microsoft.Bot.Builder.Dialogs.ConfirmPrompt;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Dialogs.Prompts
+namespace Microsoft.Services.BotTemplates.Param_ProjectName.Dialogs.Prompts
 {
     public class LuisConfirmPrompt : ConfirmPrompt
     {

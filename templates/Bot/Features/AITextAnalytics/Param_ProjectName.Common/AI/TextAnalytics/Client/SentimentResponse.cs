@@ -7,7 +7,7 @@
 using System;
 using Newtonsoft.Json;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics.Client
+namespace Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.AI.TextAnalytics.Client
 {
     /// <summary>
     /// Class SentimentResponse.

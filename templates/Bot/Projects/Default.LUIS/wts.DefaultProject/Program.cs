@@ -5,7 +5,7 @@ using System;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject
+namespace Microsoft.Services.BotTemplates.Param_ProjectName
 {
     public class Program
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.ContentModerator
+namespace Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.AI.ContentModerator
 {
     /// <summary>
     /// Defines the options used by the content moderator service.

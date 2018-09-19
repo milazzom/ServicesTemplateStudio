@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Bot.Schema;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Extensions
+namespace Microsoft.Services.BotTemplates.Param_ProjectName.Common.Extensions
 {
     public static class ActivityEx
     {

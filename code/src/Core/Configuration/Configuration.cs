@@ -17,7 +17,9 @@ namespace Microsoft.Templates.Core
 {
     public class Configuration
     {
-        public string Environment { get; set; } = "LocalEnv";
+        //public string Environment { get; set; } = "LocalEnv";
+
+        public string Environment { get; set; } = "StsLocalEnv";
 
         public string CdnUrl { get; set; } = "https://msftappswts.blob.core.windows.net/dev";
 

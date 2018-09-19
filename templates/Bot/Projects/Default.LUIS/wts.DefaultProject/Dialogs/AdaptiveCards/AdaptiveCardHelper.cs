@@ -6,7 +6,7 @@ using AdaptiveCards;
 using Microsoft.Bot.Schema;
 using Newtonsoft.Json;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Dialogs.AdaptiveCards
+namespace Microsoft.Services.BotTemplates.Param_ProjectName.Dialogs.AdaptiveCards
 {
     public class AdaptiveCardHelper
     {

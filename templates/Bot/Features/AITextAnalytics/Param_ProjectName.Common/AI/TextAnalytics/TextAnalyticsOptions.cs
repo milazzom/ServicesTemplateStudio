@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics
+namespace Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.AI.TextAnalytics
 {
     /// <summary>
     /// Defines the options to be used for calling the text analytics service.

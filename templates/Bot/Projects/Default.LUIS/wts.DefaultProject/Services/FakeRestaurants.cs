@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Schema;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Schema;
 using Newtonsoft.Json;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Services
+namespace Microsoft.Services.BotTemplates.Param_ProjectName.Services
 {
     public static class FakeRestaurants
     {

@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Ai.QnA;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.ContentModerator;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Extensions;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Common.AI.ContentModerator;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Common.AI.TextAnalytics;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Common.Extensions;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Dialogs
+namespace Microsoft.Services.BotTemplates.Param_ProjectName.Dialogs
 {
     public class KBQuestion : IDialogContinue
     {

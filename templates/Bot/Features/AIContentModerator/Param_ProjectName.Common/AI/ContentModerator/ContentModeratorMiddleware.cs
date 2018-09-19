@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Core.Extensions;
 using Microsoft.CognitiveServices.ContentModerator.Models;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.ContentModerator.Client;
+using Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.AI.ContentModerator.Client;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.ContentModerator
+namespace Microsoft.Services.BotTemplates.Param_ItemNamespace.Common.AI.ContentModerator
 {
     public class ContentModeratorMiddleware : IMiddleware
     {

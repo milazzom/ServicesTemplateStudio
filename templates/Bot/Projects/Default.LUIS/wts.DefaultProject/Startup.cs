@@ -13,12 +13,12 @@ using Microsoft.Bot.Builder.TraceExtensions;
 using Microsoft.Cognitive.LUIS;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.ContentModerator;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.AI.TextAnalytics;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Common.Telemetry;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Services;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Common.AI.ContentModerator;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Common.AI.TextAnalytics;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Common.Telemetry;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Services;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject
+namespace Microsoft.Services.BotTemplates.Param_ProjectName
 {
     public class Startup
     {

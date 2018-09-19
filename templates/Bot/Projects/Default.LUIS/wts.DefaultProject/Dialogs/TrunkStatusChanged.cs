@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
-using Microsoft.Services.BotTemplates.wts.DefaultProject.Schema;
+using Microsoft.Services.BotTemplates.Param_ProjectName.Schema;
 
-namespace Microsoft.Services.BotTemplates.wts.DefaultProject.Dialogs
+namespace Microsoft.Services.BotTemplates.Param_ProjectName.Dialogs
 {
     public class TrunkStatusChanged :IDialog
     {
