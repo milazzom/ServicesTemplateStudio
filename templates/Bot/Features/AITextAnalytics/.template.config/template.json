@@ -3,7 +3,7 @@
   "classifications": [ "Bot" ],
   "name": "AI - Text Analytics",
   "groupIdentity": "wts.Feat.AITextAnalytics.Bot",
-  "identity": "wts.Feat.AITextAnalyticsr.Bot.CodeBehind",
+  "identity": "wts.Feat.AITextAnalytics.Bot.CodeBehind",
   "description": "Add Text Analytics to your bot project.",
   "tags": {
     "language": "C#",

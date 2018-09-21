@@ -13,7 +13,7 @@ using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
 using Microsoft.Services.BotTemplates.Param_ProjectName.Dialogs;
 using Microsoft.Services.BotTemplates.Param_ProjectName.Dialogs.AdaptiveCards;
-using Microsoft.Services.BotTemplates.Param_ProjectName.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.Services.BotTemplates.Param_ProjectName
 {
@@ -24,14 +24,18 @@ namespace Microsoft.Services.BotTemplates.Param_ProjectName
     {
         private readonly DialogSet _dialogs;
         private readonly LuisRecognizer _luisRecognizer;
+        private readonly IServiceProvider _services;
 
-        public Param_ProjectName(LuisRecognizer luisRecognizer, QnAMaker qnaMaker, BingMaps bingMaps)
+        public Param_ProjectName(LuisRecognizer luisRecognizer, IServiceProvider services)
         {
             _luisRecognizer = luisRecognizer;
+            _services = services;
             _dialogs = new DialogSet();
-            _dialogs.Add("KBQuestion", new KBQuestion(qnaMaker));
-            _dialogs.Add("BookRestaurant", new BookRestaurant(luisRecognizer, bingMaps));
-            _dialogs.Add("TrunkStatusChanged", new TrunkStatusChanged());
+            ConfigureDialogs();
+        }
+
+        private void ConfigureDialogs()
+        {
         }
 
         public async Task OnTurn(ITurnContext context)

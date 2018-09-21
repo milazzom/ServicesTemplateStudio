@@ -1,0 +1,47 @@
+﻿{
+  "author": "Microsoft",
+  "classifications": [ "Bot" ],
+  "name": "Knowledge Base Questions",
+  "groupIdentity": "wts.Page.Dialog.Bot",
+  "identity": "wts.Page.KBQuestion.Dialog.Bot",
+  "description": "This is the Knowledge Base Dialog.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "page",
+    "wts.framework": "CodeBehind",
+    "wts.platform": "Bot",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "2",
+    "wts.genGroup": "0",
+    "wts.dependencies": "wts.Feat.AITextAnalytics.Bot.CodeBehind",
+    "wts.rightClickEnabled":"true" 
+  },
+  "sourceName": "KBQuestionDialog",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+    {
+      "path": ".\\Param_ProjectName\\Dialogs\\KBQuestion.cs"
+    }
+  ],
+  "symbols": {
+    "wts.projectName":
+    {
+      "type": "parameter",
+      "replaces": "Param_ProjectName",
+      "fileRename": "Param_ProjectName"
+    },
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    },
+    "setter": {
+      "type": "parameter",
+      "replaces": "Param_Setter"
+    }
+  }
+}

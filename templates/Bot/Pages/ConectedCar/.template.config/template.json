@@ -1,0 +1,46 @@
+﻿{
+  "author": "Microsoft",
+  "classifications": [ "Bot" ],
+  "name": "Connected Car",
+  "groupIdentity": "wts.Page.Dialog.Bot",
+  "identity": "wts.Page.ConnectedCar.Dialog.Bot",
+  "description": "This is the Connected Car Dialog.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "page",
+    "wts.framework": "CodeBehind",
+    "wts.platform": "Bot",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "3",
+    "wts.genGroup": "0",
+    "wts.rightClickEnabled":"true" 
+  },
+  "sourceName": "ConnectedCarDialog",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+    {
+      "path": ".\\Param_ProjectName\\Dialogs\\TrunkStatusChanged.cs"
+    }
+  ],
+  "symbols": {
+    "wts.projectName":
+    {
+      "type": "parameter",
+      "replaces": "Param_ProjectName",
+      "fileRename": "Param_ProjectName"
+    },
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    },
+    "setter": {
+      "type": "parameter",
+      "replaces": "Param_Setter"
+    }
+  }
+}

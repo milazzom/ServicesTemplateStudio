@@ -26,7 +26,7 @@
   [
     { "path": "Param_ProjectName/wts.DefaultProject.csproj" }, // Bot Project
     { "path": "Param_ProjectName.Common/wts.DefaultProject.Common.csproj" }, // Common Assembly
-    { "path": "Schema/wts.DefaultProject.Schema.csproj" }, // Schema Project
+    { "path": "Param_ProjectName.Schema/wts.DefaultProject.Schema.csproj" }, // Schema Project
     { "path": "Test/Param_ProjectName.Tests/wts.DefaultProject.Tests.csproj" }, // Test Project 
     { "path": "Param_ProjectName.Host/wts.DefaultProject.Host.csproj" }, // Bot Host Project
   ],

@@ -1,0 +1,61 @@
+﻿{
+  "author": "Microsoft",
+  "classifications": [ "Bot" ],
+  "name": "Location Booking",
+  "groupIdentity": "wts.Page.Dialog.Bot",
+  "identity": "wts.Page.LocationBooking.Dialog.Bot",
+  "description": "This is the Location Booking Dialog.",
+  "tags": {
+    "language": "C#",
+    "type": "item",
+    "wts.type": "page",
+    "wts.framework": "CodeBehind",
+    "wts.platform": "Bot",
+    "wts.version": "1.0.0",
+    "wts.displayOrder": "3",
+    "wts.genGroup": "0",
+    "wts.rightClickEnabled":"true" 
+  },
+  "sourceName": "LocationBookingDialog",
+  "preferNameDirectory": true,
+  "PrimaryOutputs": [
+    {
+      "path": ".\\Param_ProjectName\\Dialogs\\BookRestaurants.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName\\Services\\BingMaps.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName\\Services\\FakeRestaurants.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName\\Services\\Data\\Restaurants.json"
+    },
+    {
+      "path": ".\\Param_ProjectName.Schema\\Restaurants.cs"
+    },
+    {
+      "path": ".\\Param_ProjectName.Schema\\BingMapsResponse.cs"
+    }            
+  ],
+  "symbols": {
+    "wts.projectName":
+    {
+      "type": "parameter",
+      "replaces": "Param_ProjectName",
+      "fileRename": "Param_ProjectName"
+    },
+    "wts.rootNamespace": {
+      "type": "parameter",
+      "replaces": "Param_RootNamespace"
+    },
+    "wts.itemNamespace": {
+      "type": "parameter",
+      "replaces": "Param_ItemNamespace"
+    },
+    "setter": {
+      "type": "parameter",
+      "replaces": "Param_Setter"
+    }
+  }
+}

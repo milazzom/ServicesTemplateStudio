@@ -34,7 +34,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\wts.DefaultProject.Common\wts.DefaultProject.Common.csproj" />
-    <ProjectReference Include="..\Schema\wts.DefaultProject.Schema.csproj" />
+    <ProjectReference Include="..\wts.DefaultProject.Schema\wts.DefaultProject.Schema.csproj" />
   </ItemGroup>
 
   <ItemGroup>
